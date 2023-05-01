@@ -1,0 +1,1343 @@
+[9:12:30 PM] › [CLI] …  awaiting  Starting Prism…
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/accounts
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/accounts
+[9:12:31 PM] › [CLI] ℹ  info      PATCH      http://127.0.0.1:4010/accounts/account_in71c4amph0vgo2qllky
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/accounts/account_in71c4amph0vgo2qllky
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/accounts/account_in71c4amph0vgo2qllky/balance
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/accounts/account_in71c4amph0vgo2qllky/close
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/account_numbers
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/account_numbers
+[9:12:31 PM] › [CLI] ℹ  info      PATCH      http://127.0.0.1:4010/account_numbers/account_number_v18nkfqm6afpsrvy82b2
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/account_numbers/account_number_v18nkfqm6afpsrvy82b2
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/cards
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/cards
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/cards/card_oubs0hwk5rn6knuecxg2/details
+[9:12:31 PM] › [CLI] ℹ  info      PATCH      http://127.0.0.1:4010/cards/card_oubs0hwk5rn6knuecxg2
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/cards/card_oubs0hwk5rn6knuecxg2
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/card_payments
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/card_payments/card_payment_nd3k2kacrqjli8482ave
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/card_disputes
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/card_disputes
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/card_disputes/card_dispute_h9sc95nbl1cgltpp7men
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/physical_cards
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/physical_cards
+[9:12:31 PM] › [CLI] ℹ  info      PATCH      http://127.0.0.1:4010/physical_cards/physical_card_ode8duyq5v2ynhjoharl
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/physical_cards/physical_card_ode8duyq5v2ynhjoharl
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/card_profiles
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/card_profiles
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/card_profiles/card_profile_cox5y73lob2eqly18piy
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/card_profiles/card_profile_cox5y73lob2eqly18piy/archive
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/digital_wallet_tokens
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/digital_wallet_tokens/digital_wallet_token_izi62go3h51p369jrie0
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/transactions
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/transactions/transaction_uyrp7fld2ium70oa7oi
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/pending_transactions
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/pending_transactions/pending_transaction_k1sfetcau2qbvjbzgju4
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/declined_transactions
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/declined_transactions/declined_transaction_17jbn0yyhvkt4v4ooym8
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/account_transfers
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/account_transfers
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/account_transfers/account_transfer_7k9qe1ysdgqztnt63l7n
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/account_transfers/account_transfer_7k9qe1ysdgqztnt63l7n/approve
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/account_transfers/account_transfer_7k9qe1ysdgqztnt63l7n/cancel
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/ach_transfers
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/ach_transfers
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/ach_transfers/ach_transfer_uoxatyh3lt5evrsdvo7q
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/ach_transfers/ach_transfer_uoxatyh3lt5evrsdvo7q/approve
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/ach_transfers/ach_transfer_uoxatyh3lt5evrsdvo7q/cancel
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/ach_prenotifications
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/ach_prenotifications
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/ach_prenotifications/ach_prenotification_ubjf9qqsxl3obbcn1u34
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/inbound_ach_transfers
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/inbound_ach_transfers/inbound_ach_transfer_tdrwqr3fq9gnnq49odev
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/inbound_ach_transfers/inbound_ach_transfer_tdrwqr3fq9gnnq49odev/decline
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/inbound_ach_transfers/inbound_ach_transfer_tdrwqr3fq9gnnq49odev/transfer_return
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/inbound_ach_transfers/inbound_ach_transfer_tdrwqr3fq9gnnq49odev/notification_of_change
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/wire_transfers
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/wire_transfers
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/wire_transfers/wire_transfer_5akynk7dqsq25qwk9q2u
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/wire_transfers/wire_transfer_5akynk7dqsq25qwk9q2u/approve
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/wire_transfers/wire_transfer_5akynk7dqsq25qwk9q2u/cancel
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/wire_drawdown_requests
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/wire_drawdown_requests
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/wire_drawdown_requests/wire_drawdown_request_q6lmocus3glo0lr2bfv3
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/inbound_wire_drawdown_requests
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/inbound_wire_drawdown_requests/inbound_wire_drawdown_request_u5a92ikqhz1ytphn799e
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/check_transfers
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/check_transfers
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/check_transfers/check_transfer_30b43acfu9vw8fyc4f5
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/check_transfers/check_transfer_30b43acfu9vw8fyc4f5/approve
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/check_transfers/check_transfer_30b43acfu9vw8fyc4f5/cancel
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/check_transfers/check_transfer_30b43acfu9vw8fyc4f5/stop_payment
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/check_deposits
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/check_deposits
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/check_deposits/check_deposit_instruction_q2shv7x9qhevfm71kor8
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/routing_numbers?routing_number=021000021
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/external_accounts
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/external_accounts
+[9:12:31 PM] › [CLI] ℹ  info      PATCH      http://127.0.0.1:4010/external_accounts/external_account_ukk55lr923a3ac0pp7iv
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/external_accounts/external_account_ukk55lr923a3ac0pp7iv
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/entities
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/entities
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/entities/entity_n8y8tnk2p9339ti393yi
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/entities/entity_n8y8tnk2p9339ti393yi/address
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/entities/entity_n8y8tnk2p9339ti393yi/archive
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/entity_beneficial_owners/address
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/entity_beneficial_owners
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/entity_beneficial_owners/archive
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/entities/entity_n8y8tnk2p9339ti393yi/supplemental_documents
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/entity_supplemental_documents?entity_id=entity_n8y8tnk2p9339ti393yi
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/account_statements
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/account_statements/account_statement_lkc03a4skm2k7f38vj15
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/files
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/files
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/files/file_makxrc67oh9l6sg7w9yc
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/documents
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/documents/document_qjtqc6s4c14ve2q89izm
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/events
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/events/event_001dzz0r20rzr4zrhrr1364hy80
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/event_subscriptions
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/event_subscriptions
+[9:12:31 PM] › [CLI] ℹ  info      PATCH      http://127.0.0.1:4010/event_subscriptions/event_subscription_001dzz0r20rcdxgb013zqb8m04g
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/event_subscriptions/event_subscription_001dzz0r20rcdxgb013zqb8m04g
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/real_time_decisions/real_time_decision_j76n2e810ezcg3zh5qtn/action
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/real_time_decisions/real_time_decision_j76n2e810ezcg3zh5qtn
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/exports
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/exports
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/exports/export_8s4m48qz3bclzje0zwh9
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/groups/current
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/programs
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/programs/program_i2v2os4mwza1oetokh9i
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/bookkeeping_accounts
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/bookkeeping_accounts
+[9:12:31 PM] › [CLI] ℹ  info      PATCH      http://127.0.0.1:4010/bookkeeping_accounts/bookkeeping_account_e37p1f1iuocw5intf35v
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/bookkeeping_accounts/bookkeeping_account_e37p1f1iuocw5intf35v/balance
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/bookkeeping_entry_sets
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/bookkeeping_entry_sets
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/bookkeeping_entry_sets/bookkeeping_entry_set_n80c6wr2p8gtc6p4ingf
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/bookkeeping_entries
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/bookkeeping_entries/bookkeeping_entry_ctjpajsj3ks2blx10375
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/oauth_connections
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/oauth_connections/connection_dauknoksyr4wilz4e6my
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/card_purchase_supplements
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/card_purchase_supplements/card_purchase_supplement_ijuc45iym4jchnh2sfk3
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/real_time_payments_transfers
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/real_time_payments_transfers
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/real_time_payments_transfers/real_time_payments_transfer_iyuhl5kdn7ssmup83mvq
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/proof_of_authorization_requests
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/proof_of_authorization_requests/proof_of_authorization_request_iwp8no25h3rjvil6ad3b
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/proof_of_authorization_request_submissions
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/proof_of_authorization_request_submissions
+[9:12:31 PM] › [CLI] ℹ  info      GET        http://127.0.0.1:4010/proof_of_authorization_request_submissions/proof_of_authorization_request_submission_uqhqroiley7n0097vizn
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/inbound_ach_transfers
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/ach_transfers/ach_transfer_uoxatyh3lt5evrsdvo7q/submit
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/ach_transfers/ach_transfer_uoxatyh3lt5evrsdvo7q/return
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/account_transfers/account_transfer_7k9qe1ysdgqztnt63l7n/complete
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/check_transfers/check_transfer_30b43acfu9vw8fyc4f5/mail
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/check_transfers/check_transfer_30b43acfu9vw8fyc4f5/deposit
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/check_deposits/check_deposit_f06n9gpg7sxn8t19lfc1/submit
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/check_deposits/check_deposit_f06n9gpg7sxn8t19lfc1/reject
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/check_deposits/check_deposit_f06n9gpg7sxn8t19lfc1/return
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/inbound_wire_transfers
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/wire_transfers/wire_transfer_5akynk7dqsq25qwk9q2u/submit
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/wire_transfers/wire_transfer_5akynk7dqsq25qwk9q2u/reverse
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/inbound_wire_drawdown_requests
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/card_authorizations
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/interest_payment
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/card_settlements
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/card_refunds
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/card_disputes/card_dispute_h9sc95nbl1cgltpp7men/action
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/card_profiles/card_profile_cox5y73lob2eqly18piy/approve
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/digital_wallet_token_requests
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/inbound_real_time_payments_transfers
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/inbound_funds_holds/inbound_funds_hold_9vuasmywdo7xb3zt4071/release
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/account_statements
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/documents
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/real_time_payments_transfers/real_time_payments_transfer_iyuhl5kdn7ssmup83mvq/complete
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/programs
+[9:12:31 PM] › [CLI] ℹ  info      POST       http://127.0.0.1:4010/simulations/physical_cards/physical_card_ode8duyq5v2ynhjoharl/shipment_advance
+[9:12:31 PM] › [CLI] ▶  start     Prism is listening on http://127.0.0.1:4010
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /accounts ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /accounts/account_in71c4amph0vgo2qllky ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] patch /accounts/account_in71c4amph0vgo2qllky ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /accounts ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /accounts/account_in71c4amph0vgo2qllky/balance ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /account_numbers ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /account_numbers/account_number_v18nkfqm6afpsrvy82b2 ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] patch /account_numbers/account_number_v18nkfqm6afpsrvy82b2 ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /account_numbers ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /account_statements/account_statement_lkc03a4skm2k7f38vj15 ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /account_statements ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /account_transfers ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /account_transfers/account_transfer_7k9qe1ysdgqztnt63l7n ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /account_transfers ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /account_transfers/account_transfer_7k9qe1ysdgqztnt63l7n/approve ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /account_transfers/account_transfer_7k9qe1ysdgqztnt63l7n/cancel ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /ach_prenotifications ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /ach_prenotifications/ach_prenotification_ubjf9qqsxl3obbcn1u34 ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /ach_prenotifications ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /ach_transfers ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /ach_transfers/ach_transfer_uoxatyh3lt5evrsdvo7q ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /ach_transfers ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /ach_transfers/ach_transfer_uoxatyh3lt5evrsdvo7q/approve ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /ach_transfers/ach_transfer_uoxatyh3lt5evrsdvo7q/cancel ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /bookkeeping_accounts ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] patch /bookkeeping_accounts/bookkeeping_account_e37p1f1iuocw5intf35v ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /bookkeeping_accounts ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /bookkeeping_accounts/bookkeeping_account_e37p1f1iuocw5intf35v/balance ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /bookkeeping_entries/bookkeeping_entry_ctjpajsj3ks2blx10375 ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /bookkeeping_entries ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /bookkeeping_entry_sets ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /bookkeeping_entry_sets/bookkeeping_entry_set_n80c6wr2p8gtc6p4ingf ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /bookkeeping_entry_sets ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /cards ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /cards/card_oubs0hwk5rn6knuecxg2 ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] patch /cards/card_oubs0hwk5rn6knuecxg2 ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /cards ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /cards/card_oubs0hwk5rn6knuecxg2/details ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /card_disputes ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /card_disputes/card_dispute_h9sc95nbl1cgltpp7men ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /card_disputes ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /card_payments/card_payment_nd3k2kacrqjli8482ave ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /card_payments ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /card_profiles ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /card_profiles/card_profile_cox5y73lob2eqly18piy ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /card_profiles ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /card_profiles/card_profile_cox5y73lob2eqly18piy/archive ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /card_purchase_supplements/card_purchase_supplement_ijuc45iym4jchnh2sfk3 ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] ›     [VALIDATOR] ✖  error     Violation: response.body.invoice.shipping_tax_rate Response body property invoice.shipping_tax_rate must match pattern "^-?\d+(\.\d+)?$"
+[9:12:33 PM] ›     [VALIDATOR] ✖  error     Violation: response.body.line_items.0.item_quantity Response body property line_items.0.item_quantity must match pattern "^-?\d+(\.\d+)?$"
+[9:12:33 PM] ›     [VALIDATOR] ✖  error     Violation: response.body.line_items.0.unit_cost Response body property line_items.0.unit_cost must match pattern "^-?\d+(\.\d+)?$"
+[9:12:33 PM] ›     [VALIDATOR] ✖  error     Violation: response.body.line_items.0.sales_tax_rate Response body property line_items.0.sales_tax_rate must match pattern "^-?\d+(\.\d+)?$"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /card_purchase_supplements ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] ›     [VALIDATOR] ✖  error     Violation: response.body.data.0.invoice.shipping_tax_rate Response body property data.0.invoice.shipping_tax_rate must match pattern "^-?\d+(\.\d+)?$"
+[9:12:33 PM] ›     [VALIDATOR] ✖  error     Violation: response.body.data.0.line_items.0.item_quantity Response body property data.0.line_items.0.item_quantity must match pattern "^-?\d+(\.\d+)?$"
+[9:12:33 PM] ›     [VALIDATOR] ✖  error     Violation: response.body.data.0.line_items.0.unit_cost Response body property data.0.line_items.0.unit_cost must match pattern "^-?\d+(\.\d+)?$"
+[9:12:33 PM] ›     [VALIDATOR] ✖  error     Violation: response.body.data.0.line_items.0.sales_tax_rate Response body property data.0.line_items.0.sales_tax_rate must match pattern "^-?\d+(\.\d+)?$"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /check_deposits ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /check_deposits/check_deposit_instruction_q2shv7x9qhevfm71kor8 ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /check_deposits ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /check_transfers ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /check_transfers/check_transfer_30b43acfu9vw8fyc4f5 ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get /check_transfers ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /check_transfers/check_transfer_30b43acfu9vw8fyc4f5/approve ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] post /check_transfers/check_transfer_30b43acfu9vw8fyc4f5/cancel ℹ  info      Request received
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:33 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:33 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:33 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:33 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:33 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /declined_transactions/declined_transaction_17jbn0yyhvkt4v4ooym8 ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /declined_transactions ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /digital_wallet_tokens/digital_wallet_token_izi62go3h51p369jrie0 ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /digital_wallet_tokens ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /documents/document_qjtqc6s4c14ve2q89izm ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /documents ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] post /entities ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /entities/entity_n8y8tnk2p9339ti393yi ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /entities ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] post /entities/entity_n8y8tnk2p9339ti393yi/archive ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] post /entities/entity_n8y8tnk2p9339ti393yi/address ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] post /entity_beneficial_owners ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] post /entity_beneficial_owners/archive ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] post /entity_beneficial_owners/address ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] post /entities/entity_n8y8tnk2p9339ti393yi/supplemental_documents ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /entity_supplemental_documents ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /events/event_001dzz0r20rzr4zrhrr1364hy80 ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /events ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] post /event_subscriptions ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /event_subscriptions/event_subscription_001dzz0r20rcdxgb013zqb8m04g ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] patch /event_subscriptions/event_subscription_001dzz0r20rcdxgb013zqb8m04g ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /event_subscriptions ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] post /exports ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /exports/export_8s4m48qz3bclzje0zwh9 ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /exports ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] post /external_accounts ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /external_accounts/external_account_ukk55lr923a3ac0pp7iv ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] patch /external_accounts/external_account_ukk55lr923a3ac0pp7iv ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /external_accounts ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] post /files ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /files/file_makxrc67oh9l6sg7w9yc ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /files ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /groups/current ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /inbound_ach_transfers/inbound_ach_transfer_tdrwqr3fq9gnnq49odev ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /inbound_ach_transfers ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] post /inbound_ach_transfers/inbound_ach_transfer_tdrwqr3fq9gnnq49odev/decline ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] post /inbound_ach_transfers/inbound_ach_transfer_tdrwqr3fq9gnnq49odev/notification_of_change ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] post /inbound_ach_transfers/inbound_ach_transfer_tdrwqr3fq9gnnq49odev/transfer_return ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /inbound_wire_drawdown_requests/inbound_wire_drawdown_request_u5a92ikqhz1ytphn799e ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:34 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:34 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:34 PM] › [HTTP SERVER] get /inbound_wire_drawdown_requests ℹ  info      Request received
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:34 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:34 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:34 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /oauth_connections/connection_dauknoksyr4wilz4e6my ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /oauth_connections ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /accounts ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get /accounts ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get /accounts ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /accounts ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get /accounts ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /pending_transactions/pending_transaction_k1sfetcau2qbvjbzgju4 ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /pending_transactions ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /physical_cards ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /physical_cards/physical_card_ode8duyq5v2ynhjoharl ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] patch /physical_cards/physical_card_ode8duyq5v2ynhjoharl ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /physical_cards ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /programs/program_i2v2os4mwza1oetokh9i ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /programs ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /real_time_decisions/real_time_decision_j76n2e810ezcg3zh5qtn ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /real_time_decisions/real_time_decision_j76n2e810ezcg3zh5qtn/action ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /real_time_payments_transfers ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /real_time_payments_transfers/real_time_payments_transfer_iyuhl5kdn7ssmup83mvq ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /real_time_payments_transfers ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /routing_numbers ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/account_statements ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/inbound_ach_transfers ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/card_authorizations ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/card_settlements ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/card_disputes/card_dispute_h9sc95nbl1cgltpp7men/action ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/card_profiles/card_profile_cox5y73lob2eqly18piy/approve ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/card_refunds ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/check_deposits/check_deposit_f06n9gpg7sxn8t19lfc1/return ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/check_transfers/check_transfer_30b43acfu9vw8fyc4f5/deposit ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/digital_wallet_token_requests ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/documents ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/inbound_funds_holds/inbound_funds_hold_9vuasmywdo7xb3zt4071/release ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/inbound_wire_drawdown_requests ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/interest_payment ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/physical_cards/physical_card_ode8duyq5v2ynhjoharl/shipment_advance ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/programs ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/real_time_payments_transfers/real_time_payments_transfer_iyuhl5kdn7ssmup83mvq/complete ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/inbound_real_time_payments_transfers ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /simulations/inbound_wire_transfers ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /transactions/transaction_uyrp7fld2ium70oa7oi ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /transactions ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /accounts ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /wire_drawdown_requests/wire_drawdown_request_q6lmocus3glo0lr2bfv3 ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /wire_drawdown_requests ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] post /wire_transfers ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /wire_transfers/wire_transfer_5akynk7dqsq25qwk9q2u ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:35 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:35 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:35 PM] › [HTTP SERVER] get /wire_transfers ℹ  info      Request received
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:35 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:35 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:35 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:36 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:36 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:36 PM] › [HTTP SERVER] post /wire_transfers/wire_transfer_5akynk7dqsq25qwk9q2u/approve ℹ  info      Request received
+[9:12:36 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:36 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:36 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:36 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:36 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
+[9:12:36 PM] › [HTTP SERVER] get / ℹ  info      Request received
+[9:12:36 PM] › [HTTP SERVER] get / ✖  error     Request terminated with error: https://stoplight.io/prism/errors#NO_PATH_MATCHED_ERROR: Route not resolved, no path matched
+[9:12:36 PM] › [HTTP SERVER] post /wire_transfers/wire_transfer_5akynk7dqsq25qwk9q2u/cancel ℹ  info      Request received
+[9:12:36 PM] ›     [NEGOTIATOR] ℹ  info      Request contains an accept header: application/json
+[9:12:36 PM] ›     [VALIDATOR] ✔  success   The request passed the validation rules. Looking for the best response
+[9:12:36 PM] ›     [NEGOTIATOR] ✔  success   Found a compatible content for application/json
+[9:12:36 PM] ›     [NEGOTIATOR] ✔  success   Responding with the requested status code 200
+[9:12:36 PM] ›     [NEGOTIATOR] ℹ  info      > Responding with "200"
