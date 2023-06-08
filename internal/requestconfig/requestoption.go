@@ -98,6 +98,7 @@ func NewRequestConfig(ctx context.Context, method string, u string, body interfa
 		req.Header.Set("Content-Type", contentType)
 	}
 	req.Header.Set("Accept", "application/json")
+
 	for k, v := range getPlatformProperties() {
 		req.Header.Add(k, v)
 	}
