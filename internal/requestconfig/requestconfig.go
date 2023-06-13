@@ -185,9 +185,6 @@ func (cfg *RequestConfig) Execute() error {
 		}
 
 		req := cfg.Request.Clone(ctx)
-		res, err = handler(req)
-
-		req := cfg.Request.Clone(ctx)
 		req.Header.Set("Idempotency-Key", "stainless-go-"+uuid.New().String())
 		res, err = handler(req)
 		if ctx != nil && ctx.Err() != nil {
