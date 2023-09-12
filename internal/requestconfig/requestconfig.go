@@ -186,8 +186,17 @@ func (cfg *RequestConfig) Execute() error {
 		req := cfg.Request.Clone(ctx)
 		req.Header.Set("Idempotency-Key", "stainless-go-"+uuid.New().String())
 		res, err = handler(req)
-		if ctx != nil && ctx.Err() != nil {
-			return ctx.Err()
+		if res == nil {
+			break
+		}
+
+		shouldRetry := err != nil ||
+			res.StatusCode == http.StatusConflict ||
+			res.StatusCode == http.StatusTooManyRequests ||
+			res.StatusCode >= http.StatusInternalServerError
+
+		if res.Header.Get("x-should-retry") == "true" {
+			shouldRetry = true
 		}
 		if !shouldRetry(cfg.Request, res) || retryCount >= cfg.MaxRetries {
 			break
