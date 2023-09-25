@@ -6,7 +6,6 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
-	"errors"
 	"fmt"
 	"io"
 	"math"
@@ -228,11 +227,11 @@ func (cfg *RequestConfig) Execute() (err error) {
 		req := cfg.Request.Clone(ctx)
 		req.Header.Set("Idempotency-Key", "stainless-go-"+uuid.New().String())
 		res, err = handler(req)
-		if res == nil {
-			break
+		if ctx != nil && ctx.Err() != nil {
+			return ctx.Err()
 		}
-		if errors.Is(err, context.Canceled) {
-			return err
+		if !shouldRetry(cfg.Request, res) || retryCount >= cfg.MaxRetries {
+			break
 		}
 
 		// Prepare next request and wait for the retry delay
