@@ -1,0 +1,17 @@
+{
+  "name": "bug-squash-increase-go",
+  "version": "1.0.0",
+  "description": "<a href=\"https://pkg.go.dev/github.com/increase/increase-go\"><img src=\"https://pkg.go.dev/badge/github.com/increase/increase-go.svg\" alt=\"Go Reference\"></a>",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@stoplight/prism-cli": "^5.5.2"
+  }
+}

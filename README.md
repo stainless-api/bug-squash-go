@@ -311,3 +311,34 @@ This package generally attempts to follow [SemVer](https://semver.org/spec/v2.0.
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
 
 We are keen for your feedback; please open an [issue](https://www.github.com/increase/increase-go/issues) with questions, bugs, or suggestions.
+
+## Development
+
+The project should build with:
+
+
+```sh
+make
+```
+
+Then run tests with:
+
+```sh
+make test
+```
+
+Note that this will fire up two mock servers, running in parallel.
+
+The Prism server simulates basic inputs and outputs for the API:
+
+```sh
+npm install -g @stoplight/prism-cli
+prism mock openapi.json
+```
+
+The integration server simulates more complex behaviour that we want to test
+end-to-end and that isn't handled by the auto-generated Prism server:
+
+```sh
+go run scripts/integration_server.go
+```

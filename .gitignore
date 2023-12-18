@@ -1,1 +1,5 @@
 codegen.log
+.idea/
+openapi.json
+*.log
+**/node_modules
