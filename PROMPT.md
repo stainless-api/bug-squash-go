@@ -14,3 +14,9 @@ this library.
 You may use outside resources like Google and may also ask questions of
 your interviewer. Please don't look in the production increase-go code though,
 that might give away the answer too quickly!
+
+You can run tests with this command:
+
+```
+./scripts/test.sh
+```
