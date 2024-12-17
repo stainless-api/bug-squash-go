@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // CheckTransferService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewCheckTransferService] method
 // instead.
@@ -98,7 +98,7 @@ func (r *CheckTransferService) StopPayment(ctx context.Context, checkTransferID 
 	return
 }
 
-// Check Transfers move funds from your Increase account by mailing a physical
+// Check Transfers move funds from your Acme account by mailing a physical
 // check.
 type CheckTransfer struct {
 	// The Check transfer's identifier.
@@ -125,17 +125,17 @@ type CheckTransfer struct {
 	Currency CheckTransferCurrency `json:"currency,required"`
 	// After a check transfer is deposited, this will contain supplemental details.
 	Deposit CheckTransferDeposit `json:"deposit,required,nullable"`
-	// Whether Increase will print and mail the check or if you will do it yourself.
+	// Whether Acme will print and mail the check or if you will do it yourself.
 	FulfillmentMethod CheckTransferFulfillmentMethod `json:"fulfillment_method,required"`
-	// If the check has been mailed by Increase, this will contain details of the
+	// If the check has been mailed by Acme, this will contain details of the
 	// shipment.
 	Mailing CheckTransferMailing `json:"mailing,required,nullable"`
 	// The ID for the pending transaction representing the transfer. A pending
 	// transaction is created when the transfer
-	// [requires approval](https://increase.com/documentation/transfer-approvals#transfer-approvals)
+	// [requires approval](https://acme.com/documentation/transfer-approvals#transfer-approvals)
 	// by someone else in your organization.
 	PendingTransactionID string `json:"pending_transaction_id,required,nullable"`
-	// Details relating to the physical check that Increase will print and mail. Will
+	// Details relating to the physical check that Acme will print and mail. Will
 	// be present if and only if `fulfillment_method` is equal to `physical_check`.
 	PhysicalCheck CheckTransferPhysicalCheck `json:"physical_check,required,nullable"`
 	// The routing number printed on the check.
@@ -308,19 +308,19 @@ const (
 	CheckTransferDepositTypeCheckTransferDeposit CheckTransferDepositType = "check_transfer_deposit"
 )
 
-// Whether Increase will print and mail the check or if you will do it yourself.
+// Whether Acme will print and mail the check or if you will do it yourself.
 type CheckTransferFulfillmentMethod string
 
 const (
-	// Increase will print and mail a physical check.
+	// Acme will print and mail a physical check.
 	CheckTransferFulfillmentMethodPhysicalCheck CheckTransferFulfillmentMethod = "physical_check"
-	// Increase will not print a check; you are responsible for printing and mailing a
+	// Acme will not print a check; you are responsible for printing and mailing a
 	// check with the provided account number, routing number, check number, and
 	// amount.
 	CheckTransferFulfillmentMethodThirdParty CheckTransferFulfillmentMethod = "third_party"
 )
 
-// If the check has been mailed by Increase, this will contain details of the
+// If the check has been mailed by Acme, this will contain details of the
 // shipment.
 type CheckTransferMailing struct {
 	// The ID of the file corresponding to an image of the check that was mailed, if
@@ -345,10 +345,10 @@ func (r *CheckTransferMailing) UnmarshalJSON(data []byte) (err error) {
 	return apijson.UnmarshalRoot(data, r)
 }
 
-// Details relating to the physical check that Increase will print and mail. Will
+// Details relating to the physical check that Acme will print and mail. Will
 // be present if and only if `fulfillment_method` is equal to `physical_check`.
 type CheckTransferPhysicalCheck struct {
-	// Details for where Increase will mail the check.
+	// Details for where Acme will mail the check.
 	MailingAddress CheckTransferPhysicalCheckMailingAddress `json:"mailing_address,required"`
 	// The descriptor that will be printed on the memo field on the check.
 	Memo string `json:"memo,required,nullable"`
@@ -377,7 +377,7 @@ func (r *CheckTransferPhysicalCheck) UnmarshalJSON(data []byte) (err error) {
 	return apijson.UnmarshalRoot(data, r)
 }
 
-// Details for where Increase will mail the check.
+// Details for where Acme will mail the check.
 type CheckTransferPhysicalCheckMailingAddress struct {
 	// The city of the check's destination.
 	City string `json:"city,required,nullable"`
@@ -467,7 +467,7 @@ const (
 	CheckTransferStatusStopped CheckTransferStatus = "stopped"
 	// The transfer has been rejected.
 	CheckTransferStatusRejected CheckTransferStatus = "rejected"
-	// The transfer requires attention from an Increase operator.
+	// The transfer requires attention from an Acme operator.
 	CheckTransferStatusRequiresAttention CheckTransferStatus = "requires_attention"
 )
 
@@ -507,9 +507,9 @@ type CheckTransferStopPaymentRequestReason string
 const (
 	// The check could not be delivered.
 	CheckTransferStopPaymentRequestReasonMailDeliveryFailed CheckTransferStopPaymentRequestReason = "mail_delivery_failed"
-	// The check was canceled by an Increase operator who will provide details
+	// The check was canceled by an Acme operator who will provide details
 	// out-of-band.
-	CheckTransferStopPaymentRequestReasonRejectedByIncrease CheckTransferStopPaymentRequestReason = "rejected_by_increase"
+	CheckTransferStopPaymentRequestReasonRejectedByAcme CheckTransferStopPaymentRequestReason = "rejected_by_acme"
 	// The check was stopped for another reason.
 	CheckTransferStopPaymentRequestReasonUnknown CheckTransferStopPaymentRequestReason = "unknown"
 )
@@ -554,9 +554,9 @@ type CheckTransferNewParams struct {
 	AccountID param.Field[string] `json:"account_id,required"`
 	// The transfer amount in cents.
 	Amount param.Field[int64] `json:"amount,required"`
-	// Whether Increase will print and mail the check or if you will do it yourself.
+	// Whether Acme will print and mail the check or if you will do it yourself.
 	FulfillmentMethod param.Field[CheckTransferNewParamsFulfillmentMethod] `json:"fulfillment_method"`
-	// Details relating to the physical check that Increase will print and mail. This
+	// Details relating to the physical check that Acme will print and mail. This
 	// is required if `fulfillment_method` is equal to `physical_check`. It must not be
 	// included if any other `fulfillment_method` is provided.
 	PhysicalCheck param.Field[CheckTransferNewParamsPhysicalCheck] `json:"physical_check"`
@@ -575,23 +575,23 @@ func (r CheckTransferNewParams) MarshalJSON() (data []byte, err error) {
 	return apijson.MarshalRoot(r)
 }
 
-// Whether Increase will print and mail the check or if you will do it yourself.
+// Whether Acme will print and mail the check or if you will do it yourself.
 type CheckTransferNewParamsFulfillmentMethod string
 
 const (
-	// Increase will print and mail a physical check.
+	// Acme will print and mail a physical check.
 	CheckTransferNewParamsFulfillmentMethodPhysicalCheck CheckTransferNewParamsFulfillmentMethod = "physical_check"
-	// Increase will not print a check; you are responsible for printing and mailing a
+	// Acme will not print a check; you are responsible for printing and mailing a
 	// check with the provided account number, routing number, check number, and
 	// amount.
 	CheckTransferNewParamsFulfillmentMethodThirdParty CheckTransferNewParamsFulfillmentMethod = "third_party"
 )
 
-// Details relating to the physical check that Increase will print and mail. This
+// Details relating to the physical check that Acme will print and mail. This
 // is required if `fulfillment_method` is equal to `physical_check`. It must not be
 // included if any other `fulfillment_method` is provided.
 type CheckTransferNewParamsPhysicalCheck struct {
-	// Details for where Increase will mail the check.
+	// Details for where Acme will mail the check.
 	MailingAddress param.Field[CheckTransferNewParamsPhysicalCheckMailingAddress] `json:"mailing_address,required"`
 	// The descriptor that will be printed on the memo field on the check.
 	Memo param.Field[string] `json:"memo,required"`
@@ -608,7 +608,7 @@ func (r CheckTransferNewParamsPhysicalCheck) MarshalJSON() (data []byte, err err
 	return apijson.MarshalRoot(r)
 }
 
-// Details for where Increase will mail the check.
+// Details for where Acme will mail the check.
 type CheckTransferNewParamsPhysicalCheckMailingAddress struct {
 	// The city component of the check's destination address.
 	City param.Field[string] `json:"city,required"`

@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestCardDisputeNew(t *testing.T) {
@@ -22,16 +22,16 @@ func TestCardDisputeNew(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.CardDisputes.New(context.TODO(), increase.CardDisputeNewParams{
-		DisputedTransactionID: increase.F("transaction_uyrp7fld2ium70oa7oi"),
-		Explanation:           increase.F("Unauthorized recurring transaction."),
+	_, err := client.CardDisputes.New(context.TODO(), acme.CardDisputeNewParams{
+		DisputedTransactionID: acme.F("transaction_uyrp7fld2ium70oa7oi"),
+		Explanation:           acme.F("Unauthorized recurring transaction."),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -47,13 +47,13 @@ func TestCardDisputeGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.CardDisputes.Get(context.TODO(), "card_dispute_h9sc95nbl1cgltpp7men")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -69,25 +69,25 @@ func TestCardDisputeListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.CardDisputes.List(context.TODO(), increase.CardDisputeListParams{
-		CreatedAt: increase.F(increase.CardDisputeListParamsCreatedAt{
-			After:      increase.F(time.Now()),
-			Before:     increase.F(time.Now()),
-			OnOrAfter:  increase.F(time.Now()),
-			OnOrBefore: increase.F(time.Now()),
+	_, err := client.CardDisputes.List(context.TODO(), acme.CardDisputeListParams{
+		CreatedAt: acme.F(acme.CardDisputeListParamsCreatedAt{
+			After:      acme.F(time.Now()),
+			Before:     acme.F(time.Now()),
+			OnOrAfter:  acme.F(time.Now()),
+			OnOrBefore: acme.F(time.Now()),
 		}),
-		Cursor: increase.F("string"),
-		Limit:  increase.F(int64(1)),
-		Status: increase.F(increase.CardDisputeListParamsStatus{
-			In: increase.F([]increase.CardDisputeListParamsStatusIn{increase.CardDisputeListParamsStatusInPendingReviewing, increase.CardDisputeListParamsStatusInAccepted, increase.CardDisputeListParamsStatusInRejected}),
+		Cursor: acme.F("string"),
+		Limit:  acme.F(int64(1)),
+		Status: acme.F(acme.CardDisputeListParamsStatus{
+			In: acme.F([]acme.CardDisputeListParamsStatusIn{acme.CardDisputeListParamsStatusInPendingReviewing, acme.CardDisputeListParamsStatusInAccepted, acme.CardDisputeListParamsStatusInRejected}),
 		}),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

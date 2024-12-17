@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestRealTimePaymentsTransferNewWithOptionalParams(t *testing.T) {
@@ -22,23 +22,23 @@ func TestRealTimePaymentsTransferNewWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.RealTimePaymentsTransfers.New(context.TODO(), increase.RealTimePaymentsTransferNewParams{
-		Amount:                   increase.F(int64(100)),
-		CreditorName:             increase.F("Ian Crease"),
-		RemittanceInformation:    increase.F("Invoice 29582"),
-		SourceAccountNumberID:    increase.F("account_number_v18nkfqm6afpsrvy82b2"),
-		DestinationAccountNumber: increase.F("987654321"),
-		DestinationRoutingNumber: increase.F("101050001"),
-		ExternalAccountID:        increase.F("string"),
-		RequireApproval:          increase.F(true),
-		UniqueIdentifier:         increase.F("x"),
+	_, err := client.RealTimePaymentsTransfers.New(context.TODO(), acme.RealTimePaymentsTransferNewParams{
+		Amount:                   acme.F(int64(100)),
+		CreditorName:             acme.F("Ian Crease"),
+		RemittanceInformation:    acme.F("Invoice 29582"),
+		SourceAccountNumberID:    acme.F("account_number_v18nkfqm6afpsrvy82b2"),
+		DestinationAccountNumber: acme.F("987654321"),
+		DestinationRoutingNumber: acme.F("101050001"),
+		ExternalAccountID:        acme.F("string"),
+		RequireApproval:          acme.F(true),
+		UniqueIdentifier:         acme.F("x"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -54,13 +54,13 @@ func TestRealTimePaymentsTransferGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.RealTimePaymentsTransfers.Get(context.TODO(), "real_time_payments_transfer_iyuhl5kdn7ssmup83mvq")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -76,25 +76,25 @@ func TestRealTimePaymentsTransferListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.RealTimePaymentsTransfers.List(context.TODO(), increase.RealTimePaymentsTransferListParams{
-		AccountID: increase.F("string"),
-		CreatedAt: increase.F(increase.RealTimePaymentsTransferListParamsCreatedAt{
-			After:      increase.F(time.Now()),
-			Before:     increase.F(time.Now()),
-			OnOrAfter:  increase.F(time.Now()),
-			OnOrBefore: increase.F(time.Now()),
+	_, err := client.RealTimePaymentsTransfers.List(context.TODO(), acme.RealTimePaymentsTransferListParams{
+		AccountID: acme.F("string"),
+		CreatedAt: acme.F(acme.RealTimePaymentsTransferListParamsCreatedAt{
+			After:      acme.F(time.Now()),
+			Before:     acme.F(time.Now()),
+			OnOrAfter:  acme.F(time.Now()),
+			OnOrBefore: acme.F(time.Now()),
 		}),
-		Cursor:            increase.F("string"),
-		ExternalAccountID: increase.F("string"),
-		Limit:             increase.F(int64(1)),
-		UniqueIdentifier:  increase.F("x"),
+		Cursor:            acme.F("string"),
+		ExternalAccountID: acme.F("string"),
+		Limit:             acme.F(int64(1)),
+		UniqueIdentifier:  acme.F("x"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

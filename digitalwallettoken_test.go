@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestDigitalWalletTokenGet(t *testing.T) {
@@ -22,13 +22,13 @@ func TestDigitalWalletTokenGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.DigitalWalletTokens.Get(context.TODO(), "digital_wallet_token_izi62go3h51p369jrie0")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -44,23 +44,23 @@ func TestDigitalWalletTokenListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.DigitalWalletTokens.List(context.TODO(), increase.DigitalWalletTokenListParams{
-		CardID: increase.F("string"),
-		CreatedAt: increase.F(increase.DigitalWalletTokenListParamsCreatedAt{
-			After:      increase.F(time.Now()),
-			Before:     increase.F(time.Now()),
-			OnOrAfter:  increase.F(time.Now()),
-			OnOrBefore: increase.F(time.Now()),
+	_, err := client.DigitalWalletTokens.List(context.TODO(), acme.DigitalWalletTokenListParams{
+		CardID: acme.F("string"),
+		CreatedAt: acme.F(acme.DigitalWalletTokenListParamsCreatedAt{
+			After:      acme.F(time.Now()),
+			Before:     acme.F(time.Now()),
+			OnOrAfter:  acme.F(time.Now()),
+			OnOrBefore: acme.F(time.Now()),
 		}),
-		Cursor: increase.F("string"),
-		Limit:  increase.F(int64(1)),
+		Cursor: acme.F("string"),
+		Limit:  acme.F(int64(1)),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

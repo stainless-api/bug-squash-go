@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // EventSubscriptionService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewEventSubscriptionService] method
 // instead.
@@ -85,9 +85,9 @@ func (r *EventSubscriptionService) ListAutoPaging(ctx context.Context, query Eve
 // Webhooks are event notifications we send to you by HTTPS POST requests. Event
 // Subscriptions are how you configure your application to listen for them. You can
 // create an Event Subscription through your
-// [developer dashboard](https://dashboard.increase.com/developers/webhooks) or the
+// [developer dashboard](https://dashboard.acme.com/developers/webhooks) or the
 // API. For more information, see our
-// [webhooks guide](https://increase.com/documentation/webhooks).
+// [webhooks guide](https://acme.com/documentation/webhooks).
 type EventSubscription struct {
 	// The event subscription identifier.
 	ID string `json:"id,required"`
@@ -208,7 +208,7 @@ const (
 	EventSubscriptionSelectedEventCategoryFileCreated EventSubscriptionSelectedEventCategory = "file.created"
 	// Occurs whenever a Group is updated.
 	EventSubscriptionSelectedEventCategoryGroupUpdated EventSubscriptionSelectedEventCategory = "group.updated"
-	// Increase may send webhooks with this category to see if a webhook endpoint is
+	// Acme may send webhooks with this category to see if a webhook endpoint is
 	// working properly.
 	EventSubscriptionSelectedEventCategoryGroupHeartbeat EventSubscriptionSelectedEventCategory = "group.heartbeat"
 	// Occurs whenever an Inbound ACH Transfer is created.
@@ -393,7 +393,7 @@ const (
 	EventSubscriptionNewParamsSelectedEventCategoryFileCreated EventSubscriptionNewParamsSelectedEventCategory = "file.created"
 	// Occurs whenever a Group is updated.
 	EventSubscriptionNewParamsSelectedEventCategoryGroupUpdated EventSubscriptionNewParamsSelectedEventCategory = "group.updated"
-	// Increase may send webhooks with this category to see if a webhook endpoint is
+	// Acme may send webhooks with this category to see if a webhook endpoint is
 	// working properly.
 	EventSubscriptionNewParamsSelectedEventCategoryGroupHeartbeat EventSubscriptionNewParamsSelectedEventCategory = "group.heartbeat"
 	// Occurs whenever an Inbound ACH Transfer is created.

@@ -1,19 +1,19 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
 	"net/http"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/option"
 )
 
 // GroupService contains methods and other services that help with interacting with
-// the increase API. Note, unlike clients, this service does not read variables
+// the acme API. Note, unlike clients, this service does not read variables
 // from the environment automatically. You should not instantiate this service
 // directly, and instead use the [NewGroupService] method instead.
 type GroupService struct {
@@ -37,7 +37,7 @@ func (r *GroupService) GetDetails(ctx context.Context, opts ...option.RequestOpt
 	return
 }
 
-// Groups represent organizations using Increase. You can retrieve information
+// Groups represent organizations using Acme. You can retrieve information
 // about your own organization via the API, or (more commonly) OAuth platforms can
 // retrieve information about the organizations that have granted them access.
 type Group struct {

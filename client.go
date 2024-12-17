@@ -1,15 +1,15 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"os"
 
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/option"
 )
 
 // Client creates a struct with services and top level methods that help with
-// interacting with the increase API. You should not instantiate this client
+// interacting with the acme API. You should not instantiate this client
 // directly, and instead use the [NewClient] method instead.
 type Client struct {
 	Options                     []option.RequestOption
@@ -55,12 +55,12 @@ type Client struct {
 }
 
 // NewClient generates a new client with the default option read from the
-// environment (INCREASE_API_KEY). The option passed in as arguments are applied
+// environment (ACME_API_KEY). The option passed in as arguments are applied
 // after these default arguments, and all option will be passed down to the
 // services and requests that this client makes.
 func NewClient(opts ...option.RequestOption) (r *Client) {
 	defaults := []option.RequestOption{option.WithEnvironmentProduction()}
-	if o, ok := os.LookupEnv("INCREASE_API_KEY"); ok {
+	if o, ok := os.LookupEnv("ACME_API_KEY"); ok {
 		defaults = append(defaults, option.WithAPIKey(o))
 	}
 	opts = append(defaults, opts...)

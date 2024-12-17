@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestWireDrawdownRequestNewWithOptionalParams(t *testing.T) {
@@ -22,23 +22,23 @@ func TestWireDrawdownRequestNewWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.WireDrawdownRequests.New(context.TODO(), increase.WireDrawdownRequestNewParams{
-		AccountNumberID:        increase.F("account_number_v18nkfqm6afpsrvy82b2"),
-		Amount:                 increase.F(int64(10000)),
-		MessageToRecipient:     increase.F("Invoice 29582"),
-		RecipientAccountNumber: increase.F("987654321"),
-		RecipientName:          increase.F("Ian Crease"),
-		RecipientRoutingNumber: increase.F("101050001"),
-		RecipientAddressLine1:  increase.F("33 Liberty Street"),
-		RecipientAddressLine2:  increase.F("New York, NY, 10045"),
-		RecipientAddressLine3:  increase.F("x"),
+	_, err := client.WireDrawdownRequests.New(context.TODO(), acme.WireDrawdownRequestNewParams{
+		AccountNumberID:        acme.F("account_number_v18nkfqm6afpsrvy82b2"),
+		Amount:                 acme.F(int64(10000)),
+		MessageToRecipient:     acme.F("Invoice 29582"),
+		RecipientAccountNumber: acme.F("987654321"),
+		RecipientName:          acme.F("Ian Crease"),
+		RecipientRoutingNumber: acme.F("101050001"),
+		RecipientAddressLine1:  acme.F("33 Liberty Street"),
+		RecipientAddressLine2:  acme.F("New York, NY, 10045"),
+		RecipientAddressLine3:  acme.F("x"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -54,13 +54,13 @@ func TestWireDrawdownRequestGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.WireDrawdownRequests.Get(context.TODO(), "wire_drawdown_request_q6lmocus3glo0lr2bfv3")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -76,16 +76,16 @@ func TestWireDrawdownRequestListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.WireDrawdownRequests.List(context.TODO(), increase.WireDrawdownRequestListParams{
-		Cursor: increase.F("string"),
-		Limit:  increase.F(int64(1)),
+	_, err := client.WireDrawdownRequests.List(context.TODO(), acme.WireDrawdownRequestListParams{
+		Cursor: acme.F("string"),
+		Limit:  acme.F(int64(1)),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

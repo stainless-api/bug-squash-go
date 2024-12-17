@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"bytes"
@@ -11,9 +11,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestFileNewWithOptionalParams(t *testing.T) {
@@ -24,17 +24,17 @@ func TestFileNewWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Files.New(context.TODO(), increase.FileNewParams{
-		File:        increase.F(io.Reader(bytes.NewBuffer([]byte("some file contents")))),
-		Purpose:     increase.F(increase.FileNewParamsPurposeCheckImageFront),
-		Description: increase.F("x"),
+	_, err := client.Files.New(context.TODO(), acme.FileNewParams{
+		File:        acme.F(io.Reader(bytes.NewBuffer([]byte("some file contents")))),
+		Purpose:     acme.F(acme.FileNewParamsPurposeCheckImageFront),
+		Description: acme.F("x"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -50,13 +50,13 @@ func TestFileGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.Files.Get(context.TODO(), "file_makxrc67oh9l6sg7w9yc")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -72,25 +72,25 @@ func TestFileListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Files.List(context.TODO(), increase.FileListParams{
-		CreatedAt: increase.F(increase.FileListParamsCreatedAt{
-			After:      increase.F(time.Now()),
-			Before:     increase.F(time.Now()),
-			OnOrAfter:  increase.F(time.Now()),
-			OnOrBefore: increase.F(time.Now()),
+	_, err := client.Files.List(context.TODO(), acme.FileListParams{
+		CreatedAt: acme.F(acme.FileListParamsCreatedAt{
+			After:      acme.F(time.Now()),
+			Before:     acme.F(time.Now()),
+			OnOrAfter:  acme.F(time.Now()),
+			OnOrBefore: acme.F(time.Now()),
 		}),
-		Cursor: increase.F("string"),
-		Limit:  increase.F(int64(1)),
-		Purpose: increase.F(increase.FileListParamsPurpose{
-			In: increase.F([]increase.FileListParamsPurposeIn{increase.FileListParamsPurposeInCheckImageFront, increase.FileListParamsPurposeInCheckImageBack, increase.FileListParamsPurposeInMailedCheckImage}),
+		Cursor: acme.F("string"),
+		Limit:  acme.F(int64(1)),
+		Purpose: acme.F(acme.FileListParamsPurpose{
+			In: acme.F([]acme.FileListParamsPurposeIn{acme.FileListParamsPurposeInCheckImageFront, acme.FileListParamsPurposeInCheckImageBack, acme.FileListParamsPurposeInMailedCheckImage}),
 		}),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

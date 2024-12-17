@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // CardProfileService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewCardProfileService] method
 // instead.
@@ -84,7 +84,7 @@ func (r *CardProfileService) Archive(ctx context.Context, cardProfileID string, 
 
 // This contains artwork and metadata relating to a Card's appearance in digital
 // wallet apps like Apple Pay and Google Pay. For more information, see our guide
-// on [digital card artwork](https://increase.com/documentation/card-art).
+// on [digital card artwork](https://acme.com/documentation/card-art).
 type CardProfile struct {
 	// The Card Profile identifier.
 	ID string `json:"id,required"`
@@ -96,7 +96,7 @@ type CardProfile struct {
 	// How Cards should appear in digital wallets such as Apple Pay. Different wallets
 	// will use these values to render card artwork appropriately for their app.
 	DigitalWallets CardProfileDigitalWallets `json:"digital_wallets,required"`
-	// Whether this Card Profile is the default for all cards in its Increase group.
+	// Whether this Card Profile is the default for all cards in its Acme group.
 	IsDefault bool `json:"is_default,required"`
 	// How physical cards should be designed and shipped.
 	PhysicalCards CardProfilePhysicalCards `json:"physical_cards,required,nullable"`
@@ -231,9 +231,9 @@ const (
 	CardProfilePhysicalCardsStatusNotEligible CardProfilePhysicalCardsStatus = "not_eligible"
 	// There is an issue with the Physical Card Profile preventing it from use.
 	CardProfilePhysicalCardsStatusRejected CardProfilePhysicalCardsStatus = "rejected"
-	// The Card Profile has not yet been processed by Increase.
+	// The Card Profile has not yet been processed by Acme.
 	CardProfilePhysicalCardsStatusPendingCreating CardProfilePhysicalCardsStatus = "pending_creating"
-	// The card profile is awaiting review by Increase.
+	// The card profile is awaiting review by Acme.
 	CardProfilePhysicalCardsStatusPendingReviewing CardProfilePhysicalCardsStatus = "pending_reviewing"
 	// The card profile is awaiting submission to the fulfillment provider.
 	CardProfilePhysicalCardsStatusPendingSubmitting CardProfilePhysicalCardsStatus = "pending_submitting"
@@ -246,7 +246,7 @@ const (
 type CardProfileStatus string
 
 const (
-	// The Card Profile is awaiting review from Increase and/or processing by card
+	// The Card Profile is awaiting review from Acme and/or processing by card
 	// networks.
 	CardProfileStatusPending CardProfileStatus = "pending"
 	// There is an issue with the Card Profile preventing it from use.
@@ -373,9 +373,9 @@ const (
 	CardProfileListParamsPhysicalCardsStatusInNotEligible CardProfileListParamsPhysicalCardsStatusIn = "not_eligible"
 	// There is an issue with the Physical Card Profile preventing it from use.
 	CardProfileListParamsPhysicalCardsStatusInRejected CardProfileListParamsPhysicalCardsStatusIn = "rejected"
-	// The Card Profile has not yet been processed by Increase.
+	// The Card Profile has not yet been processed by Acme.
 	CardProfileListParamsPhysicalCardsStatusInPendingCreating CardProfileListParamsPhysicalCardsStatusIn = "pending_creating"
-	// The card profile is awaiting review by Increase.
+	// The card profile is awaiting review by Acme.
 	CardProfileListParamsPhysicalCardsStatusInPendingReviewing CardProfileListParamsPhysicalCardsStatusIn = "pending_reviewing"
 	// The card profile is awaiting submission to the fulfillment provider.
 	CardProfileListParamsPhysicalCardsStatusInPendingSubmitting CardProfileListParamsPhysicalCardsStatusIn = "pending_submitting"
@@ -403,7 +403,7 @@ func (r CardProfileListParamsStatus) URLQuery() (v url.Values) {
 type CardProfileListParamsStatusIn string
 
 const (
-	// The Card Profile is awaiting review from Increase and/or processing by card
+	// The Card Profile is awaiting review from Acme and/or processing by card
 	// networks.
 	CardProfileListParamsStatusInPending CardProfileListParamsStatusIn = "pending"
 	// There is an issue with the Card Profile preventing it from use.

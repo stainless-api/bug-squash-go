@@ -9,11 +9,11 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/requestconfig"
 	"github.com/tidwall/sjson"
 )
 
-// RequestOption is an option for the requests made by the increase API Client
+// RequestOption is an option for the requests made by the acme API Client
 // which can be supplied to clients, services, and methods. You can read more about this functional
 // options pattern in our [README].
 //
@@ -185,14 +185,14 @@ func WithRequestTimeout(dur time.Duration) RequestOption {
 // environment to be the "production" environment. An environment specifies which base URL
 // to use by default.
 func WithEnvironmentProduction() RequestOption {
-	return WithBaseURL("https://api.increase.com/")
+	return WithBaseURL("https://api.acme.com/")
 }
 
 // WithEnvironmentSandbox returns a RequestOption that sets the current
 // environment to be the "sandbox" environment. An environment specifies which base URL
 // to use by default.
 func WithEnvironmentSandbox() RequestOption {
-	return WithBaseURL("https://sandbox.increase.com/")
+	return WithBaseURL("https://sandbox.acme.com/")
 }
 
 // WithAPIKey returns a RequestOption that sets the client setting "api_key".

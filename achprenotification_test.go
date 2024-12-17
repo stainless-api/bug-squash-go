@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestACHPrenotificationNewWithOptionalParams(t *testing.T) {
@@ -22,26 +22,26 @@ func TestACHPrenotificationNewWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.ACHPrenotifications.New(context.TODO(), increase.ACHPrenotificationNewParams{
-		AccountNumber:            increase.F("987654321"),
-		RoutingNumber:            increase.F("101050001"),
-		Addendum:                 increase.F("x"),
-		CompanyDescriptiveDate:   increase.F("x"),
-		CompanyDiscretionaryData: increase.F("x"),
-		CompanyEntryDescription:  increase.F("x"),
-		CompanyName:              increase.F("x"),
-		CreditDebitIndicator:     increase.F(increase.ACHPrenotificationNewParamsCreditDebitIndicatorCredit),
-		EffectiveDate:            increase.F(time.Now()),
-		IndividualID:             increase.F("x"),
-		IndividualName:           increase.F("x"),
-		StandardEntryClassCode:   increase.F(increase.ACHPrenotificationNewParamsStandardEntryClassCodeCorporateCreditOrDebit),
+	_, err := client.ACHPrenotifications.New(context.TODO(), acme.ACHPrenotificationNewParams{
+		AccountNumber:            acme.F("987654321"),
+		RoutingNumber:            acme.F("101050001"),
+		Addendum:                 acme.F("x"),
+		CompanyDescriptiveDate:   acme.F("x"),
+		CompanyDiscretionaryData: acme.F("x"),
+		CompanyEntryDescription:  acme.F("x"),
+		CompanyName:              acme.F("x"),
+		CreditDebitIndicator:     acme.F(acme.ACHPrenotificationNewParamsCreditDebitIndicatorCredit),
+		EffectiveDate:            acme.F(time.Now()),
+		IndividualID:             acme.F("x"),
+		IndividualName:           acme.F("x"),
+		StandardEntryClassCode:   acme.F(acme.ACHPrenotificationNewParamsStandardEntryClassCodeCorporateCreditOrDebit),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -57,13 +57,13 @@ func TestACHPrenotificationGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.ACHPrenotifications.Get(context.TODO(), "ach_prenotification_ubjf9qqsxl3obbcn1u34")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -79,22 +79,22 @@ func TestACHPrenotificationListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.ACHPrenotifications.List(context.TODO(), increase.ACHPrenotificationListParams{
-		CreatedAt: increase.F(increase.ACHPrenotificationListParamsCreatedAt{
-			After:      increase.F(time.Now()),
-			Before:     increase.F(time.Now()),
-			OnOrAfter:  increase.F(time.Now()),
-			OnOrBefore: increase.F(time.Now()),
+	_, err := client.ACHPrenotifications.List(context.TODO(), acme.ACHPrenotificationListParams{
+		CreatedAt: acme.F(acme.ACHPrenotificationListParamsCreatedAt{
+			After:      acme.F(time.Now()),
+			Before:     acme.F(time.Now()),
+			OnOrAfter:  acme.F(time.Now()),
+			OnOrBefore: acme.F(time.Now()),
 		}),
-		Cursor: increase.F("string"),
-		Limit:  increase.F(int64(1)),
+		Cursor: acme.F("string"),
+		Limit:  acme.F(int64(1)),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestTransactionGet(t *testing.T) {
@@ -22,13 +22,13 @@ func TestTransactionGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.Transactions.Get(context.TODO(), "transaction_uyrp7fld2ium70oa7oi")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -44,27 +44,27 @@ func TestTransactionListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Transactions.List(context.TODO(), increase.TransactionListParams{
-		AccountID: increase.F("string"),
-		Category: increase.F(increase.TransactionListParamsCategory{
-			In: increase.F([]increase.TransactionListParamsCategoryIn{increase.TransactionListParamsCategoryInAccountTransferIntention, increase.TransactionListParamsCategoryInACHTransferIntention, increase.TransactionListParamsCategoryInACHTransferRejection}),
+	_, err := client.Transactions.List(context.TODO(), acme.TransactionListParams{
+		AccountID: acme.F("string"),
+		Category: acme.F(acme.TransactionListParamsCategory{
+			In: acme.F([]acme.TransactionListParamsCategoryIn{acme.TransactionListParamsCategoryInAccountTransferIntention, acme.TransactionListParamsCategoryInACHTransferIntention, acme.TransactionListParamsCategoryInACHTransferRejection}),
 		}),
-		CreatedAt: increase.F(increase.TransactionListParamsCreatedAt{
-			After:      increase.F(time.Now()),
-			Before:     increase.F(time.Now()),
-			OnOrAfter:  increase.F(time.Now()),
-			OnOrBefore: increase.F(time.Now()),
+		CreatedAt: acme.F(acme.TransactionListParamsCreatedAt{
+			After:      acme.F(time.Now()),
+			Before:     acme.F(time.Now()),
+			OnOrAfter:  acme.F(time.Now()),
+			OnOrBefore: acme.F(time.Now()),
 		}),
-		Cursor:  increase.F("string"),
-		Limit:   increase.F(int64(1)),
-		RouteID: increase.F("string"),
+		Cursor:  acme.F("string"),
+		Limit:   acme.F(int64(1)),
+		RouteID: acme.F("string"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

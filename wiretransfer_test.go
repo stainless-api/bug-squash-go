@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestWireTransferNewWithOptionalParams(t *testing.T) {
@@ -22,26 +22,26 @@ func TestWireTransferNewWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.WireTransfers.New(context.TODO(), increase.WireTransferNewParams{
-		AccountID:               increase.F("account_in71c4amph0vgo2qllky"),
-		Amount:                  increase.F(int64(100)),
-		BeneficiaryName:         increase.F("Ian Crease"),
-		MessageToRecipient:      increase.F("New account transfer"),
-		AccountNumber:           increase.F("987654321"),
-		BeneficiaryAddressLine1: increase.F("33 Liberty Street"),
-		BeneficiaryAddressLine2: increase.F("New York"),
-		BeneficiaryAddressLine3: increase.F("NY 10045"),
-		ExternalAccountID:       increase.F("string"),
-		RequireApproval:         increase.F(true),
-		RoutingNumber:           increase.F("101050001"),
-		UniqueIdentifier:        increase.F("x"),
+	_, err := client.WireTransfers.New(context.TODO(), acme.WireTransferNewParams{
+		AccountID:               acme.F("account_in71c4amph0vgo2qllky"),
+		Amount:                  acme.F(int64(100)),
+		BeneficiaryName:         acme.F("Ian Crease"),
+		MessageToRecipient:      acme.F("New account transfer"),
+		AccountNumber:           acme.F("987654321"),
+		BeneficiaryAddressLine1: acme.F("33 Liberty Street"),
+		BeneficiaryAddressLine2: acme.F("New York"),
+		BeneficiaryAddressLine3: acme.F("NY 10045"),
+		ExternalAccountID:       acme.F("string"),
+		RequireApproval:         acme.F(true),
+		RoutingNumber:           acme.F("101050001"),
+		UniqueIdentifier:        acme.F("x"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -57,13 +57,13 @@ func TestWireTransferGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.WireTransfers.Get(context.TODO(), "wire_transfer_5akynk7dqsq25qwk9q2u")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -79,25 +79,25 @@ func TestWireTransferListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.WireTransfers.List(context.TODO(), increase.WireTransferListParams{
-		AccountID: increase.F("string"),
-		CreatedAt: increase.F(increase.WireTransferListParamsCreatedAt{
-			After:      increase.F(time.Now()),
-			Before:     increase.F(time.Now()),
-			OnOrAfter:  increase.F(time.Now()),
-			OnOrBefore: increase.F(time.Now()),
+	_, err := client.WireTransfers.List(context.TODO(), acme.WireTransferListParams{
+		AccountID: acme.F("string"),
+		CreatedAt: acme.F(acme.WireTransferListParamsCreatedAt{
+			After:      acme.F(time.Now()),
+			Before:     acme.F(time.Now()),
+			OnOrAfter:  acme.F(time.Now()),
+			OnOrBefore: acme.F(time.Now()),
 		}),
-		Cursor:            increase.F("string"),
-		ExternalAccountID: increase.F("string"),
-		Limit:             increase.F(int64(1)),
-		UniqueIdentifier:  increase.F("x"),
+		Cursor:            acme.F("string"),
+		ExternalAccountID: acme.F("string"),
+		Limit:             acme.F(int64(1)),
+		UniqueIdentifier:  acme.F("x"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -113,13 +113,13 @@ func TestWireTransferApprove(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.WireTransfers.Approve(context.TODO(), "wire_transfer_5akynk7dqsq25qwk9q2u")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -135,13 +135,13 @@ func TestWireTransferCancel(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.WireTransfers.Cancel(context.TODO(), "wire_transfer_5akynk7dqsq25qwk9q2u")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -158,13 +158,13 @@ func TestWireTransferReverse(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.WireTransfers.Reverse(context.TODO(), "wire_transfer_5akynk7dqsq25qwk9q2u")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -181,13 +181,13 @@ func TestWireTransferSubmit(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.WireTransfers.Submit(context.TODO(), "wire_transfer_5akynk7dqsq25qwk9q2u")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

@@ -1,9 +1,9 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
-	"github.com/increase/increase-go/internal/apierror"
+	"github.com/acme/acme-go/internal/apierror"
 )
 
 type Error = apierror.Error

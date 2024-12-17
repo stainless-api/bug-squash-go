@@ -1,13 +1,13 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/option"
 )
 
 // SimulationService contains methods and other services that help with interacting
-// with the increase API. Note, unlike clients, this service does not read
+// with the acme API. Note, unlike clients, this service does not read
 // variables from the environment automatically. You should not instantiate this
 // service directly, and instead use the [NewSimulationService] method instead.
 type SimulationService struct {

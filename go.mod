@@ -1,4 +1,4 @@
-module github.com/increase/increase-go
+module github.com/acme/acme-go
 
 go 1.19
 

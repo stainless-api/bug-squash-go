@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestPhysicalCardNew(t *testing.T) {
@@ -22,33 +22,33 @@ func TestPhysicalCardNew(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.PhysicalCards.New(context.TODO(), increase.PhysicalCardNewParams{
-		CardID:        increase.F("card_oubs0hwk5rn6knuecxg2"),
-		CardProfileID: increase.F("card_profile_cox5y73lob2eqly18piy"),
-		Cardholder: increase.F(increase.PhysicalCardNewParamsCardholder{
-			FirstName: increase.F("Ian"),
-			LastName:  increase.F("Crease"),
+	_, err := client.PhysicalCards.New(context.TODO(), acme.PhysicalCardNewParams{
+		CardID:        acme.F("card_oubs0hwk5rn6knuecxg2"),
+		CardProfileID: acme.F("card_profile_cox5y73lob2eqly18piy"),
+		Cardholder: acme.F(acme.PhysicalCardNewParamsCardholder{
+			FirstName: acme.F("Ian"),
+			LastName:  acme.F("Crease"),
 		}),
-		Shipment: increase.F(increase.PhysicalCardNewParamsShipment{
-			Method: increase.F(increase.PhysicalCardNewParamsShipmentMethodUsps),
-			Address: increase.F(increase.PhysicalCardNewParamsShipmentAddress{
-				Name:        increase.F("Ian Crease"),
-				Line1:       increase.F("33 Liberty Street"),
-				Line2:       increase.F("Unit 2"),
-				Line3:       increase.F("x"),
-				PhoneNumber: increase.F("x"),
-				City:        increase.F("New York"),
-				State:       increase.F("NY"),
-				PostalCode:  increase.F("10045"),
+		Shipment: acme.F(acme.PhysicalCardNewParamsShipment{
+			Method: acme.F(acme.PhysicalCardNewParamsShipmentMethodUsps),
+			Address: acme.F(acme.PhysicalCardNewParamsShipmentAddress{
+				Name:        acme.F("Ian Crease"),
+				Line1:       acme.F("33 Liberty Street"),
+				Line2:       acme.F("Unit 2"),
+				Line3:       acme.F("x"),
+				PhoneNumber: acme.F("x"),
+				City:        acme.F("New York"),
+				State:       acme.F("NY"),
+				PostalCode:  acme.F("10045"),
 			}),
 		}),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -64,13 +64,13 @@ func TestPhysicalCardGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.PhysicalCards.Get(context.TODO(), "physical_card_ode8duyq5v2ynhjoharl")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -86,19 +86,19 @@ func TestPhysicalCardUpdate(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.PhysicalCards.Update(
 		context.TODO(),
 		"physical_card_ode8duyq5v2ynhjoharl",
-		increase.PhysicalCardUpdateParams{
-			Status: increase.F(increase.PhysicalCardUpdateParamsStatusDisabled),
+		acme.PhysicalCardUpdateParams{
+			Status: acme.F(acme.PhysicalCardUpdateParamsStatusDisabled),
 		},
 	)
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -114,23 +114,23 @@ func TestPhysicalCardListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.PhysicalCards.List(context.TODO(), increase.PhysicalCardListParams{
-		CardID: increase.F("string"),
-		CreatedAt: increase.F(increase.PhysicalCardListParamsCreatedAt{
-			After:      increase.F(time.Now()),
-			Before:     increase.F(time.Now()),
-			OnOrAfter:  increase.F(time.Now()),
-			OnOrBefore: increase.F(time.Now()),
+	_, err := client.PhysicalCards.List(context.TODO(), acme.PhysicalCardListParams{
+		CardID: acme.F("string"),
+		CreatedAt: acme.F(acme.PhysicalCardListParamsCreatedAt{
+			After:      acme.F(time.Now()),
+			Before:     acme.F(time.Now()),
+			OnOrAfter:  acme.F(time.Now()),
+			OnOrBefore: acme.F(time.Now()),
 		}),
-		Cursor: increase.F("string"),
-		Limit:  increase.F(int64(1)),
+		Cursor: acme.F("string"),
+		Limit:  acme.F(int64(1)),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

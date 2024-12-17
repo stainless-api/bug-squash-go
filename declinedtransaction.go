@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // DeclinedTransactionService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewDeclinedTransactionService]
 // method instead.
@@ -263,7 +263,7 @@ const (
 	DeclinedTransactionSourceACHDeclineReasonACHRouteCanceled DeclinedTransactionSourceACHDeclineReason = "ach_route_canceled"
 	// The account number is disabled.
 	DeclinedTransactionSourceACHDeclineReasonACHRouteDisabled DeclinedTransactionSourceACHDeclineReason = "ach_route_disabled"
-	// The transaction would cause an Increase limit to be exceeded.
+	// The transaction would cause an Acme limit to be exceeded.
 	DeclinedTransactionSourceACHDeclineReasonBreachesLimit DeclinedTransactionSourceACHDeclineReason = "breaches_limit"
 	// A credit was refused. This is a reasonable default reason for decline of
 	// credits.
@@ -285,7 +285,7 @@ const (
 	DeclinedTransactionSourceACHDeclineReasonNoACHRoute DeclinedTransactionSourceACHDeclineReason = "no_ach_route"
 	// The originating financial institution asked for this transfer to be returned.
 	DeclinedTransactionSourceACHDeclineReasonOriginatorRequest DeclinedTransactionSourceACHDeclineReason = "originator_request"
-	// The transaction is not allowed per Increase's terms.
+	// The transaction is not allowed per Acme's terms.
 	DeclinedTransactionSourceACHDeclineReasonTransactionNotAllowed DeclinedTransactionSourceACHDeclineReason = "transaction_not_allowed"
 	// The user initiated the decline.
 	DeclinedTransactionSourceACHDeclineReasonUserInitiated DeclinedTransactionSourceACHDeclineReason = "user_initiated"
@@ -590,7 +590,7 @@ const (
 	DeclinedTransactionSourceCardDeclineReasonInsufficientFunds DeclinedTransactionSourceCardDeclineReason = "insufficient_funds"
 	// The given CVV2 did not match the card's value.
 	DeclinedTransactionSourceCardDeclineReasonCvv2Mismatch DeclinedTransactionSourceCardDeclineReason = "cvv2_mismatch"
-	// The attempted card transaction is not allowed per Increase's terms.
+	// The attempted card transaction is not allowed per Acme's terms.
 	DeclinedTransactionSourceCardDeclineReasonTransactionNotAllowed DeclinedTransactionSourceCardDeclineReason = "transaction_not_allowed"
 	// The transaction was blocked by a Limit.
 	DeclinedTransactionSourceCardDeclineReasonBreachesLimit DeclinedTransactionSourceCardDeclineReason = "breaches_limit"
@@ -606,7 +606,7 @@ const (
 	// exist.
 	DeclinedTransactionSourceCardDeclineReasonMissingOriginalAuthorization DeclinedTransactionSourceCardDeclineReason = "missing_original_authorization"
 	// The transaction was suspected to be fraudulent. Please reach out to
-	// support@increase.com for more information.
+	// support@acme.com for more information.
 	DeclinedTransactionSourceCardDeclineReasonSuspectedFraud DeclinedTransactionSourceCardDeclineReason = "suspected_fraud"
 )
 
@@ -804,9 +804,9 @@ const (
 	// The amount the receiving bank is attempting to deposit does not match the amount
 	// on the check.
 	DeclinedTransactionSourceCheckDeclineReasonAmountMismatch DeclinedTransactionSourceCheckDeclineReason = "amount_mismatch"
-	// The check attempting to be deposited does not belong to Increase.
+	// The check attempting to be deposited does not belong to Acme.
 	DeclinedTransactionSourceCheckDeclineReasonNotOurItem DeclinedTransactionSourceCheckDeclineReason = "not_our_item"
-	// The account number on the check does not exist at Increase.
+	// The account number on the check does not exist at Acme.
 	DeclinedTransactionSourceCheckDeclineReasonNoAccountNumberFound DeclinedTransactionSourceCheckDeclineReason = "no_account_number_found"
 )
 
@@ -977,7 +977,7 @@ type DeclinedTransactionSourceInternationalACHDecline struct {
 	ReceiverStateOrProvince string `json:"receiver_state_or_province,required,nullable"`
 	// A portion of the receiver address. This may be incomplete.
 	ReceiverStreetAddress string `json:"receiver_street_address,required"`
-	// The name of the receiver of the transfer. This is not verified by Increase.
+	// The name of the receiver of the transfer. This is not verified by Acme.
 	ReceivingCompanyOrIndividualName string `json:"receiving_company_or_individual_name,required"`
 	// The [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), Alpha-2
 	// country code of the receiving bank country.
@@ -995,7 +995,7 @@ type DeclinedTransactionSourceInternationalACHDecline struct {
 	// originating and receiving bank. Along with the amount, date, and originating
 	// routing number, this can be used to identify the ACH transfer at either bank.
 	// ACH trace numbers are not unique, but are
-	// [used to correlate returns](https://increase.com/documentation/ach#returns).
+	// [used to correlate returns](https://acme.com/documentation/ach#returns).
 	TraceNumber string                                               `json:"trace_number,required"`
 	JSON        declinedTransactionSourceInternationalACHDeclineJSON `json:"-"`
 }
@@ -1166,7 +1166,7 @@ type DeclinedTransactionSourceWireDecline struct {
 	BeneficiaryName string `json:"beneficiary_name,required,nullable"`
 	// A free-form reference string set by the sender, to help identify the transfer.
 	BeneficiaryReference string `json:"beneficiary_reference,required,nullable"`
-	// An Increase-constructed description of the declined transaction.
+	// An Acme-constructed description of the declined transaction.
 	Description string `json:"description,required"`
 	// A unique identifier available to the originating and receiving banks, commonly
 	// abbreviated as IMAD. It is created when the wire is submitted to the Fedwire
@@ -1239,7 +1239,7 @@ const (
 	DeclinedTransactionSourceWireDeclineReasonGroupLocked DeclinedTransactionSourceWireDeclineReason = "group_locked"
 	// The beneficiary account number does not exist.
 	DeclinedTransactionSourceWireDeclineReasonNoAccountNumber DeclinedTransactionSourceWireDeclineReason = "no_account_number"
-	// The transaction is not allowed per Increase's terms.
+	// The transaction is not allowed per Acme's terms.
 	DeclinedTransactionSourceWireDeclineReasonTransactionNotAllowed DeclinedTransactionSourceWireDeclineReason = "transaction_not_allowed"
 )
 

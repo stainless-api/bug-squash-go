@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestCheckDepositNew(t *testing.T) {
@@ -22,19 +22,19 @@ func TestCheckDepositNew(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.CheckDeposits.New(context.TODO(), increase.CheckDepositNewParams{
-		AccountID:        increase.F("account_in71c4amph0vgo2qllky"),
-		Amount:           increase.F(int64(1000)),
-		BackImageFileID:  increase.F("file_26khfk98mzfz90a11oqx"),
-		Currency:         increase.F("USD"),
-		FrontImageFileID: increase.F("file_hkv175ovmc2tb2v2zbrm"),
+	_, err := client.CheckDeposits.New(context.TODO(), acme.CheckDepositNewParams{
+		AccountID:        acme.F("account_in71c4amph0vgo2qllky"),
+		Amount:           acme.F(int64(1000)),
+		BackImageFileID:  acme.F("file_26khfk98mzfz90a11oqx"),
+		Currency:         acme.F("USD"),
+		FrontImageFileID: acme.F("file_hkv175ovmc2tb2v2zbrm"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -50,13 +50,13 @@ func TestCheckDepositGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.CheckDeposits.Get(context.TODO(), "check_deposit_instruction_q2shv7x9qhevfm71kor8")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -72,23 +72,23 @@ func TestCheckDepositListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.CheckDeposits.List(context.TODO(), increase.CheckDepositListParams{
-		AccountID: increase.F("string"),
-		CreatedAt: increase.F(increase.CheckDepositListParamsCreatedAt{
-			After:      increase.F(time.Now()),
-			Before:     increase.F(time.Now()),
-			OnOrAfter:  increase.F(time.Now()),
-			OnOrBefore: increase.F(time.Now()),
+	_, err := client.CheckDeposits.List(context.TODO(), acme.CheckDepositListParams{
+		AccountID: acme.F("string"),
+		CreatedAt: acme.F(acme.CheckDepositListParamsCreatedAt{
+			After:      acme.F(time.Now()),
+			Before:     acme.F(time.Now()),
+			OnOrAfter:  acme.F(time.Now()),
+			OnOrBefore: acme.F(time.Now()),
 		}),
-		Cursor: increase.F("string"),
-		Limit:  increase.F(int64(1)),
+		Cursor: acme.F("string"),
+		Limit:  acme.F(int64(1)),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

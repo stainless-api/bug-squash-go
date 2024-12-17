@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestSimulationInterestPaymentNewWithOptionalParams(t *testing.T) {
@@ -22,18 +22,18 @@ func TestSimulationInterestPaymentNewWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Simulations.InterestPayments.New(context.TODO(), increase.SimulationInterestPaymentNewParams{
-		AccountID:   increase.F("account_in71c4amph0vgo2qllky"),
-		Amount:      increase.F(int64(1000)),
-		PeriodEnd:   increase.F(time.Now()),
-		PeriodStart: increase.F(time.Now()),
+	_, err := client.Simulations.InterestPayments.New(context.TODO(), acme.SimulationInterestPaymentNewParams{
+		AccountID:   acme.F("account_in71c4amph0vgo2qllky"),
+		Amount:      acme.F(int64(1000)),
+		PeriodEnd:   acme.F(time.Now()),
+		PeriodStart: acme.F(time.Now()),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

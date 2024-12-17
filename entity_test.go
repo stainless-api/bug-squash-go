@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestEntityNewWithOptionalParams(t *testing.T) {
@@ -22,365 +22,365 @@ func TestEntityNewWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Entities.New(context.TODO(), increase.EntityNewParams{
-		Structure: increase.F(increase.EntityNewParamsStructureCorporation),
-		Corporation: increase.F(increase.EntityNewParamsCorporation{
-			Name:               increase.F("National Phonograph Company"),
-			Website:            increase.F("https://example.com"),
-			TaxIdentifier:      increase.F("602214076"),
-			IncorporationState: increase.F("NY"),
-			Address: increase.F(increase.EntityNewParamsCorporationAddress{
-				Line1: increase.F("33 Liberty Street"),
-				Line2: increase.F("x"),
-				City:  increase.F("New York"),
-				State: increase.F("NY"),
-				Zip:   increase.F("10045"),
+	_, err := client.Entities.New(context.TODO(), acme.EntityNewParams{
+		Structure: acme.F(acme.EntityNewParamsStructureCorporation),
+		Corporation: acme.F(acme.EntityNewParamsCorporation{
+			Name:               acme.F("National Phonograph Company"),
+			Website:            acme.F("https://example.com"),
+			TaxIdentifier:      acme.F("602214076"),
+			IncorporationState: acme.F("NY"),
+			Address: acme.F(acme.EntityNewParamsCorporationAddress{
+				Line1: acme.F("33 Liberty Street"),
+				Line2: acme.F("x"),
+				City:  acme.F("New York"),
+				State: acme.F("NY"),
+				Zip:   acme.F("10045"),
 			}),
-			BeneficialOwners: increase.F([]increase.EntityNewParamsCorporationBeneficialOwner{{
-				Individual: increase.F(increase.EntityNewParamsCorporationBeneficialOwnersIndividual{
-					Name:        increase.F("Ian Crease"),
-					DateOfBirth: increase.F(time.Now()),
-					Address: increase.F(increase.EntityNewParamsCorporationBeneficialOwnersIndividualAddress{
-						Line1: increase.F("33 Liberty Street"),
-						Line2: increase.F("x"),
-						City:  increase.F("New York"),
-						State: increase.F("NY"),
-						Zip:   increase.F("10045"),
+			BeneficialOwners: acme.F([]acme.EntityNewParamsCorporationBeneficialOwner{{
+				Individual: acme.F(acme.EntityNewParamsCorporationBeneficialOwnersIndividual{
+					Name:        acme.F("Ian Crease"),
+					DateOfBirth: acme.F(time.Now()),
+					Address: acme.F(acme.EntityNewParamsCorporationBeneficialOwnersIndividualAddress{
+						Line1: acme.F("33 Liberty Street"),
+						Line2: acme.F("x"),
+						City:  acme.F("New York"),
+						State: acme.F("NY"),
+						Zip:   acme.F("10045"),
 					}),
-					ConfirmedNoUsTaxID: increase.F(true),
-					Identification: increase.F(increase.EntityNewParamsCorporationBeneficialOwnersIndividualIdentification{
-						Method: increase.F(increase.EntityNewParamsCorporationBeneficialOwnersIndividualIdentificationMethodSocialSecurityNumber),
-						Number: increase.F("078051120"),
-						Passport: increase.F(increase.EntityNewParamsCorporationBeneficialOwnersIndividualIdentificationPassport{
-							FileID:         increase.F("string"),
-							ExpirationDate: increase.F(time.Now()),
-							Country:        increase.F("x"),
+					ConfirmedNoUsTaxID: acme.F(true),
+					Identification: acme.F(acme.EntityNewParamsCorporationBeneficialOwnersIndividualIdentification{
+						Method: acme.F(acme.EntityNewParamsCorporationBeneficialOwnersIndividualIdentificationMethodSocialSecurityNumber),
+						Number: acme.F("078051120"),
+						Passport: acme.F(acme.EntityNewParamsCorporationBeneficialOwnersIndividualIdentificationPassport{
+							FileID:         acme.F("string"),
+							ExpirationDate: acme.F(time.Now()),
+							Country:        acme.F("x"),
 						}),
-						DriversLicense: increase.F(increase.EntityNewParamsCorporationBeneficialOwnersIndividualIdentificationDriversLicense{
-							FileID:         increase.F("string"),
-							BackFileID:     increase.F("string"),
-							ExpirationDate: increase.F(time.Now()),
-							State:          increase.F("x"),
+						DriversLicense: acme.F(acme.EntityNewParamsCorporationBeneficialOwnersIndividualIdentificationDriversLicense{
+							FileID:         acme.F("string"),
+							BackFileID:     acme.F("string"),
+							ExpirationDate: acme.F(time.Now()),
+							State:          acme.F("x"),
 						}),
-						Other: increase.F(increase.EntityNewParamsCorporationBeneficialOwnersIndividualIdentificationOther{
-							Country:        increase.F("x"),
-							Description:    increase.F("x"),
-							ExpirationDate: increase.F(time.Now()),
-							FileID:         increase.F("string"),
-							BackFileID:     increase.F("string"),
+						Other: acme.F(acme.EntityNewParamsCorporationBeneficialOwnersIndividualIdentificationOther{
+							Country:        acme.F("x"),
+							Description:    acme.F("x"),
+							ExpirationDate: acme.F(time.Now()),
+							FileID:         acme.F("string"),
+							BackFileID:     acme.F("string"),
 						}),
 					}),
 				}),
-				CompanyTitle: increase.F("CEO"),
-				Prongs:       increase.F([]increase.EntityNewParamsCorporationBeneficialOwnersProng{increase.EntityNewParamsCorporationBeneficialOwnersProngControl}),
+				CompanyTitle: acme.F("CEO"),
+				Prongs:       acme.F([]acme.EntityNewParamsCorporationBeneficialOwnersProng{acme.EntityNewParamsCorporationBeneficialOwnersProngControl}),
 			}}),
 		}),
-		Description: increase.F("x"),
-		Joint: increase.F(increase.EntityNewParamsJoint{
-			Name: increase.F("x"),
-			Individuals: increase.F([]increase.EntityNewParamsJointIndividual{{
-				Name:        increase.F("x"),
-				DateOfBirth: increase.F(time.Now()),
-				Address: increase.F(increase.EntityNewParamsJointIndividualsAddress{
-					Line1: increase.F("x"),
-					Line2: increase.F("x"),
-					City:  increase.F("x"),
-					State: increase.F("x"),
-					Zip:   increase.F("x"),
+		Description: acme.F("x"),
+		Joint: acme.F(acme.EntityNewParamsJoint{
+			Name: acme.F("x"),
+			Individuals: acme.F([]acme.EntityNewParamsJointIndividual{{
+				Name:        acme.F("x"),
+				DateOfBirth: acme.F(time.Now()),
+				Address: acme.F(acme.EntityNewParamsJointIndividualsAddress{
+					Line1: acme.F("x"),
+					Line2: acme.F("x"),
+					City:  acme.F("x"),
+					State: acme.F("x"),
+					Zip:   acme.F("x"),
 				}),
-				ConfirmedNoUsTaxID: increase.F(true),
-				Identification: increase.F(increase.EntityNewParamsJointIndividualsIdentification{
-					Method: increase.F(increase.EntityNewParamsJointIndividualsIdentificationMethodSocialSecurityNumber),
-					Number: increase.F("xxxx"),
-					Passport: increase.F(increase.EntityNewParamsJointIndividualsIdentificationPassport{
-						FileID:         increase.F("string"),
-						ExpirationDate: increase.F(time.Now()),
-						Country:        increase.F("x"),
+				ConfirmedNoUsTaxID: acme.F(true),
+				Identification: acme.F(acme.EntityNewParamsJointIndividualsIdentification{
+					Method: acme.F(acme.EntityNewParamsJointIndividualsIdentificationMethodSocialSecurityNumber),
+					Number: acme.F("xxxx"),
+					Passport: acme.F(acme.EntityNewParamsJointIndividualsIdentificationPassport{
+						FileID:         acme.F("string"),
+						ExpirationDate: acme.F(time.Now()),
+						Country:        acme.F("x"),
 					}),
-					DriversLicense: increase.F(increase.EntityNewParamsJointIndividualsIdentificationDriversLicense{
-						FileID:         increase.F("string"),
-						BackFileID:     increase.F("string"),
-						ExpirationDate: increase.F(time.Now()),
-						State:          increase.F("x"),
+					DriversLicense: acme.F(acme.EntityNewParamsJointIndividualsIdentificationDriversLicense{
+						FileID:         acme.F("string"),
+						BackFileID:     acme.F("string"),
+						ExpirationDate: acme.F(time.Now()),
+						State:          acme.F("x"),
 					}),
-					Other: increase.F(increase.EntityNewParamsJointIndividualsIdentificationOther{
-						Country:        increase.F("x"),
-						Description:    increase.F("x"),
-						ExpirationDate: increase.F(time.Now()),
-						FileID:         increase.F("string"),
-						BackFileID:     increase.F("string"),
+					Other: acme.F(acme.EntityNewParamsJointIndividualsIdentificationOther{
+						Country:        acme.F("x"),
+						Description:    acme.F("x"),
+						ExpirationDate: acme.F(time.Now()),
+						FileID:         acme.F("string"),
+						BackFileID:     acme.F("string"),
 					}),
 				}),
 			}, {
-				Name:        increase.F("x"),
-				DateOfBirth: increase.F(time.Now()),
-				Address: increase.F(increase.EntityNewParamsJointIndividualsAddress{
-					Line1: increase.F("x"),
-					Line2: increase.F("x"),
-					City:  increase.F("x"),
-					State: increase.F("x"),
-					Zip:   increase.F("x"),
+				Name:        acme.F("x"),
+				DateOfBirth: acme.F(time.Now()),
+				Address: acme.F(acme.EntityNewParamsJointIndividualsAddress{
+					Line1: acme.F("x"),
+					Line2: acme.F("x"),
+					City:  acme.F("x"),
+					State: acme.F("x"),
+					Zip:   acme.F("x"),
 				}),
-				ConfirmedNoUsTaxID: increase.F(true),
-				Identification: increase.F(increase.EntityNewParamsJointIndividualsIdentification{
-					Method: increase.F(increase.EntityNewParamsJointIndividualsIdentificationMethodSocialSecurityNumber),
-					Number: increase.F("xxxx"),
-					Passport: increase.F(increase.EntityNewParamsJointIndividualsIdentificationPassport{
-						FileID:         increase.F("string"),
-						ExpirationDate: increase.F(time.Now()),
-						Country:        increase.F("x"),
+				ConfirmedNoUsTaxID: acme.F(true),
+				Identification: acme.F(acme.EntityNewParamsJointIndividualsIdentification{
+					Method: acme.F(acme.EntityNewParamsJointIndividualsIdentificationMethodSocialSecurityNumber),
+					Number: acme.F("xxxx"),
+					Passport: acme.F(acme.EntityNewParamsJointIndividualsIdentificationPassport{
+						FileID:         acme.F("string"),
+						ExpirationDate: acme.F(time.Now()),
+						Country:        acme.F("x"),
 					}),
-					DriversLicense: increase.F(increase.EntityNewParamsJointIndividualsIdentificationDriversLicense{
-						FileID:         increase.F("string"),
-						BackFileID:     increase.F("string"),
-						ExpirationDate: increase.F(time.Now()),
-						State:          increase.F("x"),
+					DriversLicense: acme.F(acme.EntityNewParamsJointIndividualsIdentificationDriversLicense{
+						FileID:         acme.F("string"),
+						BackFileID:     acme.F("string"),
+						ExpirationDate: acme.F(time.Now()),
+						State:          acme.F("x"),
 					}),
-					Other: increase.F(increase.EntityNewParamsJointIndividualsIdentificationOther{
-						Country:        increase.F("x"),
-						Description:    increase.F("x"),
-						ExpirationDate: increase.F(time.Now()),
-						FileID:         increase.F("string"),
-						BackFileID:     increase.F("string"),
+					Other: acme.F(acme.EntityNewParamsJointIndividualsIdentificationOther{
+						Country:        acme.F("x"),
+						Description:    acme.F("x"),
+						ExpirationDate: acme.F(time.Now()),
+						FileID:         acme.F("string"),
+						BackFileID:     acme.F("string"),
 					}),
 				}),
 			}, {
-				Name:        increase.F("x"),
-				DateOfBirth: increase.F(time.Now()),
-				Address: increase.F(increase.EntityNewParamsJointIndividualsAddress{
-					Line1: increase.F("x"),
-					Line2: increase.F("x"),
-					City:  increase.F("x"),
-					State: increase.F("x"),
-					Zip:   increase.F("x"),
+				Name:        acme.F("x"),
+				DateOfBirth: acme.F(time.Now()),
+				Address: acme.F(acme.EntityNewParamsJointIndividualsAddress{
+					Line1: acme.F("x"),
+					Line2: acme.F("x"),
+					City:  acme.F("x"),
+					State: acme.F("x"),
+					Zip:   acme.F("x"),
 				}),
-				ConfirmedNoUsTaxID: increase.F(true),
-				Identification: increase.F(increase.EntityNewParamsJointIndividualsIdentification{
-					Method: increase.F(increase.EntityNewParamsJointIndividualsIdentificationMethodSocialSecurityNumber),
-					Number: increase.F("xxxx"),
-					Passport: increase.F(increase.EntityNewParamsJointIndividualsIdentificationPassport{
-						FileID:         increase.F("string"),
-						ExpirationDate: increase.F(time.Now()),
-						Country:        increase.F("x"),
+				ConfirmedNoUsTaxID: acme.F(true),
+				Identification: acme.F(acme.EntityNewParamsJointIndividualsIdentification{
+					Method: acme.F(acme.EntityNewParamsJointIndividualsIdentificationMethodSocialSecurityNumber),
+					Number: acme.F("xxxx"),
+					Passport: acme.F(acme.EntityNewParamsJointIndividualsIdentificationPassport{
+						FileID:         acme.F("string"),
+						ExpirationDate: acme.F(time.Now()),
+						Country:        acme.F("x"),
 					}),
-					DriversLicense: increase.F(increase.EntityNewParamsJointIndividualsIdentificationDriversLicense{
-						FileID:         increase.F("string"),
-						BackFileID:     increase.F("string"),
-						ExpirationDate: increase.F(time.Now()),
-						State:          increase.F("x"),
+					DriversLicense: acme.F(acme.EntityNewParamsJointIndividualsIdentificationDriversLicense{
+						FileID:         acme.F("string"),
+						BackFileID:     acme.F("string"),
+						ExpirationDate: acme.F(time.Now()),
+						State:          acme.F("x"),
 					}),
-					Other: increase.F(increase.EntityNewParamsJointIndividualsIdentificationOther{
-						Country:        increase.F("x"),
-						Description:    increase.F("x"),
-						ExpirationDate: increase.F(time.Now()),
-						FileID:         increase.F("string"),
-						BackFileID:     increase.F("string"),
+					Other: acme.F(acme.EntityNewParamsJointIndividualsIdentificationOther{
+						Country:        acme.F("x"),
+						Description:    acme.F("x"),
+						ExpirationDate: acme.F(time.Now()),
+						FileID:         acme.F("string"),
+						BackFileID:     acme.F("string"),
 					}),
 				}),
 			}}),
 		}),
-		NaturalPerson: increase.F(increase.EntityNewParamsNaturalPerson{
-			Name:        increase.F("x"),
-			DateOfBirth: increase.F(time.Now()),
-			Address: increase.F(increase.EntityNewParamsNaturalPersonAddress{
-				Line1: increase.F("x"),
-				Line2: increase.F("x"),
-				City:  increase.F("x"),
-				State: increase.F("x"),
-				Zip:   increase.F("x"),
+		NaturalPerson: acme.F(acme.EntityNewParamsNaturalPerson{
+			Name:        acme.F("x"),
+			DateOfBirth: acme.F(time.Now()),
+			Address: acme.F(acme.EntityNewParamsNaturalPersonAddress{
+				Line1: acme.F("x"),
+				Line2: acme.F("x"),
+				City:  acme.F("x"),
+				State: acme.F("x"),
+				Zip:   acme.F("x"),
 			}),
-			ConfirmedNoUsTaxID: increase.F(true),
-			Identification: increase.F(increase.EntityNewParamsNaturalPersonIdentification{
-				Method: increase.F(increase.EntityNewParamsNaturalPersonIdentificationMethodSocialSecurityNumber),
-				Number: increase.F("xxxx"),
-				Passport: increase.F(increase.EntityNewParamsNaturalPersonIdentificationPassport{
-					FileID:         increase.F("string"),
-					ExpirationDate: increase.F(time.Now()),
-					Country:        increase.F("x"),
+			ConfirmedNoUsTaxID: acme.F(true),
+			Identification: acme.F(acme.EntityNewParamsNaturalPersonIdentification{
+				Method: acme.F(acme.EntityNewParamsNaturalPersonIdentificationMethodSocialSecurityNumber),
+				Number: acme.F("xxxx"),
+				Passport: acme.F(acme.EntityNewParamsNaturalPersonIdentificationPassport{
+					FileID:         acme.F("string"),
+					ExpirationDate: acme.F(time.Now()),
+					Country:        acme.F("x"),
 				}),
-				DriversLicense: increase.F(increase.EntityNewParamsNaturalPersonIdentificationDriversLicense{
-					FileID:         increase.F("string"),
-					BackFileID:     increase.F("string"),
-					ExpirationDate: increase.F(time.Now()),
-					State:          increase.F("x"),
+				DriversLicense: acme.F(acme.EntityNewParamsNaturalPersonIdentificationDriversLicense{
+					FileID:         acme.F("string"),
+					BackFileID:     acme.F("string"),
+					ExpirationDate: acme.F(time.Now()),
+					State:          acme.F("x"),
 				}),
-				Other: increase.F(increase.EntityNewParamsNaturalPersonIdentificationOther{
-					Country:        increase.F("x"),
-					Description:    increase.F("x"),
-					ExpirationDate: increase.F(time.Now()),
-					FileID:         increase.F("string"),
-					BackFileID:     increase.F("string"),
+				Other: acme.F(acme.EntityNewParamsNaturalPersonIdentificationOther{
+					Country:        acme.F("x"),
+					Description:    acme.F("x"),
+					ExpirationDate: acme.F(time.Now()),
+					FileID:         acme.F("string"),
+					BackFileID:     acme.F("string"),
 				}),
 			}),
 		}),
-		Relationship: increase.F(increase.EntityNewParamsRelationshipAffiliated),
-		SupplementalDocuments: increase.F([]increase.EntityNewParamsSupplementalDocument{{
-			FileID: increase.F("file_makxrc67oh9l6sg7w9yc"),
+		Relationship: acme.F(acme.EntityNewParamsRelationshipAffiliated),
+		SupplementalDocuments: acme.F([]acme.EntityNewParamsSupplementalDocument{{
+			FileID: acme.F("file_makxrc67oh9l6sg7w9yc"),
 		}}),
-		Trust: increase.F(increase.EntityNewParamsTrust{
-			Name:           increase.F("x"),
-			Category:       increase.F(increase.EntityNewParamsTrustCategoryRevocable),
-			TaxIdentifier:  increase.F("x"),
-			FormationState: increase.F("x"),
-			Address: increase.F(increase.EntityNewParamsTrustAddress{
-				Line1: increase.F("x"),
-				Line2: increase.F("x"),
-				City:  increase.F("x"),
-				State: increase.F("x"),
-				Zip:   increase.F("x"),
+		Trust: acme.F(acme.EntityNewParamsTrust{
+			Name:           acme.F("x"),
+			Category:       acme.F(acme.EntityNewParamsTrustCategoryRevocable),
+			TaxIdentifier:  acme.F("x"),
+			FormationState: acme.F("x"),
+			Address: acme.F(acme.EntityNewParamsTrustAddress{
+				Line1: acme.F("x"),
+				Line2: acme.F("x"),
+				City:  acme.F("x"),
+				State: acme.F("x"),
+				Zip:   acme.F("x"),
 			}),
-			FormationDocumentFileID: increase.F("string"),
-			Trustees: increase.F([]increase.EntityNewParamsTrustTrustee{{
-				Structure: increase.F(increase.EntityNewParamsTrustTrusteesStructureIndividual),
-				Individual: increase.F(increase.EntityNewParamsTrustTrusteesIndividual{
-					Name:        increase.F("x"),
-					DateOfBirth: increase.F(time.Now()),
-					Address: increase.F(increase.EntityNewParamsTrustTrusteesIndividualAddress{
-						Line1: increase.F("x"),
-						Line2: increase.F("x"),
-						City:  increase.F("x"),
-						State: increase.F("x"),
-						Zip:   increase.F("x"),
+			FormationDocumentFileID: acme.F("string"),
+			Trustees: acme.F([]acme.EntityNewParamsTrustTrustee{{
+				Structure: acme.F(acme.EntityNewParamsTrustTrusteesStructureIndividual),
+				Individual: acme.F(acme.EntityNewParamsTrustTrusteesIndividual{
+					Name:        acme.F("x"),
+					DateOfBirth: acme.F(time.Now()),
+					Address: acme.F(acme.EntityNewParamsTrustTrusteesIndividualAddress{
+						Line1: acme.F("x"),
+						Line2: acme.F("x"),
+						City:  acme.F("x"),
+						State: acme.F("x"),
+						Zip:   acme.F("x"),
 					}),
-					ConfirmedNoUsTaxID: increase.F(true),
-					Identification: increase.F(increase.EntityNewParamsTrustTrusteesIndividualIdentification{
-						Method: increase.F(increase.EntityNewParamsTrustTrusteesIndividualIdentificationMethodSocialSecurityNumber),
-						Number: increase.F("xxxx"),
-						Passport: increase.F(increase.EntityNewParamsTrustTrusteesIndividualIdentificationPassport{
-							FileID:         increase.F("string"),
-							ExpirationDate: increase.F(time.Now()),
-							Country:        increase.F("x"),
+					ConfirmedNoUsTaxID: acme.F(true),
+					Identification: acme.F(acme.EntityNewParamsTrustTrusteesIndividualIdentification{
+						Method: acme.F(acme.EntityNewParamsTrustTrusteesIndividualIdentificationMethodSocialSecurityNumber),
+						Number: acme.F("xxxx"),
+						Passport: acme.F(acme.EntityNewParamsTrustTrusteesIndividualIdentificationPassport{
+							FileID:         acme.F("string"),
+							ExpirationDate: acme.F(time.Now()),
+							Country:        acme.F("x"),
 						}),
-						DriversLicense: increase.F(increase.EntityNewParamsTrustTrusteesIndividualIdentificationDriversLicense{
-							FileID:         increase.F("string"),
-							BackFileID:     increase.F("string"),
-							ExpirationDate: increase.F(time.Now()),
-							State:          increase.F("x"),
+						DriversLicense: acme.F(acme.EntityNewParamsTrustTrusteesIndividualIdentificationDriversLicense{
+							FileID:         acme.F("string"),
+							BackFileID:     acme.F("string"),
+							ExpirationDate: acme.F(time.Now()),
+							State:          acme.F("x"),
 						}),
-						Other: increase.F(increase.EntityNewParamsTrustTrusteesIndividualIdentificationOther{
-							Country:        increase.F("x"),
-							Description:    increase.F("x"),
-							ExpirationDate: increase.F(time.Now()),
-							FileID:         increase.F("string"),
-							BackFileID:     increase.F("string"),
-						}),
-					}),
-				}),
-			}, {
-				Structure: increase.F(increase.EntityNewParamsTrustTrusteesStructureIndividual),
-				Individual: increase.F(increase.EntityNewParamsTrustTrusteesIndividual{
-					Name:        increase.F("x"),
-					DateOfBirth: increase.F(time.Now()),
-					Address: increase.F(increase.EntityNewParamsTrustTrusteesIndividualAddress{
-						Line1: increase.F("x"),
-						Line2: increase.F("x"),
-						City:  increase.F("x"),
-						State: increase.F("x"),
-						Zip:   increase.F("x"),
-					}),
-					ConfirmedNoUsTaxID: increase.F(true),
-					Identification: increase.F(increase.EntityNewParamsTrustTrusteesIndividualIdentification{
-						Method: increase.F(increase.EntityNewParamsTrustTrusteesIndividualIdentificationMethodSocialSecurityNumber),
-						Number: increase.F("xxxx"),
-						Passport: increase.F(increase.EntityNewParamsTrustTrusteesIndividualIdentificationPassport{
-							FileID:         increase.F("string"),
-							ExpirationDate: increase.F(time.Now()),
-							Country:        increase.F("x"),
-						}),
-						DriversLicense: increase.F(increase.EntityNewParamsTrustTrusteesIndividualIdentificationDriversLicense{
-							FileID:         increase.F("string"),
-							BackFileID:     increase.F("string"),
-							ExpirationDate: increase.F(time.Now()),
-							State:          increase.F("x"),
-						}),
-						Other: increase.F(increase.EntityNewParamsTrustTrusteesIndividualIdentificationOther{
-							Country:        increase.F("x"),
-							Description:    increase.F("x"),
-							ExpirationDate: increase.F(time.Now()),
-							FileID:         increase.F("string"),
-							BackFileID:     increase.F("string"),
+						Other: acme.F(acme.EntityNewParamsTrustTrusteesIndividualIdentificationOther{
+							Country:        acme.F("x"),
+							Description:    acme.F("x"),
+							ExpirationDate: acme.F(time.Now()),
+							FileID:         acme.F("string"),
+							BackFileID:     acme.F("string"),
 						}),
 					}),
 				}),
 			}, {
-				Structure: increase.F(increase.EntityNewParamsTrustTrusteesStructureIndividual),
-				Individual: increase.F(increase.EntityNewParamsTrustTrusteesIndividual{
-					Name:        increase.F("x"),
-					DateOfBirth: increase.F(time.Now()),
-					Address: increase.F(increase.EntityNewParamsTrustTrusteesIndividualAddress{
-						Line1: increase.F("x"),
-						Line2: increase.F("x"),
-						City:  increase.F("x"),
-						State: increase.F("x"),
-						Zip:   increase.F("x"),
+				Structure: acme.F(acme.EntityNewParamsTrustTrusteesStructureIndividual),
+				Individual: acme.F(acme.EntityNewParamsTrustTrusteesIndividual{
+					Name:        acme.F("x"),
+					DateOfBirth: acme.F(time.Now()),
+					Address: acme.F(acme.EntityNewParamsTrustTrusteesIndividualAddress{
+						Line1: acme.F("x"),
+						Line2: acme.F("x"),
+						City:  acme.F("x"),
+						State: acme.F("x"),
+						Zip:   acme.F("x"),
 					}),
-					ConfirmedNoUsTaxID: increase.F(true),
-					Identification: increase.F(increase.EntityNewParamsTrustTrusteesIndividualIdentification{
-						Method: increase.F(increase.EntityNewParamsTrustTrusteesIndividualIdentificationMethodSocialSecurityNumber),
-						Number: increase.F("xxxx"),
-						Passport: increase.F(increase.EntityNewParamsTrustTrusteesIndividualIdentificationPassport{
-							FileID:         increase.F("string"),
-							ExpirationDate: increase.F(time.Now()),
-							Country:        increase.F("x"),
+					ConfirmedNoUsTaxID: acme.F(true),
+					Identification: acme.F(acme.EntityNewParamsTrustTrusteesIndividualIdentification{
+						Method: acme.F(acme.EntityNewParamsTrustTrusteesIndividualIdentificationMethodSocialSecurityNumber),
+						Number: acme.F("xxxx"),
+						Passport: acme.F(acme.EntityNewParamsTrustTrusteesIndividualIdentificationPassport{
+							FileID:         acme.F("string"),
+							ExpirationDate: acme.F(time.Now()),
+							Country:        acme.F("x"),
 						}),
-						DriversLicense: increase.F(increase.EntityNewParamsTrustTrusteesIndividualIdentificationDriversLicense{
-							FileID:         increase.F("string"),
-							BackFileID:     increase.F("string"),
-							ExpirationDate: increase.F(time.Now()),
-							State:          increase.F("x"),
+						DriversLicense: acme.F(acme.EntityNewParamsTrustTrusteesIndividualIdentificationDriversLicense{
+							FileID:         acme.F("string"),
+							BackFileID:     acme.F("string"),
+							ExpirationDate: acme.F(time.Now()),
+							State:          acme.F("x"),
 						}),
-						Other: increase.F(increase.EntityNewParamsTrustTrusteesIndividualIdentificationOther{
-							Country:        increase.F("x"),
-							Description:    increase.F("x"),
-							ExpirationDate: increase.F(time.Now()),
-							FileID:         increase.F("string"),
-							BackFileID:     increase.F("string"),
+						Other: acme.F(acme.EntityNewParamsTrustTrusteesIndividualIdentificationOther{
+							Country:        acme.F("x"),
+							Description:    acme.F("x"),
+							ExpirationDate: acme.F(time.Now()),
+							FileID:         acme.F("string"),
+							BackFileID:     acme.F("string"),
+						}),
+					}),
+				}),
+			}, {
+				Structure: acme.F(acme.EntityNewParamsTrustTrusteesStructureIndividual),
+				Individual: acme.F(acme.EntityNewParamsTrustTrusteesIndividual{
+					Name:        acme.F("x"),
+					DateOfBirth: acme.F(time.Now()),
+					Address: acme.F(acme.EntityNewParamsTrustTrusteesIndividualAddress{
+						Line1: acme.F("x"),
+						Line2: acme.F("x"),
+						City:  acme.F("x"),
+						State: acme.F("x"),
+						Zip:   acme.F("x"),
+					}),
+					ConfirmedNoUsTaxID: acme.F(true),
+					Identification: acme.F(acme.EntityNewParamsTrustTrusteesIndividualIdentification{
+						Method: acme.F(acme.EntityNewParamsTrustTrusteesIndividualIdentificationMethodSocialSecurityNumber),
+						Number: acme.F("xxxx"),
+						Passport: acme.F(acme.EntityNewParamsTrustTrusteesIndividualIdentificationPassport{
+							FileID:         acme.F("string"),
+							ExpirationDate: acme.F(time.Now()),
+							Country:        acme.F("x"),
+						}),
+						DriversLicense: acme.F(acme.EntityNewParamsTrustTrusteesIndividualIdentificationDriversLicense{
+							FileID:         acme.F("string"),
+							BackFileID:     acme.F("string"),
+							ExpirationDate: acme.F(time.Now()),
+							State:          acme.F("x"),
+						}),
+						Other: acme.F(acme.EntityNewParamsTrustTrusteesIndividualIdentificationOther{
+							Country:        acme.F("x"),
+							Description:    acme.F("x"),
+							ExpirationDate: acme.F(time.Now()),
+							FileID:         acme.F("string"),
+							BackFileID:     acme.F("string"),
 						}),
 					}),
 				}),
 			}}),
-			Grantor: increase.F(increase.EntityNewParamsTrustGrantor{
-				Name:        increase.F("x"),
-				DateOfBirth: increase.F(time.Now()),
-				Address: increase.F(increase.EntityNewParamsTrustGrantorAddress{
-					Line1: increase.F("x"),
-					Line2: increase.F("x"),
-					City:  increase.F("x"),
-					State: increase.F("x"),
-					Zip:   increase.F("x"),
+			Grantor: acme.F(acme.EntityNewParamsTrustGrantor{
+				Name:        acme.F("x"),
+				DateOfBirth: acme.F(time.Now()),
+				Address: acme.F(acme.EntityNewParamsTrustGrantorAddress{
+					Line1: acme.F("x"),
+					Line2: acme.F("x"),
+					City:  acme.F("x"),
+					State: acme.F("x"),
+					Zip:   acme.F("x"),
 				}),
-				ConfirmedNoUsTaxID: increase.F(true),
-				Identification: increase.F(increase.EntityNewParamsTrustGrantorIdentification{
-					Method: increase.F(increase.EntityNewParamsTrustGrantorIdentificationMethodSocialSecurityNumber),
-					Number: increase.F("xxxx"),
-					Passport: increase.F(increase.EntityNewParamsTrustGrantorIdentificationPassport{
-						FileID:         increase.F("string"),
-						ExpirationDate: increase.F(time.Now()),
-						Country:        increase.F("x"),
+				ConfirmedNoUsTaxID: acme.F(true),
+				Identification: acme.F(acme.EntityNewParamsTrustGrantorIdentification{
+					Method: acme.F(acme.EntityNewParamsTrustGrantorIdentificationMethodSocialSecurityNumber),
+					Number: acme.F("xxxx"),
+					Passport: acme.F(acme.EntityNewParamsTrustGrantorIdentificationPassport{
+						FileID:         acme.F("string"),
+						ExpirationDate: acme.F(time.Now()),
+						Country:        acme.F("x"),
 					}),
-					DriversLicense: increase.F(increase.EntityNewParamsTrustGrantorIdentificationDriversLicense{
-						FileID:         increase.F("string"),
-						BackFileID:     increase.F("string"),
-						ExpirationDate: increase.F(time.Now()),
-						State:          increase.F("x"),
+					DriversLicense: acme.F(acme.EntityNewParamsTrustGrantorIdentificationDriversLicense{
+						FileID:         acme.F("string"),
+						BackFileID:     acme.F("string"),
+						ExpirationDate: acme.F(time.Now()),
+						State:          acme.F("x"),
 					}),
-					Other: increase.F(increase.EntityNewParamsTrustGrantorIdentificationOther{
-						Country:        increase.F("x"),
-						Description:    increase.F("x"),
-						ExpirationDate: increase.F(time.Now()),
-						FileID:         increase.F("string"),
-						BackFileID:     increase.F("string"),
+					Other: acme.F(acme.EntityNewParamsTrustGrantorIdentificationOther{
+						Country:        acme.F("x"),
+						Description:    acme.F("x"),
+						ExpirationDate: acme.F(time.Now()),
+						FileID:         acme.F("string"),
+						BackFileID:     acme.F("string"),
 					}),
 				}),
 			}),
 		}),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -396,13 +396,13 @@ func TestEntityGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.Entities.Get(context.TODO(), "entity_n8y8tnk2p9339ti393yi")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -418,25 +418,25 @@ func TestEntityListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Entities.List(context.TODO(), increase.EntityListParams{
-		CreatedAt: increase.F(increase.EntityListParamsCreatedAt{
-			After:      increase.F(time.Now()),
-			Before:     increase.F(time.Now()),
-			OnOrAfter:  increase.F(time.Now()),
-			OnOrBefore: increase.F(time.Now()),
+	_, err := client.Entities.List(context.TODO(), acme.EntityListParams{
+		CreatedAt: acme.F(acme.EntityListParamsCreatedAt{
+			After:      acme.F(time.Now()),
+			Before:     acme.F(time.Now()),
+			OnOrAfter:  acme.F(time.Now()),
+			OnOrBefore: acme.F(time.Now()),
 		}),
-		Cursor: increase.F("string"),
-		Limit:  increase.F(int64(1)),
-		Status: increase.F(increase.EntityListParamsStatus{
-			In: increase.F([]increase.EntityListParamsStatusIn{increase.EntityListParamsStatusInActive, increase.EntityListParamsStatusInArchived, increase.EntityListParamsStatusInDisabled}),
+		Cursor: acme.F("string"),
+		Limit:  acme.F(int64(1)),
+		Status: acme.F(acme.EntityListParamsStatus{
+			In: acme.F([]acme.EntityListParamsStatusIn{acme.EntityListParamsStatusInActive, acme.EntityListParamsStatusInArchived, acme.EntityListParamsStatusInDisabled}),
 		}),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -452,13 +452,13 @@ func TestEntityArchive(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.Entities.Archive(context.TODO(), "entity_n8y8tnk2p9339ti393yi")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -474,25 +474,25 @@ func TestEntityUpdateAddressWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.Entities.UpdateAddress(
 		context.TODO(),
 		"entity_n8y8tnk2p9339ti393yi",
-		increase.EntityUpdateAddressParams{
-			Address: increase.F(increase.EntityUpdateAddressParamsAddress{
-				Line1: increase.F("33 Liberty Street"),
-				Line2: increase.F("Unit 2"),
-				City:  increase.F("New York"),
-				State: increase.F("NY"),
-				Zip:   increase.F("10045"),
+		acme.EntityUpdateAddressParams{
+			Address: acme.F(acme.EntityUpdateAddressParamsAddress{
+				Line1: acme.F("33 Liberty Street"),
+				Line2: acme.F("Unit 2"),
+				City:  acme.F("New York"),
+				State: acme.F("NY"),
+				Zip:   acme.F("10045"),
 			}),
 		},
 	)
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

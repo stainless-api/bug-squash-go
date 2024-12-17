@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestAccountNewWithOptionalParams(t *testing.T) {
@@ -22,18 +22,18 @@ func TestAccountNewWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Accounts.New(context.TODO(), increase.AccountNewParams{
-		Name:                  increase.F("New Account!"),
-		EntityID:              increase.F("entity_n8y8tnk2p9339ti393yi"),
-		InformationalEntityID: increase.F("string"),
-		ProgramID:             increase.F("program_i2v2os4mwza1oetokh9i"),
+	_, err := client.Accounts.New(context.TODO(), acme.AccountNewParams{
+		Name:                  acme.F("New Account!"),
+		EntityID:              acme.F("entity_n8y8tnk2p9339ti393yi"),
+		InformationalEntityID: acme.F("string"),
+		ProgramID:             acme.F("program_i2v2os4mwza1oetokh9i"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -49,13 +49,13 @@ func TestAccountGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.Accounts.Get(context.TODO(), "account_in71c4amph0vgo2qllky")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -71,19 +71,19 @@ func TestAccountUpdateWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.Accounts.Update(
 		context.TODO(),
 		"account_in71c4amph0vgo2qllky",
-		increase.AccountUpdateParams{
-			Name: increase.F("My renamed account"),
+		acme.AccountUpdateParams{
+			Name: acme.F("My renamed account"),
 		},
 	)
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -99,25 +99,25 @@ func TestAccountListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Accounts.List(context.TODO(), increase.AccountListParams{
-		CreatedAt: increase.F(increase.AccountListParamsCreatedAt{
-			After:      increase.F(time.Now()),
-			Before:     increase.F(time.Now()),
-			OnOrAfter:  increase.F(time.Now()),
-			OnOrBefore: increase.F(time.Now()),
+	_, err := client.Accounts.List(context.TODO(), acme.AccountListParams{
+		CreatedAt: acme.F(acme.AccountListParamsCreatedAt{
+			After:      acme.F(time.Now()),
+			Before:     acme.F(time.Now()),
+			OnOrAfter:  acme.F(time.Now()),
+			OnOrBefore: acme.F(time.Now()),
 		}),
-		Cursor:                increase.F("string"),
-		EntityID:              increase.F("string"),
-		InformationalEntityID: increase.F("string"),
-		Limit:                 increase.F(int64(1)),
-		Status:                increase.F(increase.AccountListParamsStatusOpen),
+		Cursor:                acme.F("string"),
+		EntityID:              acme.F("string"),
+		InformationalEntityID: acme.F("string"),
+		Limit:                 acme.F(int64(1)),
+		Status:                acme.F(acme.AccountListParamsStatusOpen),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -133,19 +133,19 @@ func TestAccountBalanceWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.Accounts.Balance(
 		context.TODO(),
 		"account_in71c4amph0vgo2qllky",
-		increase.AccountBalanceParams{
-			AtTime: increase.F(time.Now()),
+		acme.AccountBalanceParams{
+			AtTime: acme.F(time.Now()),
 		},
 	)
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -162,13 +162,13 @@ func TestAccountClose(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.Accounts.Close(context.TODO(), "account_in71c4amph0vgo2qllky")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

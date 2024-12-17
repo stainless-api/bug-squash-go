@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // RealTimePaymentsTransferService contains methods and other services that help
-// with interacting with the increase API. Note, unlike clients, this service does
+// with interacting with the acme API. Note, unlike clients, this service does
 // not read variables from the environment automatically. You should not
 // instantiate this service directly, and instead use the
 // [NewRealTimePaymentsTransferService] method instead.
@@ -74,7 +74,7 @@ func (r *RealTimePaymentsTransferService) ListAutoPaging(ctx context.Context, qu
 	return shared.NewPageAutoPager(r.List(ctx, query, opts...))
 }
 
-// Real-Time Payments transfers move funds, within seconds, between your Increase
+// Real-Time Payments transfers move funds, within seconds, between your Acme
 // account and any other account on the Real-Time Payments network.
 type RealTimePaymentsTransfer struct {
 	// The Real-Time Payments Transfer's identifier.
@@ -106,7 +106,7 @@ type RealTimePaymentsTransfer struct {
 	ExternalAccountID string `json:"external_account_id,required,nullable"`
 	// The ID for the pending transaction representing the transfer. A pending
 	// transaction is created when the transfer
-	// [requires approval](https://increase.com/documentation/transfer-approvals#transfer-approvals)
+	// [requires approval](https://acme.com/documentation/transfer-approvals#transfer-approvals)
 	// by someone else in your organization.
 	PendingTransactionID string `json:"pending_transaction_id,required,nullable"`
 	// If the transfer is rejected by Real-Time Payments or the destination financial
@@ -322,7 +322,7 @@ const (
 	// The destination financial institution is currently signed off of Real-Time
 	// Payments. Corresponds to the Real-Time Payments reason code `9910`.
 	RealTimePaymentsTransferRejectionRejectReasonCodeInstructedAgentSignedOff RealTimePaymentsTransferRejectionRejectReasonCode = "instructed_agent_signed_off"
-	// The transfer was rejected due to an internal Increase issue. We have been
+	// The transfer was rejected due to an internal Acme issue. We have been
 	// notified.
 	RealTimePaymentsTransferRejectionRejectReasonCodeProcessingError RealTimePaymentsTransferRejectionRejectReasonCode = "processing_error"
 	// Some other error or issue has occurred.
@@ -346,7 +346,7 @@ const (
 	RealTimePaymentsTransferStatusComplete RealTimePaymentsTransferStatus = "complete"
 	// The transfer was rejected by the network or the recipient's bank.
 	RealTimePaymentsTransferStatusRejected RealTimePaymentsTransferStatus = "rejected"
-	// The transfer requires attention from an Increase operator.
+	// The transfer requires attention from an Acme operator.
 	RealTimePaymentsTransferStatusRequiresAttention RealTimePaymentsTransferStatus = "requires_attention"
 )
 

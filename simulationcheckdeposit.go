@@ -1,18 +1,18 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
 	"fmt"
 	"net/http"
 
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/option"
 )
 
 // SimulationCheckDepositService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewSimulationCheckDepositService]
 // method instead.
@@ -29,7 +29,7 @@ func NewSimulationCheckDepositService(opts ...option.RequestOption) (r *Simulati
 	return
 }
 
-// Simulates the rejection of a [Check Deposit](#check-deposits) by Increase due to
+// Simulates the rejection of a [Check Deposit](#check-deposits) by Acme due to
 // factors like poor image quality. This Check Deposit must first have a `status`
 // of `pending`.
 func (r *SimulationCheckDepositService) Reject(ctx context.Context, checkDepositID string, opts ...option.RequestOption) (res *CheckDeposit, err error) {

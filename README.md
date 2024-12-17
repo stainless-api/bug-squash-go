@@ -1,9 +1,9 @@
-# Increase Go API Library
+# Acme Go API Library
 
-<a href="https://pkg.go.dev/github.com/increase/increase-go"><img src="https://pkg.go.dev/badge/github.com/increase/increase-go.svg" alt="Go Reference"></a>
+<a href="https://pkg.go.dev/github.com/acme/acme-go"><img src="https://pkg.go.dev/badge/github.com/acme/acme-go.svg" alt="Go Reference"></a>
 
-The Increase Go library provides convenient access to [the Increase REST
-API](https://increase.com/documentation) from applications written in Go.
+The Acme Go library provides convenient access to [the Acme REST
+API](https://acme.com/documentation) from applications written in Go.
 
 ## Installation
 
@@ -11,7 +11,7 @@ API](https://increase.com/documentation) from applications written in Go.
 
 ```go
 import (
-	"github.com/increase/increase-go" // imported as increase
+	"github.com/acme/acme-go" // imported as acme
 )
 ```
 
@@ -22,7 +22,7 @@ Or to pin the version:
 <!-- x-release-please-start-version -->
 
 ```sh
-go get -u 'github.com/increase/increase-go@v0.8.0'
+go get -u 'github.com/acme/acme-go@v0.8.0'
 ```
 
 <!-- x-release-please-end -->
@@ -33,7 +33,7 @@ This library requires Go 1.18+.
 
 ## Usage
 
-The full API of this library can be found in [api.md](https://www.github.com/increase/increase-go/blob/main/api.md).
+The full API of this library can be found in [api.md](https://www.github.com/acme/acme-go/blob/main/api.md).
 
 ```go
 package main
@@ -41,17 +41,17 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/option"
 )
 
 func main() {
-	client := increase.NewClient(
-		option.WithAPIKey("My API Key"), // defaults to os.LookupEnv("INCREASE_API_KEY")
+	client := acme.NewClient(
+		option.WithAPIKey("My API Key"), // defaults to os.LookupEnv("ACME_API_KEY")
 		option.WithEnvironmentSandbox(), // defaults to option.WithEnvironmentProduction()
 	)
-	account, err := client.Accounts.New(context.TODO(), increase.AccountNewParams{
-		Name: increase.F("My First Increase Account"),
+	account, err := client.Accounts.New(context.TODO(), acme.AccountNewParams{
+		Name: acme.F("My First Acme Account"),
 	})
 	if err != nil {
 		panic(err.Error())
@@ -75,18 +75,18 @@ To send a null, use `Null[T]()`, and to send a nonconforming value, use `Raw[T](
 
 ```go
 params := FooParams{
-	Name: increase.F("hello"),
+	Name: acme.F("hello"),
 
 	// Explicitly send `"description": null`
-	Description: increase.Null[string](),
+	Description: acme.Null[string](),
 
-	Point: increase.F(increase.Point{
-		X: increase.Int(0),
-		Y: increase.Int(1),
+	Point: acme.F(acme.Point{
+		X: acme.Int(0),
+		Y: acme.Int(1),
 
 		// In cases where the API specifies a given type,
 		// but you want to send something else, use `Raw`:
-		Z: increase.Raw[int64](0.01), // sends a float
+		Z: acme.Raw[int64](0.01), // sends a float
 	}),
 }
 ```
@@ -140,7 +140,7 @@ This library uses the functional options pattern. Functions defined in the
 requests. For example:
 
 ```go
-client := increase.NewClient(
+client := acme.NewClient(
 	// Adds a header to every request made by the client
 	option.WithHeader("X-Some-Header", "custom_header_info"),
 )
@@ -153,7 +153,7 @@ client.Accounts.New(context.TODO(), ...,
 )
 ```
 
-The full list of request options is [here](https://pkg.go.dev/github.com/increase/increase-go/option).
+The full list of request options is [here](https://pkg.go.dev/github.com/acme/acme-go/option).
 
 ### Pagination
 
@@ -162,7 +162,7 @@ This library provides some conveniences for working with paginated list endpoint
 You can use `.ListAutoPaging()` methods to iterate through items across all pages:
 
 ```go
-iter := client.Accounts.ListAutoPaging(context.TODO(), increase.AccountListParams{})
+iter := client.Accounts.ListAutoPaging(context.TODO(), acme.AccountListParams{})
 // Automatically fetches more pages as needed.
 for iter.Next() {
 	account := iter.Current()
@@ -177,7 +177,7 @@ Or you can use simple `.List()` methods to fetch a single page and receive a sta
 with additional helper methods like `.GetNextPage()`, e.g.:
 
 ```go
-page, err := client.Accounts.List(context.TODO(), increase.AccountListParams{})
+page, err := client.Accounts.List(context.TODO(), acme.AccountListParams{})
 for page != nil {
 	for _, account := range page.Data {
 		fmt.Printf("%+v\n", account)
@@ -192,18 +192,18 @@ if err != nil {
 ### Errors
 
 When the API returns a non-success status code, we return an error with type
-`*increase.Error`. This contains the `StatusCode`, `*http.Request`, and
+`*acme.Error`. This contains the `StatusCode`, `*http.Request`, and
 `*http.Response` values of the request, as well as the JSON of the error body
 (much like other response objects in the SDK).
 
 To handle errors, we recommend that you use the `errors.As` pattern:
 
 ```go
-_, err := client.Accounts.New(context.TODO(), increase.AccountNewParams{
-	Name: increase.F("New Account!"),
+_, err := client.Accounts.New(context.TODO(), acme.AccountNewParams{
+	Name: acme.F("New Account!"),
 })
 if err != nil {
-	var apierr *increase.Error
+	var apierr *acme.Error
 	if errors.As(err, &apierr) {
 		println(string(apierr.DumpRequest(true)))  // Prints the serialized HTTP request
 		println(string(apierr.DumpResponse(true))) // Prints the serialized HTTP response
@@ -232,8 +232,8 @@ ctx, cancel := context.WithTimeout(context.Background(), 5*time.Minute)
 defer cancel()
 client.Accounts.List(
 	ctx,
-	increase.AccountListParams{
-		Status: increase.F(increase.AccountListParamsStatusOpen),
+	acme.AccountListParams{
+		Status: acme.F(acme.AccountListParamsStatusOpen),
 	},
 	// This sets the per-retry timeout
 	option.WithRequestTimeout(20*time.Second),
@@ -250,15 +250,15 @@ You can use the `WithMaxRetries` option to configure or disable this:
 
 ```go
 // Configure the default for all requests:
-client := increase.NewClient(
+client := acme.NewClient(
 	option.WithMaxRetries(0), // default is 2
 )
 
 // Override per-request:
 client.Accounts.New(
 	context.TODO(),
-	increase.AccountNewParams{
-		Name: increase.F("Jack"),
+	acme.AccountNewParams{
+		Name: acme.F("Jack"),
 	},
 	option.WithMaxRetries(5),
 )
@@ -285,7 +285,7 @@ func Logger(req *http.Request, next option.MiddlewareNext) (res *http.Response, 
     return res, err
 }
 
-client := increase.NewClient(
+client := acme.NewClient(
 	option.WithMiddleware(Logger),
 )
 ```
@@ -310,12 +310,11 @@ This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) con
 
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
 
-We are keen for your feedback; please open an [issue](https://www.github.com/increase/increase-go/issues) with questions, bugs, or suggestions.
+We are keen for your feedback; please open an [issue](https://www.github.com/acme/acme-go/issues) with questions, bugs, or suggestions.
 
 ## Development
 
 The project should build with:
-
 
 ```sh
 make

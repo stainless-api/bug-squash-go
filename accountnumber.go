@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // AccountNumberService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewAccountNumberService] method
 // instead.
@@ -168,7 +168,7 @@ const (
 // Properties related to how this Account Number should handle inbound check
 // withdrawls.
 type AccountNumberInboundChecks struct {
-	// How Increase should process checks with this account number printed on them.
+	// How Acme should process checks with this account number printed on them.
 	Status AccountNumberInboundChecksStatus `json:"status,required"`
 	JSON   accountNumberInboundChecksJSON   `json:"-"`
 }
@@ -185,7 +185,7 @@ func (r *AccountNumberInboundChecks) UnmarshalJSON(data []byte) (err error) {
 	return apijson.UnmarshalRoot(data, r)
 }
 
-// How Increase should process checks with this account number printed on them.
+// How Acme should process checks with this account number printed on them.
 type AccountNumberInboundChecksStatus string
 
 const (
@@ -258,7 +258,7 @@ const (
 // Options related to how this Account Number should handle inbound check
 // withdrawls.
 type AccountNumberNewParamsInboundChecks struct {
-	// How Increase should process checks with this account number printed on them.
+	// How Acme should process checks with this account number printed on them.
 	Status param.Field[AccountNumberNewParamsInboundChecksStatus] `json:"status,required"`
 }
 
@@ -266,7 +266,7 @@ func (r AccountNumberNewParamsInboundChecks) MarshalJSON() (data []byte, err err
 	return apijson.MarshalRoot(r)
 }
 
-// How Increase should process checks with this account number printed on them.
+// How Acme should process checks with this account number printed on them.
 type AccountNumberNewParamsInboundChecksStatus string
 
 const (

@@ -1,20 +1,20 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
 	"net/http"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/option"
 )
 
 // SimulationCardService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewSimulationCardService] method
 // instead.
@@ -285,7 +285,7 @@ const (
 	CardAuthorizationSimulationDeclinedTransactionSourceACHDeclineReasonACHRouteCanceled CardAuthorizationSimulationDeclinedTransactionSourceACHDeclineReason = "ach_route_canceled"
 	// The account number is disabled.
 	CardAuthorizationSimulationDeclinedTransactionSourceACHDeclineReasonACHRouteDisabled CardAuthorizationSimulationDeclinedTransactionSourceACHDeclineReason = "ach_route_disabled"
-	// The transaction would cause an Increase limit to be exceeded.
+	// The transaction would cause an Acme limit to be exceeded.
 	CardAuthorizationSimulationDeclinedTransactionSourceACHDeclineReasonBreachesLimit CardAuthorizationSimulationDeclinedTransactionSourceACHDeclineReason = "breaches_limit"
 	// A credit was refused. This is a reasonable default reason for decline of
 	// credits.
@@ -307,7 +307,7 @@ const (
 	CardAuthorizationSimulationDeclinedTransactionSourceACHDeclineReasonNoACHRoute CardAuthorizationSimulationDeclinedTransactionSourceACHDeclineReason = "no_ach_route"
 	// The originating financial institution asked for this transfer to be returned.
 	CardAuthorizationSimulationDeclinedTransactionSourceACHDeclineReasonOriginatorRequest CardAuthorizationSimulationDeclinedTransactionSourceACHDeclineReason = "originator_request"
-	// The transaction is not allowed per Increase's terms.
+	// The transaction is not allowed per Acme's terms.
 	CardAuthorizationSimulationDeclinedTransactionSourceACHDeclineReasonTransactionNotAllowed CardAuthorizationSimulationDeclinedTransactionSourceACHDeclineReason = "transaction_not_allowed"
 	// The user initiated the decline.
 	CardAuthorizationSimulationDeclinedTransactionSourceACHDeclineReasonUserInitiated CardAuthorizationSimulationDeclinedTransactionSourceACHDeclineReason = "user_initiated"
@@ -616,7 +616,7 @@ const (
 	CardAuthorizationSimulationDeclinedTransactionSourceCardDeclineReasonInsufficientFunds CardAuthorizationSimulationDeclinedTransactionSourceCardDeclineReason = "insufficient_funds"
 	// The given CVV2 did not match the card's value.
 	CardAuthorizationSimulationDeclinedTransactionSourceCardDeclineReasonCvv2Mismatch CardAuthorizationSimulationDeclinedTransactionSourceCardDeclineReason = "cvv2_mismatch"
-	// The attempted card transaction is not allowed per Increase's terms.
+	// The attempted card transaction is not allowed per Acme's terms.
 	CardAuthorizationSimulationDeclinedTransactionSourceCardDeclineReasonTransactionNotAllowed CardAuthorizationSimulationDeclinedTransactionSourceCardDeclineReason = "transaction_not_allowed"
 	// The transaction was blocked by a Limit.
 	CardAuthorizationSimulationDeclinedTransactionSourceCardDeclineReasonBreachesLimit CardAuthorizationSimulationDeclinedTransactionSourceCardDeclineReason = "breaches_limit"
@@ -632,7 +632,7 @@ const (
 	// exist.
 	CardAuthorizationSimulationDeclinedTransactionSourceCardDeclineReasonMissingOriginalAuthorization CardAuthorizationSimulationDeclinedTransactionSourceCardDeclineReason = "missing_original_authorization"
 	// The transaction was suspected to be fraudulent. Please reach out to
-	// support@increase.com for more information.
+	// support@acme.com for more information.
 	CardAuthorizationSimulationDeclinedTransactionSourceCardDeclineReasonSuspectedFraud CardAuthorizationSimulationDeclinedTransactionSourceCardDeclineReason = "suspected_fraud"
 )
 
@@ -832,9 +832,9 @@ const (
 	// The amount the receiving bank is attempting to deposit does not match the amount
 	// on the check.
 	CardAuthorizationSimulationDeclinedTransactionSourceCheckDeclineReasonAmountMismatch CardAuthorizationSimulationDeclinedTransactionSourceCheckDeclineReason = "amount_mismatch"
-	// The check attempting to be deposited does not belong to Increase.
+	// The check attempting to be deposited does not belong to Acme.
 	CardAuthorizationSimulationDeclinedTransactionSourceCheckDeclineReasonNotOurItem CardAuthorizationSimulationDeclinedTransactionSourceCheckDeclineReason = "not_our_item"
-	// The account number on the check does not exist at Increase.
+	// The account number on the check does not exist at Acme.
 	CardAuthorizationSimulationDeclinedTransactionSourceCheckDeclineReasonNoAccountNumberFound CardAuthorizationSimulationDeclinedTransactionSourceCheckDeclineReason = "no_account_number_found"
 )
 
@@ -1005,7 +1005,7 @@ type CardAuthorizationSimulationDeclinedTransactionSourceInternationalACHDecline
 	ReceiverStateOrProvince string `json:"receiver_state_or_province,required,nullable"`
 	// A portion of the receiver address. This may be incomplete.
 	ReceiverStreetAddress string `json:"receiver_street_address,required"`
-	// The name of the receiver of the transfer. This is not verified by Increase.
+	// The name of the receiver of the transfer. This is not verified by Acme.
 	ReceivingCompanyOrIndividualName string `json:"receiving_company_or_individual_name,required"`
 	// The [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), Alpha-2
 	// country code of the receiving bank country.
@@ -1023,7 +1023,7 @@ type CardAuthorizationSimulationDeclinedTransactionSourceInternationalACHDecline
 	// originating and receiving bank. Along with the amount, date, and originating
 	// routing number, this can be used to identify the ACH transfer at either bank.
 	// ACH trace numbers are not unique, but are
-	// [used to correlate returns](https://increase.com/documentation/ach#returns).
+	// [used to correlate returns](https://acme.com/documentation/ach#returns).
 	TraceNumber string                                                                          `json:"trace_number,required"`
 	JSON        cardAuthorizationSimulationDeclinedTransactionSourceInternationalACHDeclineJSON `json:"-"`
 }
@@ -1195,7 +1195,7 @@ type CardAuthorizationSimulationDeclinedTransactionSourceWireDecline struct {
 	BeneficiaryName string `json:"beneficiary_name,required,nullable"`
 	// A free-form reference string set by the sender, to help identify the transfer.
 	BeneficiaryReference string `json:"beneficiary_reference,required,nullable"`
-	// An Increase-constructed description of the declined transaction.
+	// An Acme-constructed description of the declined transaction.
 	Description string `json:"description,required"`
 	// A unique identifier available to the originating and receiving banks, commonly
 	// abbreviated as IMAD. It is created when the wire is submitted to the Fedwire
@@ -1269,7 +1269,7 @@ const (
 	CardAuthorizationSimulationDeclinedTransactionSourceWireDeclineReasonGroupLocked CardAuthorizationSimulationDeclinedTransactionSourceWireDeclineReason = "group_locked"
 	// The beneficiary account number does not exist.
 	CardAuthorizationSimulationDeclinedTransactionSourceWireDeclineReasonNoAccountNumber CardAuthorizationSimulationDeclinedTransactionSourceWireDeclineReason = "no_account_number"
-	// The transaction is not allowed per Increase's terms.
+	// The transaction is not allowed per Acme's terms.
 	CardAuthorizationSimulationDeclinedTransactionSourceWireDeclineReasonTransactionNotAllowed CardAuthorizationSimulationDeclinedTransactionSourceWireDeclineReason = "transaction_not_allowed"
 )
 

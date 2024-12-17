@@ -7,7 +7,7 @@ on:
 jobs:
   release:
     name: release
-    if: github.ref == 'refs/heads/main' && github.repository == 'increase/increase-go'
+    if: github.ref == 'refs/heads/main' && github.repository == 'acme/acme-go'
     runs-on: ubuntu-latest
 
     steps:
@@ -23,4 +23,4 @@ jobs:
         if: ${{ steps.release.outputs.releases_created }}
         run: |
           version=$(jq -r '. | to_entries[0] | .value' .release-please-manifest.json)
-          curl -X POST https://pkg.go.dev/fetch/github.com/increase/increase-go@v${version}
+          curl -X POST https://pkg.go.dev/fetch/github.com/acme/acme-go@v${version}

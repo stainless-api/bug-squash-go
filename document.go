@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // DocumentService contains methods and other services that help with interacting
-// with the increase API. Note, unlike clients, this service does not read
+// with the acme API. Note, unlike clients, this service does not read
 // variables from the environment automatically. You should not instantiate this
 // service directly, and instead use the [NewDocumentService] method instead.
 type DocumentService struct {
@@ -65,7 +65,7 @@ func (r *DocumentService) ListAutoPaging(ctx context.Context, query DocumentList
 	return shared.NewPageAutoPager(r.List(ctx, query, opts...))
 }
 
-// Increase generates certain documents / forms automatically for your application;
+// Acme generates certain documents / forms automatically for your application;
 // they can be listed here. Currently the only supported document type is IRS Form
 // 1099-INT.
 type Document struct {

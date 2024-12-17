@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // InboundACHTransferService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewInboundACHTransferService] method
 // instead.
@@ -90,7 +90,7 @@ func (r *InboundACHTransferService) TransferReturn(ctx context.Context, inboundA
 	return
 }
 
-// An Inbound ACH Transfer is an ACH transfer initiated outside of Increase to your
+// An Inbound ACH Transfer is an ACH transfer initiated outside of Acme to your
 // account.
 type InboundACHTransfer struct {
 	// The inbound ach transfer's identifier.
@@ -295,7 +295,7 @@ const (
 	InboundACHTransferDeclineReasonACHRouteCanceled InboundACHTransferDeclineReason = "ach_route_canceled"
 	// The account number is disabled.
 	InboundACHTransferDeclineReasonACHRouteDisabled InboundACHTransferDeclineReason = "ach_route_disabled"
-	// The transaction would cause an Increase limit to be exceeded.
+	// The transaction would cause an Acme limit to be exceeded.
 	InboundACHTransferDeclineReasonBreachesLimit InboundACHTransferDeclineReason = "breaches_limit"
 	// A credit was refused. This is a reasonable default reason for decline of
 	// credits.
@@ -317,7 +317,7 @@ const (
 	InboundACHTransferDeclineReasonNoACHRoute InboundACHTransferDeclineReason = "no_ach_route"
 	// The originating financial institution asked for this transfer to be returned.
 	InboundACHTransferDeclineReasonOriginatorRequest InboundACHTransferDeclineReason = "originator_request"
-	// The transaction is not allowed per Increase's terms.
+	// The transaction is not allowed per Acme's terms.
 	InboundACHTransferDeclineReasonTransactionNotAllowed InboundACHTransferDeclineReason = "transaction_not_allowed"
 	// The user initiated the decline.
 	InboundACHTransferDeclineReasonUserInitiated InboundACHTransferDeclineReason = "user_initiated"

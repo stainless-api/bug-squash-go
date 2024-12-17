@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // PhysicalCardService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewPhysicalCardService] method
 // instead.
@@ -85,7 +85,7 @@ func (r *PhysicalCardService) ListAutoPaging(ctx context.Context, query Physical
 // Custom physical Visa cards that are shipped to your customers. The artwork is
 // configurable by a connected [Card Profile](/documentation/api#card-profiles).
 // The same Card can be used for multiple Physical Cards. Printing cards incurs a
-// fee. Please contact [support@increase.com](mailto:support@increase.com) for
+// fee. Please contact [support@acme.com](mailto:support@acme.com) for
 // pricing!
 type PhysicalCard struct {
 	// The physical card identifier.

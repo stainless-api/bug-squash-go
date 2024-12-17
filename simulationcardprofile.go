@@ -1,18 +1,18 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
 	"fmt"
 	"net/http"
 
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/option"
 )
 
 // SimulationCardProfileService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewSimulationCardProfileService]
 // method instead.
@@ -32,7 +32,7 @@ func NewSimulationCardProfileService(opts ...option.RequestOption) (r *Simulatio
 // After a [Card Profile](#card-profile) is created in production, the images will
 // be uploaded to Visa within one day. Since Card Profiles are not uploaded to Visa
 // in sandbox, this endpoint simulates that step. Invoking this simulation triggers
-// the webhooks Increase sends when the Card Profile is approved and updates the
+// the webhooks Acme sends when the Card Profile is approved and updates the
 // status of the Card Profile.
 func (r *SimulationCardProfileService) Approve(ctx context.Context, cardProfileID string, opts ...option.RequestOption) (res *CardProfile, err error) {
 	opts = append(r.Options[:], opts...)

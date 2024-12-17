@@ -18,10 +18,10 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/increase/increase-go/internal"
-	"github.com/increase/increase-go/internal/apierror"
-	"github.com/increase/increase-go/internal/apiform"
-	"github.com/increase/increase-go/internal/apiquery"
+	"github.com/acme/acme-go/internal"
+	"github.com/acme/acme-go/internal/apierror"
+	"github.com/acme/acme-go/internal/apiform"
+	"github.com/acme/acme-go/internal/apiquery"
 )
 
 func getNormalizedOS() string {

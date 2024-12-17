@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestContextCancel(t *testing.T) {
@@ -23,14 +23,14 @@ func TestContextCancel(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	cancelCtx, cancel := context.WithCancel(context.Background())
 	cancel()
-	res, err := client.Accounts.New(cancelCtx, increase.AccountNewParams{
-		Name: increase.F("My First Increase Account"),
+	res, err := client.Accounts.New(cancelCtx, acme.AccountNewParams{
+		Name: acme.F("My First Acme Account"),
 	})
 	if err == nil || res != nil {
 		t.Error("Expected there to be a cancel error and for the response to be nil")
@@ -53,7 +53,7 @@ func TestContextCancelDelay(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 		option.WithHTTPClient(&http.Client{Transport: &neverTransport{}}),
@@ -63,8 +63,8 @@ func TestContextCancelDelay(t *testing.T) {
 		time.Sleep(time.Millisecond * time.Duration(2))
 		cancel()
 	}()
-	res, err := client.Accounts.New(cancelCtx, increase.AccountNewParams{
-		Name: increase.F("My First Increase Account"),
+	res, err := client.Accounts.New(cancelCtx, acme.AccountNewParams{
+		Name: acme.F("My First Acme Account"),
 	})
 	if err == nil || res != nil {
 		t.Error("expected there to be a cancel error and for the response to be nil")
@@ -88,13 +88,13 @@ func TestContextDeadline(t *testing.T) {
 	defer cancel()
 
 	go func() {
-		client := increase.NewClient(
+		client := acme.NewClient(
 			option.WithBaseURL(baseURL),
 			option.WithAPIKey("My API Key"),
 			option.WithHTTPClient(&http.Client{Transport: &neverTransport{}}),
 		)
-		res, err := client.Accounts.New(deadlineCtx, increase.AccountNewParams{
-			Name: increase.F("My First Increase Account"),
+		res, err := client.Accounts.New(deadlineCtx, acme.AccountNewParams{
+			Name: acme.F("My First Acme Account"),
 		})
 		if err == nil || res != nil {
 			t.Error("expected there to be a deadline error and for the response to be nil")

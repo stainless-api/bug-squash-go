@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestEntitySupplementalDocumentNew(t *testing.T) {
@@ -21,19 +21,19 @@ func TestEntitySupplementalDocumentNew(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.Entities.SupplementalDocuments.New(
 		context.TODO(),
 		"entity_n8y8tnk2p9339ti393yi",
-		increase.EntitySupplementalDocumentNewParams{
-			FileID: increase.F("file_makxrc67oh9l6sg7w9yc"),
+		acme.EntitySupplementalDocumentNewParams{
+			FileID: acme.F("file_makxrc67oh9l6sg7w9yc"),
 		},
 	)
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -49,17 +49,17 @@ func TestEntitySupplementalDocumentListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Entities.SupplementalDocuments.List(context.TODO(), increase.EntitySupplementalDocumentListParams{
-		EntityID: increase.F("string"),
-		Cursor:   increase.F("string"),
-		Limit:    increase.F(int64(1)),
+	_, err := client.Entities.SupplementalDocuments.List(context.TODO(), acme.EntitySupplementalDocumentListParams{
+		EntityID: acme.F("string"),
+		Cursor:   acme.F("string"),
+		Limit:    acme.F(int64(1)),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

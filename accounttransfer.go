@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // AccountTransferService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewAccountTransferService] method
 // instead.
@@ -90,7 +90,7 @@ func (r *AccountTransferService) Cancel(ctx context.Context, accountTransferID s
 	return
 }
 
-// Account transfers move funds between your own accounts at Increase.
+// Account transfers move funds between your own accounts at Acme.
 type AccountTransfer struct {
 	// The account transfer's identifier.
 	ID string `json:"id,required"`
@@ -121,7 +121,7 @@ type AccountTransfer struct {
 	Network AccountTransferNetwork `json:"network,required"`
 	// The ID for the pending transaction representing the transfer. A pending
 	// transaction is created when the transfer
-	// [requires approval](https://increase.com/documentation/transfer-approvals#transfer-approvals)
+	// [requires approval](https://acme.com/documentation/transfer-approvals#transfer-approvals)
 	// by someone else in your organization.
 	PendingTransactionID string `json:"pending_transaction_id,required,nullable"`
 	// The lifecycle status of the transfer.

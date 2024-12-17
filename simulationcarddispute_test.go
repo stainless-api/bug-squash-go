@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestSimulationCardDisputeActionWithOptionalParams(t *testing.T) {
@@ -21,20 +21,20 @@ func TestSimulationCardDisputeActionWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.Simulations.CardDisputes.Action(
 		context.TODO(),
 		"card_dispute_h9sc95nbl1cgltpp7men",
-		increase.SimulationCardDisputeActionParams{
-			Status:      increase.F(increase.SimulationCardDisputeActionParamsStatusRejected),
-			Explanation: increase.F("This was a valid recurring transaction"),
+		acme.SimulationCardDisputeActionParams{
+			Status:      acme.F(acme.SimulationCardDisputeActionParamsStatusRejected),
+			Explanation: acme.F("This was a valid recurring transaction"),
 		},
 	)
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

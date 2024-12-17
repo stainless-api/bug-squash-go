@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestRealTimeDecisionGet(t *testing.T) {
@@ -21,13 +21,13 @@ func TestRealTimeDecisionGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.RealTimeDecisions.Get(context.TODO(), "real_time_decision_j76n2e810ezcg3zh5qtn")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -43,34 +43,34 @@ func TestRealTimeDecisionActionWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.RealTimeDecisions.Action(
 		context.TODO(),
 		"real_time_decision_j76n2e810ezcg3zh5qtn",
-		increase.RealTimeDecisionActionParams{
-			CardAuthorization: increase.F(increase.RealTimeDecisionActionParamsCardAuthorization{
-				Decision: increase.F(increase.RealTimeDecisionActionParamsCardAuthorizationDecisionApprove),
+		acme.RealTimeDecisionActionParams{
+			CardAuthorization: acme.F(acme.RealTimeDecisionActionParamsCardAuthorization{
+				Decision: acme.F(acme.RealTimeDecisionActionParamsCardAuthorizationDecisionApprove),
 			}),
-			DigitalWalletAuthentication: increase.F(increase.RealTimeDecisionActionParamsDigitalWalletAuthentication{
-				Result: increase.F(increase.RealTimeDecisionActionParamsDigitalWalletAuthenticationResultSuccess),
+			DigitalWalletAuthentication: acme.F(acme.RealTimeDecisionActionParamsDigitalWalletAuthentication{
+				Result: acme.F(acme.RealTimeDecisionActionParamsDigitalWalletAuthenticationResultSuccess),
 			}),
-			DigitalWalletToken: increase.F(increase.RealTimeDecisionActionParamsDigitalWalletToken{
-				Approval: increase.F(increase.RealTimeDecisionActionParamsDigitalWalletTokenApproval{
-					CardProfileID: increase.F("string"),
-					Phone:         increase.F("x"),
-					Email:         increase.F("x"),
+			DigitalWalletToken: acme.F(acme.RealTimeDecisionActionParamsDigitalWalletToken{
+				Approval: acme.F(acme.RealTimeDecisionActionParamsDigitalWalletTokenApproval{
+					CardProfileID: acme.F("string"),
+					Phone:         acme.F("x"),
+					Email:         acme.F("x"),
 				}),
-				Decline: increase.F(increase.RealTimeDecisionActionParamsDigitalWalletTokenDecline{
-					Reason: increase.F("x"),
+				Decline: acme.F(acme.RealTimeDecisionActionParamsDigitalWalletTokenDecline{
+					Reason: acme.F("x"),
 				}),
 			}),
 		},
 	)
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

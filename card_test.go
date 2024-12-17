@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestCardNewWithOptionalParams(t *testing.T) {
@@ -22,29 +22,29 @@ func TestCardNewWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Cards.New(context.TODO(), increase.CardNewParams{
-		AccountID: increase.F("account_in71c4amph0vgo2qllky"),
-		BillingAddress: increase.F(increase.CardNewParamsBillingAddress{
-			Line1:      increase.F("x"),
-			Line2:      increase.F("x"),
-			City:       increase.F("x"),
-			State:      increase.F("x"),
-			PostalCode: increase.F("x"),
+	_, err := client.Cards.New(context.TODO(), acme.CardNewParams{
+		AccountID: acme.F("account_in71c4amph0vgo2qllky"),
+		BillingAddress: acme.F(acme.CardNewParamsBillingAddress{
+			Line1:      acme.F("x"),
+			Line2:      acme.F("x"),
+			City:       acme.F("x"),
+			State:      acme.F("x"),
+			PostalCode: acme.F("x"),
 		}),
-		Description: increase.F("Card for Ian Crease"),
-		DigitalWallet: increase.F(increase.CardNewParamsDigitalWallet{
-			Email:         increase.F("x"),
-			Phone:         increase.F("x"),
-			CardProfileID: increase.F("string"),
+		Description: acme.F("Card for Ian Crease"),
+		DigitalWallet: acme.F(acme.CardNewParamsDigitalWallet{
+			Email:         acme.F("x"),
+			Phone:         acme.F("x"),
+			CardProfileID: acme.F("string"),
 		}),
-		EntityID: increase.F("string"),
+		EntityID: acme.F("string"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -60,13 +60,13 @@ func TestCardGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.Cards.Get(context.TODO(), "card_oubs0hwk5rn6knuecxg2")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -82,33 +82,33 @@ func TestCardUpdateWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.Cards.Update(
 		context.TODO(),
 		"card_oubs0hwk5rn6knuecxg2",
-		increase.CardUpdateParams{
-			BillingAddress: increase.F(increase.CardUpdateParamsBillingAddress{
-				Line1:      increase.F("x"),
-				Line2:      increase.F("x"),
-				City:       increase.F("x"),
-				State:      increase.F("x"),
-				PostalCode: increase.F("x"),
+		acme.CardUpdateParams{
+			BillingAddress: acme.F(acme.CardUpdateParamsBillingAddress{
+				Line1:      acme.F("x"),
+				Line2:      acme.F("x"),
+				City:       acme.F("x"),
+				State:      acme.F("x"),
+				PostalCode: acme.F("x"),
 			}),
-			Description: increase.F("New description"),
-			DigitalWallet: increase.F(increase.CardUpdateParamsDigitalWallet{
-				Email:         increase.F("x"),
-				Phone:         increase.F("x"),
-				CardProfileID: increase.F("string"),
+			Description: acme.F("New description"),
+			DigitalWallet: acme.F(acme.CardUpdateParamsDigitalWallet{
+				Email:         acme.F("x"),
+				Phone:         acme.F("x"),
+				CardProfileID: acme.F("string"),
 			}),
-			EntityID: increase.F("string"),
-			Status:   increase.F(increase.CardUpdateParamsStatusActive),
+			EntityID: acme.F("string"),
+			Status:   acme.F(acme.CardUpdateParamsStatusActive),
 		},
 	)
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -124,23 +124,23 @@ func TestCardListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Cards.List(context.TODO(), increase.CardListParams{
-		AccountID: increase.F("string"),
-		CreatedAt: increase.F(increase.CardListParamsCreatedAt{
-			After:      increase.F(time.Now()),
-			Before:     increase.F(time.Now()),
-			OnOrAfter:  increase.F(time.Now()),
-			OnOrBefore: increase.F(time.Now()),
+	_, err := client.Cards.List(context.TODO(), acme.CardListParams{
+		AccountID: acme.F("string"),
+		CreatedAt: acme.F(acme.CardListParamsCreatedAt{
+			After:      acme.F(time.Now()),
+			Before:     acme.F(time.Now()),
+			OnOrAfter:  acme.F(time.Now()),
+			OnOrBefore: acme.F(time.Now()),
 		}),
-		Cursor: increase.F("string"),
-		Limit:  increase.F(int64(1)),
+		Cursor: acme.F("string"),
+		Limit:  acme.F(int64(1)),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -156,13 +156,13 @@ func TestCardGetSensitiveDetails(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.Cards.GetSensitiveDetails(context.TODO(), "card_oubs0hwk5rn6knuecxg2")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

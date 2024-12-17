@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // BookkeepingAccountService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewBookkeepingAccountService] method
 // instead.
@@ -84,7 +84,7 @@ func (r *BookkeepingAccountService) Balance(ctx context.Context, bookkeepingAcco
 
 // Accounts are T-accounts. They can store accounting entries. Your compliance
 // setup might require annotating money movements using this API. Learn more in our
-// [guide to Bookkeeping](https://increase.com/documentation/bookkeeping#bookkeeping).
+// [guide to Bookkeeping](https://acme.com/documentation/bookkeeping#bookkeeping).
 type BookkeepingAccount struct {
 	// The account identifier.
 	ID string `json:"id,required"`
@@ -123,7 +123,7 @@ func (r *BookkeepingAccount) UnmarshalJSON(data []byte) (err error) {
 type BookkeepingAccountComplianceCategory string
 
 const (
-	// A cash in an commingled Increase Account.
+	// A cash in an commingled Acme Account.
 	BookkeepingAccountComplianceCategoryCommingledCash BookkeepingAccountComplianceCategory = "commingled_cash"
 	// A customer balance.
 	BookkeepingAccountComplianceCategoryCustomerBalance BookkeepingAccountComplianceCategory = "customer_balance"
@@ -192,7 +192,7 @@ func (r BookkeepingAccountNewParams) MarshalJSON() (data []byte, err error) {
 type BookkeepingAccountNewParamsComplianceCategory string
 
 const (
-	// A cash in an commingled Increase Account.
+	// A cash in an commingled Acme Account.
 	BookkeepingAccountNewParamsComplianceCategoryCommingledCash BookkeepingAccountNewParamsComplianceCategory = "commingled_cash"
 	// A customer balance.
 	BookkeepingAccountNewParamsComplianceCategoryCustomerBalance BookkeepingAccountNewParamsComplianceCategory = "customer_balance"

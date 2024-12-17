@@ -1,15 +1,15 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
 	"os"
 	"testing"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestManualPagination(t *testing.T) {
@@ -20,11 +20,11 @@ func TestManualPagination(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	page, err := client.Accounts.List(context.TODO(), increase.AccountListParams{})
+	page, err := client.Accounts.List(context.TODO(), acme.AccountListParams{})
 	if err != nil {
 		t.Fatalf("err should be nil: %s", err.Error())
 	}

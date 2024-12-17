@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // TransactionService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewTransactionService] method
 // instead.
@@ -412,7 +412,7 @@ type TransactionSourceACHTransferReturn struct {
 	// The three character ACH return code, in the range R01 to R85.
 	RawReturnReasonCode string `json:"raw_return_reason_code,required"`
 	// Why the ACH Transfer was returned. This reason code is sent by the receiving
-	// bank back to Increase.
+	// bank back to Acme.
 	ReturnReasonCode TransactionSourceACHTransferReturnReturnReasonCode `json:"return_reason_code,required"`
 	// The identifier of the Transaction associated with this return.
 	TransactionID string `json:"transaction_id,required"`
@@ -438,7 +438,7 @@ func (r *TransactionSourceACHTransferReturn) UnmarshalJSON(data []byte) (err err
 }
 
 // Why the ACH Transfer was returned. This reason code is sent by the receiving
-// bank back to Increase.
+// bank back to Acme.
 type TransactionSourceACHTransferReturnReturnReasonCode string
 
 const (
@@ -2408,9 +2408,9 @@ type TransactionSourceCheckTransferStopPaymentRequestReason string
 const (
 	// The check could not be delivered.
 	TransactionSourceCheckTransferStopPaymentRequestReasonMailDeliveryFailed TransactionSourceCheckTransferStopPaymentRequestReason = "mail_delivery_failed"
-	// The check was canceled by an Increase operator who will provide details
+	// The check was canceled by an Acme operator who will provide details
 	// out-of-band.
-	TransactionSourceCheckTransferStopPaymentRequestReasonRejectedByIncrease TransactionSourceCheckTransferStopPaymentRequestReason = "rejected_by_increase"
+	TransactionSourceCheckTransferStopPaymentRequestReasonRejectedByAcme TransactionSourceCheckTransferStopPaymentRequestReason = "rejected_by_acme"
 	// The check was stopped for another reason.
 	TransactionSourceCheckTransferStopPaymentRequestReasonUnknown TransactionSourceCheckTransferStopPaymentRequestReason = "unknown"
 )
@@ -2490,13 +2490,13 @@ type TransactionSourceInboundACHTransfer struct {
 	// The originator's identifier for the transfer receipient.
 	ReceiverIDNumber string `json:"receiver_id_number,required,nullable"`
 	// The name of the transfer recipient. This value is informational and not verified
-	// by Increase.
+	// by Acme.
 	ReceiverName string `json:"receiver_name,required,nullable"`
 	// A 15 digit number recorded in the Nacha file and available to both the
 	// originating and receiving bank. Along with the amount, date, and originating
 	// routing number, this can be used to identify the ACH transfer at either bank.
 	// ACH trace numbers are not unique, but are
-	// [used to correlate returns](https://increase.com/documentation/ach#returns).
+	// [used to correlate returns](https://acme.com/documentation/ach#returns).
 	TraceNumber string `json:"trace_number,required"`
 	// The inbound ach transfer's identifier.
 	TransferID string                                  `json:"transfer_id,required"`
@@ -2664,7 +2664,7 @@ type TransactionSourceInboundInternationalACHTransfer struct {
 	ReceiverStateOrProvince string `json:"receiver_state_or_province,required,nullable"`
 	// A portion of the receiver address. This may be incomplete.
 	ReceiverStreetAddress string `json:"receiver_street_address,required"`
-	// The name of the receiver of the transfer. This is not verified by Increase.
+	// The name of the receiver of the transfer. This is not verified by Acme.
 	ReceivingCompanyOrIndividualName string `json:"receiving_company_or_individual_name,required"`
 	// The [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), Alpha-2
 	// country code of the receiving bank country.
@@ -2682,7 +2682,7 @@ type TransactionSourceInboundInternationalACHTransfer struct {
 	// originating and receiving bank. Along with the amount, date, and originating
 	// routing number, this can be used to identify the ACH transfer at either bank.
 	// ACH trace numbers are not unique, but are
-	// [used to correlate returns](https://increase.com/documentation/ach#returns).
+	// [used to correlate returns](https://acme.com/documentation/ach#returns).
 	TraceNumber string                                               `json:"trace_number,required"`
 	JSON        transactionSourceInboundInternationalACHTransferJSON `json:"-"`
 }
@@ -2917,7 +2917,7 @@ type TransactionSourceInboundWireDrawdownPayment struct {
 	BeneficiaryName string `json:"beneficiary_name,required,nullable"`
 	// A free-form reference string set by the sender, to help identify the transfer.
 	BeneficiaryReference string `json:"beneficiary_reference,required,nullable"`
-	// An Increase-constructed description of the transfer.
+	// An Acme-constructed description of the transfer.
 	Description string `json:"description,required"`
 	// A unique identifier available to the originating and receiving banks, commonly
 	// abbreviated as IMAD. It is created when the wire is submitted to the Fedwire
@@ -2934,7 +2934,7 @@ type TransactionSourceInboundWireDrawdownPayment struct {
 	// The American Banking Association (ABA) routing number of the bank originating
 	// the transfer.
 	OriginatorRoutingNumber string `json:"originator_routing_number,required,nullable"`
-	// An Increase-created concatenation of the Originator-to-Beneficiary lines.
+	// An Acme-created concatenation of the Originator-to-Beneficiary lines.
 	OriginatorToBeneficiaryInformation string `json:"originator_to_beneficiary_information,required,nullable"`
 	// A free-form message set by the wire originator.
 	OriginatorToBeneficiaryInformationLine1 string `json:"originator_to_beneficiary_information_line1,required,nullable"`
@@ -3113,7 +3113,7 @@ type TransactionSourceInboundWireTransfer struct {
 	BeneficiaryName string `json:"beneficiary_name,required,nullable"`
 	// A free-form reference string set by the sender, to help identify the transfer.
 	BeneficiaryReference string `json:"beneficiary_reference,required,nullable"`
-	// An Increase-constructed description of the transfer.
+	// An Acme-constructed description of the transfer.
 	Description string `json:"description,required"`
 	// A unique identifier available to the originating and receiving banks, commonly
 	// abbreviated as IMAD. It is created when the wire is submitted to the Fedwire
@@ -3130,7 +3130,7 @@ type TransactionSourceInboundWireTransfer struct {
 	// The American Banking Association (ABA) routing number of the bank originating
 	// the transfer.
 	OriginatorRoutingNumber string `json:"originator_routing_number,required,nullable"`
-	// An Increase-created concatenation of the Originator-to-Beneficiary lines.
+	// An Acme-created concatenation of the Originator-to-Beneficiary lines.
 	OriginatorToBeneficiaryInformation string `json:"originator_to_beneficiary_information,required,nullable"`
 	// A free-form message set by the wire originator.
 	OriginatorToBeneficiaryInformationLine1 string `json:"originator_to_beneficiary_information_line1,required,nullable"`
@@ -3234,7 +3234,7 @@ type TransactionSourceInternalSource struct {
 	// The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the transaction
 	// currency.
 	Currency TransactionSourceInternalSourceCurrency `json:"currency,required"`
-	// An Internal Source is a transaction between you and Increase. This describes the
+	// An Internal Source is a transaction between you and Acme. This describes the
 	// reason for the transaction.
 	Reason TransactionSourceInternalSourceReason `json:"reason,required"`
 	JSON   transactionSourceInternalSourceJSON   `json:"-"`
@@ -3273,7 +3273,7 @@ const (
 	TransactionSourceInternalSourceCurrencyUsd TransactionSourceInternalSourceCurrency = "USD"
 )
 
-// An Internal Source is a transaction between you and Increase. This describes the
+// An Internal Source is a transaction between you and Acme. This describes the
 // reason for the transaction.
 type TransactionSourceInternalSourceReason string
 

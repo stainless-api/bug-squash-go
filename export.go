@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // ExportService contains methods and other services that help with interacting
-// with the increase API. Note, unlike clients, this service does not read
+// with the acme API. Note, unlike clients, this service does not read
 // variables from the environment automatically. You should not instantiate this
 // service directly, and instead use the [NewExportService] method instead.
 type ExportService struct {
@@ -73,11 +73,11 @@ func (r *ExportService) ListAutoPaging(ctx context.Context, query ExportListPara
 	return shared.NewPageAutoPager(r.List(ctx, query, opts...))
 }
 
-// Exports are batch summaries of your Increase data. You can make them from the
+// Exports are batch summaries of your Acme data. You can make them from the
 // API or dashboard. Since they can take a while, they are generated
 // asynchronously. We send a webhook when they are ready. For more information,
 // please read our
-// [Exports documentation](https://increase.com/documentation/exports).
+// [Exports documentation](https://acme.com/documentation/exports).
 type Export struct {
 	// The Export identifier.
 	ID string `json:"id,required"`
@@ -139,11 +139,11 @@ const (
 type ExportStatus string
 
 const (
-	// Increase is generating the export.
+	// Acme is generating the export.
 	ExportStatusPending ExportStatus = "pending"
 	// The export has been successfully generated.
 	ExportStatusComplete ExportStatus = "complete"
-	// The export failed to generate. Increase will reach out to you to resolve the
+	// The export failed to generate. Acme will reach out to you to resolve the
 	// issue.
 	ExportStatusFailed ExportStatus = "failed"
 )

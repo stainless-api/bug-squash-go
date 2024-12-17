@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -8,14 +8,14 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/option"
 )
 
 // SimulationRealTimePaymentsTransferService contains methods and other services
-// that help with interacting with the increase API. Note, unlike clients, this
+// that help with interacting with the acme API. Note, unlike clients, this
 // service does not read variables from the environment automatically. You should
 // not instantiate this service directly, and instead use the
 // [NewSimulationRealTimePaymentsTransferService] method instead.
@@ -284,7 +284,7 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceACHDeclineReasonACHRouteCanceled InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceACHDeclineReason = "ach_route_canceled"
 	// The account number is disabled.
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceACHDeclineReasonACHRouteDisabled InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceACHDeclineReason = "ach_route_disabled"
-	// The transaction would cause an Increase limit to be exceeded.
+	// The transaction would cause an Acme limit to be exceeded.
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceACHDeclineReasonBreachesLimit InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceACHDeclineReason = "breaches_limit"
 	// A credit was refused. This is a reasonable default reason for decline of
 	// credits.
@@ -306,7 +306,7 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceACHDeclineReasonNoACHRoute InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceACHDeclineReason = "no_ach_route"
 	// The originating financial institution asked for this transfer to be returned.
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceACHDeclineReasonOriginatorRequest InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceACHDeclineReason = "originator_request"
-	// The transaction is not allowed per Increase's terms.
+	// The transaction is not allowed per Acme's terms.
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceACHDeclineReasonTransactionNotAllowed InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceACHDeclineReason = "transaction_not_allowed"
 	// The user initiated the decline.
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceACHDeclineReasonUserInitiated InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceACHDeclineReason = "user_initiated"
@@ -615,7 +615,7 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCardDeclineReasonInsufficientFunds InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCardDeclineReason = "insufficient_funds"
 	// The given CVV2 did not match the card's value.
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCardDeclineReasonCvv2Mismatch InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCardDeclineReason = "cvv2_mismatch"
-	// The attempted card transaction is not allowed per Increase's terms.
+	// The attempted card transaction is not allowed per Acme's terms.
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCardDeclineReasonTransactionNotAllowed InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCardDeclineReason = "transaction_not_allowed"
 	// The transaction was blocked by a Limit.
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCardDeclineReasonBreachesLimit InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCardDeclineReason = "breaches_limit"
@@ -631,7 +631,7 @@ const (
 	// exist.
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCardDeclineReasonMissingOriginalAuthorization InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCardDeclineReason = "missing_original_authorization"
 	// The transaction was suspected to be fraudulent. Please reach out to
-	// support@increase.com for more information.
+	// support@acme.com for more information.
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCardDeclineReasonSuspectedFraud InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCardDeclineReason = "suspected_fraud"
 )
 
@@ -831,9 +831,9 @@ const (
 	// The amount the receiving bank is attempting to deposit does not match the amount
 	// on the check.
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCheckDeclineReasonAmountMismatch InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCheckDeclineReason = "amount_mismatch"
-	// The check attempting to be deposited does not belong to Increase.
+	// The check attempting to be deposited does not belong to Acme.
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCheckDeclineReasonNotOurItem InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCheckDeclineReason = "not_our_item"
-	// The account number on the check does not exist at Increase.
+	// The account number on the check does not exist at Acme.
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCheckDeclineReasonNoAccountNumberFound InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceCheckDeclineReason = "no_account_number_found"
 )
 
@@ -1004,7 +1004,7 @@ type InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceInt
 	ReceiverStateOrProvince string `json:"receiver_state_or_province,required,nullable"`
 	// A portion of the receiver address. This may be incomplete.
 	ReceiverStreetAddress string `json:"receiver_street_address,required"`
-	// The name of the receiver of the transfer. This is not verified by Increase.
+	// The name of the receiver of the transfer. This is not verified by Acme.
 	ReceivingCompanyOrIndividualName string `json:"receiving_company_or_individual_name,required"`
 	// The [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), Alpha-2
 	// country code of the receiving bank country.
@@ -1022,7 +1022,7 @@ type InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceInt
 	// originating and receiving bank. Along with the amount, date, and originating
 	// routing number, this can be used to identify the ACH transfer at either bank.
 	// ACH trace numbers are not unique, but are
-	// [used to correlate returns](https://increase.com/documentation/ach#returns).
+	// [used to correlate returns](https://acme.com/documentation/ach#returns).
 	TraceNumber string                                                                                              `json:"trace_number,required"`
 	JSON        inboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceInternationalACHDeclineJSON `json:"-"`
 }
@@ -1194,7 +1194,7 @@ type InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceWir
 	BeneficiaryName string `json:"beneficiary_name,required,nullable"`
 	// A free-form reference string set by the sender, to help identify the transfer.
 	BeneficiaryReference string `json:"beneficiary_reference,required,nullable"`
-	// An Increase-constructed description of the declined transaction.
+	// An Acme-constructed description of the declined transaction.
 	Description string `json:"description,required"`
 	// A unique identifier available to the originating and receiving banks, commonly
 	// abbreviated as IMAD. It is created when the wire is submitted to the Fedwire
@@ -1268,7 +1268,7 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceWireDeclineReasonGroupLocked InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceWireDeclineReason = "group_locked"
 	// The beneficiary account number does not exist.
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceWireDeclineReasonNoAccountNumber InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceWireDeclineReason = "no_account_number"
-	// The transaction is not allowed per Increase's terms.
+	// The transaction is not allowed per Acme's terms.
 	InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceWireDeclineReasonTransactionNotAllowed InboundRealTimePaymentsTransferSimulationResultDeclinedTransactionSourceWireDeclineReason = "transaction_not_allowed"
 )
 
@@ -1633,7 +1633,7 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionSourceACHTransfer
 	// The three character ACH return code, in the range R01 to R85.
 	RawReturnReasonCode string `json:"raw_return_reason_code,required"`
 	// Why the ACH Transfer was returned. This reason code is sent by the receiving
-	// bank back to Increase.
+	// bank back to Acme.
 	ReturnReasonCode InboundRealTimePaymentsTransferSimulationResultTransactionSourceACHTransferReturnReturnReasonCode `json:"return_reason_code,required"`
 	// The identifier of the Transaction associated with this return.
 	TransactionID string `json:"transaction_id,required"`
@@ -1660,7 +1660,7 @@ func (r *InboundRealTimePaymentsTransferSimulationResultTransactionSourceACHTran
 }
 
 // Why the ACH Transfer was returned. This reason code is sent by the receiving
-// bank back to Increase.
+// bank back to Acme.
 type InboundRealTimePaymentsTransferSimulationResultTransactionSourceACHTransferReturnReturnReasonCode string
 
 const (
@@ -3648,9 +3648,9 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionSourceCheckTransf
 const (
 	// The check could not be delivered.
 	InboundRealTimePaymentsTransferSimulationResultTransactionSourceCheckTransferStopPaymentRequestReasonMailDeliveryFailed InboundRealTimePaymentsTransferSimulationResultTransactionSourceCheckTransferStopPaymentRequestReason = "mail_delivery_failed"
-	// The check was canceled by an Increase operator who will provide details
+	// The check was canceled by an Acme operator who will provide details
 	// out-of-band.
-	InboundRealTimePaymentsTransferSimulationResultTransactionSourceCheckTransferStopPaymentRequestReasonRejectedByIncrease InboundRealTimePaymentsTransferSimulationResultTransactionSourceCheckTransferStopPaymentRequestReason = "rejected_by_increase"
+	InboundRealTimePaymentsTransferSimulationResultTransactionSourceCheckTransferStopPaymentRequestReasonRejectedByAcme InboundRealTimePaymentsTransferSimulationResultTransactionSourceCheckTransferStopPaymentRequestReason = "rejected_by_acme"
 	// The check was stopped for another reason.
 	InboundRealTimePaymentsTransferSimulationResultTransactionSourceCheckTransferStopPaymentRequestReasonUnknown InboundRealTimePaymentsTransferSimulationResultTransactionSourceCheckTransferStopPaymentRequestReason = "unknown"
 )
@@ -3731,13 +3731,13 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionSourceInboundACHT
 	// The originator's identifier for the transfer receipient.
 	ReceiverIDNumber string `json:"receiver_id_number,required,nullable"`
 	// The name of the transfer recipient. This value is informational and not verified
-	// by Increase.
+	// by Acme.
 	ReceiverName string `json:"receiver_name,required,nullable"`
 	// A 15 digit number recorded in the Nacha file and available to both the
 	// originating and receiving bank. Along with the amount, date, and originating
 	// routing number, this can be used to identify the ACH transfer at either bank.
 	// ACH trace numbers are not unique, but are
-	// [used to correlate returns](https://increase.com/documentation/ach#returns).
+	// [used to correlate returns](https://acme.com/documentation/ach#returns).
 	TraceNumber string `json:"trace_number,required"`
 	// The inbound ach transfer's identifier.
 	TransferID string                                                                                 `json:"transfer_id,required"`
@@ -3907,7 +3907,7 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionSourceInboundInte
 	ReceiverStateOrProvince string `json:"receiver_state_or_province,required,nullable"`
 	// A portion of the receiver address. This may be incomplete.
 	ReceiverStreetAddress string `json:"receiver_street_address,required"`
-	// The name of the receiver of the transfer. This is not verified by Increase.
+	// The name of the receiver of the transfer. This is not verified by Acme.
 	ReceivingCompanyOrIndividualName string `json:"receiving_company_or_individual_name,required"`
 	// The [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), Alpha-2
 	// country code of the receiving bank country.
@@ -3925,7 +3925,7 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionSourceInboundInte
 	// originating and receiving bank. Along with the amount, date, and originating
 	// routing number, this can be used to identify the ACH transfer at either bank.
 	// ACH trace numbers are not unique, but are
-	// [used to correlate returns](https://increase.com/documentation/ach#returns).
+	// [used to correlate returns](https://acme.com/documentation/ach#returns).
 	TraceNumber string                                                                                              `json:"trace_number,required"`
 	JSON        inboundRealTimePaymentsTransferSimulationResultTransactionSourceInboundInternationalACHTransferJSON `json:"-"`
 }
@@ -4161,7 +4161,7 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionSourceInboundWire
 	BeneficiaryName string `json:"beneficiary_name,required,nullable"`
 	// A free-form reference string set by the sender, to help identify the transfer.
 	BeneficiaryReference string `json:"beneficiary_reference,required,nullable"`
-	// An Increase-constructed description of the transfer.
+	// An Acme-constructed description of the transfer.
 	Description string `json:"description,required"`
 	// A unique identifier available to the originating and receiving banks, commonly
 	// abbreviated as IMAD. It is created when the wire is submitted to the Fedwire
@@ -4178,7 +4178,7 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionSourceInboundWire
 	// The American Banking Association (ABA) routing number of the bank originating
 	// the transfer.
 	OriginatorRoutingNumber string `json:"originator_routing_number,required,nullable"`
-	// An Increase-created concatenation of the Originator-to-Beneficiary lines.
+	// An Acme-created concatenation of the Originator-to-Beneficiary lines.
 	OriginatorToBeneficiaryInformation string `json:"originator_to_beneficiary_information,required,nullable"`
 	// A free-form message set by the wire originator.
 	OriginatorToBeneficiaryInformationLine1 string `json:"originator_to_beneficiary_information_line1,required,nullable"`
@@ -4360,7 +4360,7 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionSourceInboundWire
 	BeneficiaryName string `json:"beneficiary_name,required,nullable"`
 	// A free-form reference string set by the sender, to help identify the transfer.
 	BeneficiaryReference string `json:"beneficiary_reference,required,nullable"`
-	// An Increase-constructed description of the transfer.
+	// An Acme-constructed description of the transfer.
 	Description string `json:"description,required"`
 	// A unique identifier available to the originating and receiving banks, commonly
 	// abbreviated as IMAD. It is created when the wire is submitted to the Fedwire
@@ -4377,7 +4377,7 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionSourceInboundWire
 	// The American Banking Association (ABA) routing number of the bank originating
 	// the transfer.
 	OriginatorRoutingNumber string `json:"originator_routing_number,required,nullable"`
-	// An Increase-created concatenation of the Originator-to-Beneficiary lines.
+	// An Acme-created concatenation of the Originator-to-Beneficiary lines.
 	OriginatorToBeneficiaryInformation string `json:"originator_to_beneficiary_information,required,nullable"`
 	// A free-form message set by the wire originator.
 	OriginatorToBeneficiaryInformationLine1 string `json:"originator_to_beneficiary_information_line1,required,nullable"`
@@ -4483,7 +4483,7 @@ type InboundRealTimePaymentsTransferSimulationResultTransactionSourceInternalSou
 	// The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the transaction
 	// currency.
 	Currency InboundRealTimePaymentsTransferSimulationResultTransactionSourceInternalSourceCurrency `json:"currency,required"`
-	// An Internal Source is a transaction between you and Increase. This describes the
+	// An Internal Source is a transaction between you and Acme. This describes the
 	// reason for the transaction.
 	Reason InboundRealTimePaymentsTransferSimulationResultTransactionSourceInternalSourceReason `json:"reason,required"`
 	JSON   inboundRealTimePaymentsTransferSimulationResultTransactionSourceInternalSourceJSON   `json:"-"`
@@ -4523,7 +4523,7 @@ const (
 	InboundRealTimePaymentsTransferSimulationResultTransactionSourceInternalSourceCurrencyUsd InboundRealTimePaymentsTransferSimulationResultTransactionSourceInternalSourceCurrency = "USD"
 )
 
-// An Internal Source is a transaction between you and Increase. This describes the
+// An Internal Source is a transaction between you and Acme. This describes the
 // reason for the transaction.
 type InboundRealTimePaymentsTransferSimulationResultTransactionSourceInternalSourceReason string
 
@@ -4761,7 +4761,7 @@ const (
 	// The destination financial institution is currently signed off of Real-Time
 	// Payments. Corresponds to the Real-Time Payments reason code `9910`.
 	SimulationRealTimePaymentsTransferCompleteParamsRejectionRejectReasonCodeInstructedAgentSignedOff SimulationRealTimePaymentsTransferCompleteParamsRejectionRejectReasonCode = "instructed_agent_signed_off"
-	// The transfer was rejected due to an internal Increase issue. We have been
+	// The transfer was rejected due to an internal Acme issue. We have been
 	// notified.
 	SimulationRealTimePaymentsTransferCompleteParamsRejectionRejectReasonCodeProcessingError SimulationRealTimePaymentsTransferCompleteParamsRejectionRejectReasonCode = "processing_error"
 	// Some other error or issue has occurred.

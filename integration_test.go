@@ -2,7 +2,7 @@
 // and intermittent errors. We have a few tests here to better exercise
 // those code paths in the client.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -10,9 +10,9 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 // Test that we can succesfully paginate through a list endpoint.
@@ -26,14 +26,14 @@ func TestAutoPaginationIntegration(t *testing.T) {
 	if !testutil.CheckIntegrationServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey(apiKey),
 	)
 	cds := make(map[string]bool)
 
-	iter := client.CheckDeposits.ListAutoPaging(context.TODO(), increase.CheckDepositListParams{
-		Limit: increase.F(int64(2)),
+	iter := client.CheckDeposits.ListAutoPaging(context.TODO(), acme.CheckDepositListParams{
+		Limit: acme.F(int64(2)),
 	})
 	for iter.Next() {
 		cd := iter.Current()
@@ -63,23 +63,23 @@ func TestNewIdempotentlyIntegration(t *testing.T) {
 	if !testutil.CheckIntegrationServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey(apiKey),
 	)
 	accountID := fmt.Sprintf("account_%08d", rand.Int())
-	_, err := client.CheckDeposits.New(context.TODO(), increase.CheckDepositNewParams{
-		AccountID:        increase.F(accountID),
-		Amount:           increase.F(int64(42)),
-		Currency:         increase.F("USD"),
-		FrontImageFileID: increase.F(fmt.Sprintf("file_%08d", rand.Int())),
-		BackImageFileID:  increase.F(fmt.Sprintf("file_%08d", rand.Int())),
+	_, err := client.CheckDeposits.New(context.TODO(), acme.CheckDepositNewParams{
+		AccountID:        acme.F(accountID),
+		Amount:           acme.F(int64(42)),
+		Currency:         acme.F("USD"),
+		FrontImageFileID: acme.F(fmt.Sprintf("file_%08d", rand.Int())),
+		BackImageFileID:  acme.F(fmt.Sprintf("file_%08d", rand.Int())),
 	})
 	if err != nil {
 		t.Fatalf("err should be nil: %s", err.Error())
 	}
 
-	iter := client.CheckDeposits.ListAutoPaging(context.TODO(), increase.CheckDepositListParams{})
+	iter := client.CheckDeposits.ListAutoPaging(context.TODO(), acme.CheckDepositListParams{})
 	accountIDSeen := 0
 	for iter.Next() {
 		if accountID == iter.Current().AccountID {

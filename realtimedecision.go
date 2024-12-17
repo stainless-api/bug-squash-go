@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -8,14 +8,14 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/option"
 )
 
 // RealTimeDecisionService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewRealTimeDecisionService] method
 // instead.
@@ -50,7 +50,7 @@ func (r *RealTimeDecisionService) Action(ctx context.Context, realTimeDecisionID
 
 // Real Time Decisions are created when your application needs to take action in
 // real-time to some event such as a card authorization. Real time decisions are
-// currently in beta; please contact support@increase.com if you're interested in
+// currently in beta; please contact support@acme.com if you're interested in
 // trying them out!
 type RealTimeDecision struct {
 	// The Real-Time Decision identifier.
@@ -400,7 +400,7 @@ type RealTimeDecisionCardAuthorizationRequestDetailsCategory string
 const (
 	// A regular, standalone authorization.
 	RealTimeDecisionCardAuthorizationRequestDetailsCategoryInitialAuthorization RealTimeDecisionCardAuthorizationRequestDetailsCategory = "initial_authorization"
-	// An incremental request to increase the amount of an existing authorization.
+	// An incremental request to acme the amount of an existing authorization.
 	RealTimeDecisionCardAuthorizationRequestDetailsCategoryIncrementalAuthorization RealTimeDecisionCardAuthorizationRequestDetailsCategory = "incremental_authorization"
 )
 

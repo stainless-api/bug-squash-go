@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // CheckDepositService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewCheckDepositService] method
 // instead.
@@ -90,10 +90,10 @@ type CheckDeposit struct {
 	CreatedAt time.Time `json:"created_at,required" format:"date-time"`
 	// The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the deposit.
 	Currency CheckDepositCurrency `json:"currency,required"`
-	// If your deposit is successfully parsed and accepted by Increase, this will
+	// If your deposit is successfully parsed and accepted by Acme, this will
 	// contain details of the parsed check.
 	DepositAcceptance CheckDepositDepositAcceptance `json:"deposit_acceptance,required,nullable"`
-	// If your deposit is rejected by Increase, this will contain details as to why it
+	// If your deposit is rejected by Acme, this will contain details as to why it
 	// was rejected.
 	DepositRejection CheckDepositDepositRejection `json:"deposit_rejection,required,nullable"`
 	// If your deposit is returned, this will contain details as to why it was
@@ -152,7 +152,7 @@ const (
 	CheckDepositCurrencyUsd CheckDepositCurrency = "USD"
 )
 
-// If your deposit is successfully parsed and accepted by Increase, this will
+// If your deposit is successfully parsed and accepted by Acme, this will
 // contain details of the parsed check.
 type CheckDepositDepositAcceptance struct {
 	// The account number printed on the check.
@@ -213,7 +213,7 @@ const (
 	CheckDepositDepositAcceptanceCurrencyUsd CheckDepositDepositAcceptanceCurrency = "USD"
 )
 
-// If your deposit is rejected by Increase, this will contain details as to why it
+// If your deposit is rejected by Acme, this will contain details as to why it
 // was rejected.
 type CheckDepositDepositRejection struct {
 	// The rejected amount in the minor unit of check's currency. For dollars, for

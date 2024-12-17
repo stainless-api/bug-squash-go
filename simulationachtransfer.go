@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -8,14 +8,14 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/option"
 )
 
 // SimulationACHTransferService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewSimulationACHTransferService]
 // method instead.
@@ -33,11 +33,11 @@ func NewSimulationACHTransferService(opts ...option.RequestOption) (r *Simulatio
 }
 
 // Simulates an inbound ACH transfer to your account. This imitates initiating a
-// transfer to an Increase account from a different financial institution. The
+// transfer to an Acme account from a different financial institution. The
 // transfer may be either a credit or a debit depending on if the `amount` is
 // positive or negative. The result of calling this API will contain the created
 // transfer. You can pass a `resolve_at` parameter to allow for a window to
-// [action on the Inbound ACH Transfer](https://increase.com/documentation/inbound-ach-transfers#inbound-ach-transfers).
+// [action on the Inbound ACH Transfer](https://acme.com/documentation/inbound-ach-transfers#inbound-ach-transfers).
 // Alternatively, if you don't pass the `resolve_at` parameter the result will
 // contain either a [Transaction](#transactions) or a
 // [Declined Transaction](#declined-transactions) depending on whether or not the
@@ -61,7 +61,7 @@ func (r *SimulationACHTransferService) Return(ctx context.Context, achTransferID
 
 // Simulates the submission of an [ACH Transfer](#ach-transfers) to the Federal
 // Reserve. This transfer must first have a `status` of `pending_approval` or
-// `pending_submission`. In production, Increase submits ACH Transfers to the
+// `pending_submission`. In production, Acme submits ACH Transfers to the
 // Federal Reserve three times per day on weekdays. Since sandbox ACH Transfers are
 // not submitted to the Federal Reserve, this endpoint allows you to skip that
 // delay and transition the ACH Transfer to a status of `submitted`.
@@ -303,7 +303,7 @@ const (
 	ACHTransferSimulationDeclinedTransactionSourceACHDeclineReasonACHRouteCanceled ACHTransferSimulationDeclinedTransactionSourceACHDeclineReason = "ach_route_canceled"
 	// The account number is disabled.
 	ACHTransferSimulationDeclinedTransactionSourceACHDeclineReasonACHRouteDisabled ACHTransferSimulationDeclinedTransactionSourceACHDeclineReason = "ach_route_disabled"
-	// The transaction would cause an Increase limit to be exceeded.
+	// The transaction would cause an Acme limit to be exceeded.
 	ACHTransferSimulationDeclinedTransactionSourceACHDeclineReasonBreachesLimit ACHTransferSimulationDeclinedTransactionSourceACHDeclineReason = "breaches_limit"
 	// A credit was refused. This is a reasonable default reason for decline of
 	// credits.
@@ -325,7 +325,7 @@ const (
 	ACHTransferSimulationDeclinedTransactionSourceACHDeclineReasonNoACHRoute ACHTransferSimulationDeclinedTransactionSourceACHDeclineReason = "no_ach_route"
 	// The originating financial institution asked for this transfer to be returned.
 	ACHTransferSimulationDeclinedTransactionSourceACHDeclineReasonOriginatorRequest ACHTransferSimulationDeclinedTransactionSourceACHDeclineReason = "originator_request"
-	// The transaction is not allowed per Increase's terms.
+	// The transaction is not allowed per Acme's terms.
 	ACHTransferSimulationDeclinedTransactionSourceACHDeclineReasonTransactionNotAllowed ACHTransferSimulationDeclinedTransactionSourceACHDeclineReason = "transaction_not_allowed"
 	// The user initiated the decline.
 	ACHTransferSimulationDeclinedTransactionSourceACHDeclineReasonUserInitiated ACHTransferSimulationDeclinedTransactionSourceACHDeclineReason = "user_initiated"
@@ -634,7 +634,7 @@ const (
 	ACHTransferSimulationDeclinedTransactionSourceCardDeclineReasonInsufficientFunds ACHTransferSimulationDeclinedTransactionSourceCardDeclineReason = "insufficient_funds"
 	// The given CVV2 did not match the card's value.
 	ACHTransferSimulationDeclinedTransactionSourceCardDeclineReasonCvv2Mismatch ACHTransferSimulationDeclinedTransactionSourceCardDeclineReason = "cvv2_mismatch"
-	// The attempted card transaction is not allowed per Increase's terms.
+	// The attempted card transaction is not allowed per Acme's terms.
 	ACHTransferSimulationDeclinedTransactionSourceCardDeclineReasonTransactionNotAllowed ACHTransferSimulationDeclinedTransactionSourceCardDeclineReason = "transaction_not_allowed"
 	// The transaction was blocked by a Limit.
 	ACHTransferSimulationDeclinedTransactionSourceCardDeclineReasonBreachesLimit ACHTransferSimulationDeclinedTransactionSourceCardDeclineReason = "breaches_limit"
@@ -650,7 +650,7 @@ const (
 	// exist.
 	ACHTransferSimulationDeclinedTransactionSourceCardDeclineReasonMissingOriginalAuthorization ACHTransferSimulationDeclinedTransactionSourceCardDeclineReason = "missing_original_authorization"
 	// The transaction was suspected to be fraudulent. Please reach out to
-	// support@increase.com for more information.
+	// support@acme.com for more information.
 	ACHTransferSimulationDeclinedTransactionSourceCardDeclineReasonSuspectedFraud ACHTransferSimulationDeclinedTransactionSourceCardDeclineReason = "suspected_fraud"
 )
 
@@ -850,9 +850,9 @@ const (
 	// The amount the receiving bank is attempting to deposit does not match the amount
 	// on the check.
 	ACHTransferSimulationDeclinedTransactionSourceCheckDeclineReasonAmountMismatch ACHTransferSimulationDeclinedTransactionSourceCheckDeclineReason = "amount_mismatch"
-	// The check attempting to be deposited does not belong to Increase.
+	// The check attempting to be deposited does not belong to Acme.
 	ACHTransferSimulationDeclinedTransactionSourceCheckDeclineReasonNotOurItem ACHTransferSimulationDeclinedTransactionSourceCheckDeclineReason = "not_our_item"
-	// The account number on the check does not exist at Increase.
+	// The account number on the check does not exist at Acme.
 	ACHTransferSimulationDeclinedTransactionSourceCheckDeclineReasonNoAccountNumberFound ACHTransferSimulationDeclinedTransactionSourceCheckDeclineReason = "no_account_number_found"
 )
 
@@ -1023,7 +1023,7 @@ type ACHTransferSimulationDeclinedTransactionSourceInternationalACHDecline struc
 	ReceiverStateOrProvince string `json:"receiver_state_or_province,required,nullable"`
 	// A portion of the receiver address. This may be incomplete.
 	ReceiverStreetAddress string `json:"receiver_street_address,required"`
-	// The name of the receiver of the transfer. This is not verified by Increase.
+	// The name of the receiver of the transfer. This is not verified by Acme.
 	ReceivingCompanyOrIndividualName string `json:"receiving_company_or_individual_name,required"`
 	// The [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), Alpha-2
 	// country code of the receiving bank country.
@@ -1041,7 +1041,7 @@ type ACHTransferSimulationDeclinedTransactionSourceInternationalACHDecline struc
 	// originating and receiving bank. Along with the amount, date, and originating
 	// routing number, this can be used to identify the ACH transfer at either bank.
 	// ACH trace numbers are not unique, but are
-	// [used to correlate returns](https://increase.com/documentation/ach#returns).
+	// [used to correlate returns](https://acme.com/documentation/ach#returns).
 	TraceNumber string                                                                    `json:"trace_number,required"`
 	JSON        achTransferSimulationDeclinedTransactionSourceInternationalACHDeclineJSON `json:"-"`
 }
@@ -1213,7 +1213,7 @@ type ACHTransferSimulationDeclinedTransactionSourceWireDecline struct {
 	BeneficiaryName string `json:"beneficiary_name,required,nullable"`
 	// A free-form reference string set by the sender, to help identify the transfer.
 	BeneficiaryReference string `json:"beneficiary_reference,required,nullable"`
-	// An Increase-constructed description of the declined transaction.
+	// An Acme-constructed description of the declined transaction.
 	Description string `json:"description,required"`
 	// A unique identifier available to the originating and receiving banks, commonly
 	// abbreviated as IMAD. It is created when the wire is submitted to the Fedwire
@@ -1287,7 +1287,7 @@ const (
 	ACHTransferSimulationDeclinedTransactionSourceWireDeclineReasonGroupLocked ACHTransferSimulationDeclinedTransactionSourceWireDeclineReason = "group_locked"
 	// The beneficiary account number does not exist.
 	ACHTransferSimulationDeclinedTransactionSourceWireDeclineReasonNoAccountNumber ACHTransferSimulationDeclinedTransactionSourceWireDeclineReason = "no_account_number"
-	// The transaction is not allowed per Increase's terms.
+	// The transaction is not allowed per Acme's terms.
 	ACHTransferSimulationDeclinedTransactionSourceWireDeclineReasonTransactionNotAllowed ACHTransferSimulationDeclinedTransactionSourceWireDeclineReason = "transaction_not_allowed"
 )
 
@@ -1650,7 +1650,7 @@ type ACHTransferSimulationTransactionSourceACHTransferReturn struct {
 	// The three character ACH return code, in the range R01 to R85.
 	RawReturnReasonCode string `json:"raw_return_reason_code,required"`
 	// Why the ACH Transfer was returned. This reason code is sent by the receiving
-	// bank back to Increase.
+	// bank back to Acme.
 	ReturnReasonCode ACHTransferSimulationTransactionSourceACHTransferReturnReturnReasonCode `json:"return_reason_code,required"`
 	// The identifier of the Transaction associated with this return.
 	TransactionID string `json:"transaction_id,required"`
@@ -1677,7 +1677,7 @@ func (r *ACHTransferSimulationTransactionSourceACHTransferReturn) UnmarshalJSON(
 }
 
 // Why the ACH Transfer was returned. This reason code is sent by the receiving
-// bank back to Increase.
+// bank back to Acme.
 type ACHTransferSimulationTransactionSourceACHTransferReturnReturnReasonCode string
 
 const (
@@ -3663,9 +3663,9 @@ type ACHTransferSimulationTransactionSourceCheckTransferStopPaymentRequestReason
 const (
 	// The check could not be delivered.
 	ACHTransferSimulationTransactionSourceCheckTransferStopPaymentRequestReasonMailDeliveryFailed ACHTransferSimulationTransactionSourceCheckTransferStopPaymentRequestReason = "mail_delivery_failed"
-	// The check was canceled by an Increase operator who will provide details
+	// The check was canceled by an Acme operator who will provide details
 	// out-of-band.
-	ACHTransferSimulationTransactionSourceCheckTransferStopPaymentRequestReasonRejectedByIncrease ACHTransferSimulationTransactionSourceCheckTransferStopPaymentRequestReason = "rejected_by_increase"
+	ACHTransferSimulationTransactionSourceCheckTransferStopPaymentRequestReasonRejectedByAcme ACHTransferSimulationTransactionSourceCheckTransferStopPaymentRequestReason = "rejected_by_acme"
 	// The check was stopped for another reason.
 	ACHTransferSimulationTransactionSourceCheckTransferStopPaymentRequestReasonUnknown ACHTransferSimulationTransactionSourceCheckTransferStopPaymentRequestReason = "unknown"
 )
@@ -3745,13 +3745,13 @@ type ACHTransferSimulationTransactionSourceInboundACHTransfer struct {
 	// The originator's identifier for the transfer receipient.
 	ReceiverIDNumber string `json:"receiver_id_number,required,nullable"`
 	// The name of the transfer recipient. This value is informational and not verified
-	// by Increase.
+	// by Acme.
 	ReceiverName string `json:"receiver_name,required,nullable"`
 	// A 15 digit number recorded in the Nacha file and available to both the
 	// originating and receiving bank. Along with the amount, date, and originating
 	// routing number, this can be used to identify the ACH transfer at either bank.
 	// ACH trace numbers are not unique, but are
-	// [used to correlate returns](https://increase.com/documentation/ach#returns).
+	// [used to correlate returns](https://acme.com/documentation/ach#returns).
 	TraceNumber string `json:"trace_number,required"`
 	// The inbound ach transfer's identifier.
 	TransferID string                                                       `json:"transfer_id,required"`
@@ -3920,7 +3920,7 @@ type ACHTransferSimulationTransactionSourceInboundInternationalACHTransfer struc
 	ReceiverStateOrProvince string `json:"receiver_state_or_province,required,nullable"`
 	// A portion of the receiver address. This may be incomplete.
 	ReceiverStreetAddress string `json:"receiver_street_address,required"`
-	// The name of the receiver of the transfer. This is not verified by Increase.
+	// The name of the receiver of the transfer. This is not verified by Acme.
 	ReceivingCompanyOrIndividualName string `json:"receiving_company_or_individual_name,required"`
 	// The [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), Alpha-2
 	// country code of the receiving bank country.
@@ -3938,7 +3938,7 @@ type ACHTransferSimulationTransactionSourceInboundInternationalACHTransfer struc
 	// originating and receiving bank. Along with the amount, date, and originating
 	// routing number, this can be used to identify the ACH transfer at either bank.
 	// ACH trace numbers are not unique, but are
-	// [used to correlate returns](https://increase.com/documentation/ach#returns).
+	// [used to correlate returns](https://acme.com/documentation/ach#returns).
 	TraceNumber string                                                                    `json:"trace_number,required"`
 	JSON        achTransferSimulationTransactionSourceInboundInternationalACHTransferJSON `json:"-"`
 }
@@ -4174,7 +4174,7 @@ type ACHTransferSimulationTransactionSourceInboundWireDrawdownPayment struct {
 	BeneficiaryName string `json:"beneficiary_name,required,nullable"`
 	// A free-form reference string set by the sender, to help identify the transfer.
 	BeneficiaryReference string `json:"beneficiary_reference,required,nullable"`
-	// An Increase-constructed description of the transfer.
+	// An Acme-constructed description of the transfer.
 	Description string `json:"description,required"`
 	// A unique identifier available to the originating and receiving banks, commonly
 	// abbreviated as IMAD. It is created when the wire is submitted to the Fedwire
@@ -4191,7 +4191,7 @@ type ACHTransferSimulationTransactionSourceInboundWireDrawdownPayment struct {
 	// The American Banking Association (ABA) routing number of the bank originating
 	// the transfer.
 	OriginatorRoutingNumber string `json:"originator_routing_number,required,nullable"`
-	// An Increase-created concatenation of the Originator-to-Beneficiary lines.
+	// An Acme-created concatenation of the Originator-to-Beneficiary lines.
 	OriginatorToBeneficiaryInformation string `json:"originator_to_beneficiary_information,required,nullable"`
 	// A free-form message set by the wire originator.
 	OriginatorToBeneficiaryInformationLine1 string `json:"originator_to_beneficiary_information_line1,required,nullable"`
@@ -4373,7 +4373,7 @@ type ACHTransferSimulationTransactionSourceInboundWireTransfer struct {
 	BeneficiaryName string `json:"beneficiary_name,required,nullable"`
 	// A free-form reference string set by the sender, to help identify the transfer.
 	BeneficiaryReference string `json:"beneficiary_reference,required,nullable"`
-	// An Increase-constructed description of the transfer.
+	// An Acme-constructed description of the transfer.
 	Description string `json:"description,required"`
 	// A unique identifier available to the originating and receiving banks, commonly
 	// abbreviated as IMAD. It is created when the wire is submitted to the Fedwire
@@ -4390,7 +4390,7 @@ type ACHTransferSimulationTransactionSourceInboundWireTransfer struct {
 	// The American Banking Association (ABA) routing number of the bank originating
 	// the transfer.
 	OriginatorRoutingNumber string `json:"originator_routing_number,required,nullable"`
-	// An Increase-created concatenation of the Originator-to-Beneficiary lines.
+	// An Acme-created concatenation of the Originator-to-Beneficiary lines.
 	OriginatorToBeneficiaryInformation string `json:"originator_to_beneficiary_information,required,nullable"`
 	// A free-form message set by the wire originator.
 	OriginatorToBeneficiaryInformationLine1 string `json:"originator_to_beneficiary_information_line1,required,nullable"`
@@ -4495,7 +4495,7 @@ type ACHTransferSimulationTransactionSourceInternalSource struct {
 	// The [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) code for the transaction
 	// currency.
 	Currency ACHTransferSimulationTransactionSourceInternalSourceCurrency `json:"currency,required"`
-	// An Internal Source is a transaction between you and Increase. This describes the
+	// An Internal Source is a transaction between you and Acme. This describes the
 	// reason for the transaction.
 	Reason ACHTransferSimulationTransactionSourceInternalSourceReason `json:"reason,required"`
 	JSON   achTransferSimulationTransactionSourceInternalSourceJSON   `json:"-"`
@@ -4534,7 +4534,7 @@ const (
 	ACHTransferSimulationTransactionSourceInternalSourceCurrencyUsd ACHTransferSimulationTransactionSourceInternalSourceCurrency = "USD"
 )
 
-// An Internal Source is a transaction between you and Increase. This describes the
+// An Internal Source is a transaction between you and Acme. This describes the
 // reason for the transaction.
 type ACHTransferSimulationTransactionSourceInternalSourceReason string
 
@@ -4887,7 +4887,7 @@ const (
 	ACHTransferSimulationTransferDeclineReasonACHRouteCanceled ACHTransferSimulationTransferDeclineReason = "ach_route_canceled"
 	// The account number is disabled.
 	ACHTransferSimulationTransferDeclineReasonACHRouteDisabled ACHTransferSimulationTransferDeclineReason = "ach_route_disabled"
-	// The transaction would cause an Increase limit to be exceeded.
+	// The transaction would cause an Acme limit to be exceeded.
 	ACHTransferSimulationTransferDeclineReasonBreachesLimit ACHTransferSimulationTransferDeclineReason = "breaches_limit"
 	// A credit was refused. This is a reasonable default reason for decline of
 	// credits.
@@ -4909,7 +4909,7 @@ const (
 	ACHTransferSimulationTransferDeclineReasonNoACHRoute ACHTransferSimulationTransferDeclineReason = "no_ach_route"
 	// The originating financial institution asked for this transfer to be returned.
 	ACHTransferSimulationTransferDeclineReasonOriginatorRequest ACHTransferSimulationTransferDeclineReason = "originator_request"
-	// The transaction is not allowed per Increase's terms.
+	// The transaction is not allowed per Acme's terms.
 	ACHTransferSimulationTransferDeclineReasonTransactionNotAllowed ACHTransferSimulationTransferDeclineReason = "transaction_not_allowed"
 	// The user initiated the decline.
 	ACHTransferSimulationTransferDeclineReasonUserInitiated ACHTransferSimulationTransferDeclineReason = "user_initiated"

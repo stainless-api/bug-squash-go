@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestEventSubscriptionNewWithOptionalParams(t *testing.T) {
@@ -21,17 +21,17 @@ func TestEventSubscriptionNewWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.EventSubscriptions.New(context.TODO(), increase.EventSubscriptionNewParams{
-		URL:                   increase.F("https://website.com/webhooks"),
-		SelectedEventCategory: increase.F(increase.EventSubscriptionNewParamsSelectedEventCategoryAccountCreated),
-		SharedSecret:          increase.F("x"),
+	_, err := client.EventSubscriptions.New(context.TODO(), acme.EventSubscriptionNewParams{
+		URL:                   acme.F("https://website.com/webhooks"),
+		SelectedEventCategory: acme.F(acme.EventSubscriptionNewParamsSelectedEventCategoryAccountCreated),
+		SharedSecret:          acme.F("x"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -47,13 +47,13 @@ func TestEventSubscriptionGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.EventSubscriptions.Get(context.TODO(), "event_subscription_001dzz0r20rcdxgb013zqb8m04g")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -69,19 +69,19 @@ func TestEventSubscriptionUpdateWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.EventSubscriptions.Update(
 		context.TODO(),
 		"event_subscription_001dzz0r20rcdxgb013zqb8m04g",
-		increase.EventSubscriptionUpdateParams{
-			Status: increase.F(increase.EventSubscriptionUpdateParamsStatusActive),
+		acme.EventSubscriptionUpdateParams{
+			Status: acme.F(acme.EventSubscriptionUpdateParamsStatusActive),
 		},
 	)
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -97,16 +97,16 @@ func TestEventSubscriptionListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.EventSubscriptions.List(context.TODO(), increase.EventSubscriptionListParams{
-		Cursor: increase.F("string"),
-		Limit:  increase.F(int64(1)),
+	_, err := client.EventSubscriptions.List(context.TODO(), acme.EventSubscriptionListParams{
+		Cursor: acme.F("string"),
+		Limit:  acme.F(int64(1)),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

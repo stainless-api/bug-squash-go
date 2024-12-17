@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestExternalAccountNewWithOptionalParams(t *testing.T) {
@@ -21,18 +21,18 @@ func TestExternalAccountNewWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.ExternalAccounts.New(context.TODO(), increase.ExternalAccountNewParams{
-		AccountNumber: increase.F("987654321"),
-		Description:   increase.F("Landlord"),
-		RoutingNumber: increase.F("101050001"),
-		Funding:       increase.F(increase.ExternalAccountNewParamsFundingChecking),
+	_, err := client.ExternalAccounts.New(context.TODO(), acme.ExternalAccountNewParams{
+		AccountNumber: acme.F("987654321"),
+		Description:   acme.F("Landlord"),
+		RoutingNumber: acme.F("101050001"),
+		Funding:       acme.F(acme.ExternalAccountNewParamsFundingChecking),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -48,13 +48,13 @@ func TestExternalAccountGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.ExternalAccounts.Get(context.TODO(), "external_account_ukk55lr923a3ac0pp7iv")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -70,20 +70,20 @@ func TestExternalAccountUpdateWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.ExternalAccounts.Update(
 		context.TODO(),
 		"external_account_ukk55lr923a3ac0pp7iv",
-		increase.ExternalAccountUpdateParams{
-			Description: increase.F("New description"),
-			Status:      increase.F(increase.ExternalAccountUpdateParamsStatusActive),
+		acme.ExternalAccountUpdateParams{
+			Description: acme.F("New description"),
+			Status:      acme.F(acme.ExternalAccountUpdateParamsStatusActive),
 		},
 	)
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -99,20 +99,20 @@ func TestExternalAccountListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.ExternalAccounts.List(context.TODO(), increase.ExternalAccountListParams{
-		Cursor:        increase.F("string"),
-		Limit:         increase.F(int64(1)),
-		RoutingNumber: increase.F("xxxxxxxxx"),
-		Status: increase.F(increase.ExternalAccountListParamsStatus{
-			In: increase.F([]increase.ExternalAccountListParamsStatusIn{increase.ExternalAccountListParamsStatusInActive, increase.ExternalAccountListParamsStatusInArchived}),
+	_, err := client.ExternalAccounts.List(context.TODO(), acme.ExternalAccountListParams{
+		Cursor:        acme.F("string"),
+		Limit:         acme.F(int64(1)),
+		RoutingNumber: acme.F("xxxxxxxxx"),
+		Status: acme.F(acme.ExternalAccountListParamsStatus{
+			In: acme.F([]acme.ExternalAccountListParamsStatusIn{acme.ExternalAccountListParamsStatusInActive, acme.ExternalAccountListParamsStatusInArchived}),
 		}),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

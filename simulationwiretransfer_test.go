@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestSimulationWireTransferNewInboundWithOptionalParams(t *testing.T) {
@@ -21,30 +21,30 @@ func TestSimulationWireTransferNewInboundWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Simulations.WireTransfers.NewInbound(context.TODO(), increase.SimulationWireTransferNewInboundParams{
-		AccountNumberID:                         increase.F("account_number_v18nkfqm6afpsrvy82b2"),
-		Amount:                                  increase.F(int64(1000)),
-		BeneficiaryAddressLine1:                 increase.F("x"),
-		BeneficiaryAddressLine2:                 increase.F("x"),
-		BeneficiaryAddressLine3:                 increase.F("x"),
-		BeneficiaryName:                         increase.F("x"),
-		BeneficiaryReference:                    increase.F("x"),
-		OriginatorAddressLine1:                  increase.F("x"),
-		OriginatorAddressLine2:                  increase.F("x"),
-		OriginatorAddressLine3:                  increase.F("x"),
-		OriginatorName:                          increase.F("x"),
-		OriginatorRoutingNumber:                 increase.F("x"),
-		OriginatorToBeneficiaryInformationLine1: increase.F("x"),
-		OriginatorToBeneficiaryInformationLine2: increase.F("x"),
-		OriginatorToBeneficiaryInformationLine3: increase.F("x"),
-		OriginatorToBeneficiaryInformationLine4: increase.F("x"),
+	_, err := client.Simulations.WireTransfers.NewInbound(context.TODO(), acme.SimulationWireTransferNewInboundParams{
+		AccountNumberID:                         acme.F("account_number_v18nkfqm6afpsrvy82b2"),
+		Amount:                                  acme.F(int64(1000)),
+		BeneficiaryAddressLine1:                 acme.F("x"),
+		BeneficiaryAddressLine2:                 acme.F("x"),
+		BeneficiaryAddressLine3:                 acme.F("x"),
+		BeneficiaryName:                         acme.F("x"),
+		BeneficiaryReference:                    acme.F("x"),
+		OriginatorAddressLine1:                  acme.F("x"),
+		OriginatorAddressLine2:                  acme.F("x"),
+		OriginatorAddressLine3:                  acme.F("x"),
+		OriginatorName:                          acme.F("x"),
+		OriginatorRoutingNumber:                 acme.F("x"),
+		OriginatorToBeneficiaryInformationLine1: acme.F("x"),
+		OriginatorToBeneficiaryInformationLine2: acme.F("x"),
+		OriginatorToBeneficiaryInformationLine3: acme.F("x"),
+		OriginatorToBeneficiaryInformationLine4: acme.F("x"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

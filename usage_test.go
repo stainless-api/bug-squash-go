@@ -1,15 +1,15 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
 	"os"
 	"testing"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestUsage(t *testing.T) {
@@ -20,12 +20,12 @@ func TestUsage(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	account, err := client.Accounts.New(context.TODO(), increase.AccountNewParams{
-		Name: increase.F("My First Increase Account"),
+	account, err := client.Accounts.New(context.TODO(), acme.AccountNewParams{
+		Name: acme.F("My First Acme Account"),
 	})
 	if err != nil {
 		t.Error(err)

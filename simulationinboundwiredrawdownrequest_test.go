@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestSimulationInboundWireDrawdownRequestNewWithOptionalParams(t *testing.T) {
@@ -21,34 +21,34 @@ func TestSimulationInboundWireDrawdownRequestNewWithOptionalParams(t *testing.T)
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.Simulations.InboundWireDrawdownRequests.New(context.TODO(), increase.SimulationInboundWireDrawdownRequestNewParams{
-		Amount:                                  increase.F(int64(10000)),
-		BeneficiaryAccountNumber:                increase.F("987654321"),
-		BeneficiaryRoutingNumber:                increase.F("101050001"),
-		Currency:                                increase.F("USD"),
-		MessageToRecipient:                      increase.F("Invoice 29582"),
-		OriginatorAccountNumber:                 increase.F("987654321"),
-		OriginatorRoutingNumber:                 increase.F("101050001"),
-		RecipientAccountNumberID:                increase.F("account_number_v18nkfqm6afpsrvy82b2"),
-		BeneficiaryAddressLine1:                 increase.F("33 Liberty Street"),
-		BeneficiaryAddressLine2:                 increase.F("New York, NY, 10045"),
-		BeneficiaryAddressLine3:                 increase.F("x"),
-		BeneficiaryName:                         increase.F("Ian Crease"),
-		OriginatorAddressLine1:                  increase.F("33 Liberty Street"),
-		OriginatorAddressLine2:                  increase.F("New York, NY, 10045"),
-		OriginatorAddressLine3:                  increase.F("x"),
-		OriginatorName:                          increase.F("Ian Crease"),
-		OriginatorToBeneficiaryInformationLine1: increase.F("x"),
-		OriginatorToBeneficiaryInformationLine2: increase.F("x"),
-		OriginatorToBeneficiaryInformationLine3: increase.F("x"),
-		OriginatorToBeneficiaryInformationLine4: increase.F("x"),
+	_, err := client.Simulations.InboundWireDrawdownRequests.New(context.TODO(), acme.SimulationInboundWireDrawdownRequestNewParams{
+		Amount:                                  acme.F(int64(10000)),
+		BeneficiaryAccountNumber:                acme.F("987654321"),
+		BeneficiaryRoutingNumber:                acme.F("101050001"),
+		Currency:                                acme.F("USD"),
+		MessageToRecipient:                      acme.F("Invoice 29582"),
+		OriginatorAccountNumber:                 acme.F("987654321"),
+		OriginatorRoutingNumber:                 acme.F("101050001"),
+		RecipientAccountNumberID:                acme.F("account_number_v18nkfqm6afpsrvy82b2"),
+		BeneficiaryAddressLine1:                 acme.F("33 Liberty Street"),
+		BeneficiaryAddressLine2:                 acme.F("New York, NY, 10045"),
+		BeneficiaryAddressLine3:                 acme.F("x"),
+		BeneficiaryName:                         acme.F("Ian Crease"),
+		OriginatorAddressLine1:                  acme.F("33 Liberty Street"),
+		OriginatorAddressLine2:                  acme.F("New York, NY, 10045"),
+		OriginatorAddressLine3:                  acme.F("x"),
+		OriginatorName:                          acme.F("Ian Crease"),
+		OriginatorToBeneficiaryInformationLine1: acme.F("x"),
+		OriginatorToBeneficiaryInformationLine2: acme.F("x"),
+		OriginatorToBeneficiaryInformationLine3: acme.F("x"),
+		OriginatorToBeneficiaryInformationLine4: acme.F("x"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // WireTransferService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewWireTransferService] method
 // instead.
@@ -111,7 +111,7 @@ func (r *WireTransferService) Submit(ctx context.Context, wireTransferID string,
 	return
 }
 
-// Wire transfers move funds between your Increase account and any other account
+// Wire transfers move funds between your Acme account and any other account
 // accessible by Fedwire.
 type WireTransfer struct {
 	// The wire transfer's identifier.
@@ -150,7 +150,7 @@ type WireTransfer struct {
 	Network WireTransferNetwork `json:"network,required"`
 	// The ID for the pending transaction representing the transfer. A pending
 	// transaction is created when the transfer
-	// [requires approval](https://increase.com/documentation/transfer-approvals#transfer-approvals)
+	// [requires approval](https://acme.com/documentation/transfer-approvals#transfer-approvals)
 	// by someone else in your organization.
 	PendingTransactionID string `json:"pending_transaction_id,required,nullable"`
 	// If your transfer is reversed, this will contain details of the reversal.
@@ -356,7 +356,7 @@ type WireTransferStatus string
 const (
 	// The transfer has been canceled.
 	WireTransferStatusCanceled WireTransferStatus = "canceled"
-	// The transfer requires attention from an Increase operator.
+	// The transfer requires attention from an Acme operator.
 	WireTransferStatusRequiresAttention WireTransferStatus = "requires_attention"
 	// The transfer is pending approval.
 	WireTransferStatusPendingApproval WireTransferStatus = "pending_approval"

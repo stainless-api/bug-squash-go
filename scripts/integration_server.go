@@ -11,8 +11,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/shared"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/shared"
 )
 
 func check(err error) {
@@ -21,7 +21,7 @@ func check(err error) {
 	}
 }
 
-func sendError(w http.ResponseWriter, error *increase.Error) {
+func sendError(w http.ResponseWriter, error *acme.Error) {
 	errorB, err := json.Marshal(error)
 	if err != nil {
 		panic(err)
@@ -39,8 +39,8 @@ func rootFunc(w http.ResponseWriter, r *http.Request) {
 
 func checkAuthorization(w http.ResponseWriter, r *http.Request) bool {
 	if r.Header.Get("Authorization") != "Bearer sk_test_1234567890" {
-		error := &increase.Error{
-			Detail: "See https://increase.com/documentation/api#authorization-and-testing",
+		error := &acme.Error{
+			Detail: "See https://acme.com/documentation/api#authorization-and-testing",
 			Status: 403,
 			Title:  "Incorrect or missing Authorization",
 			Type:   "insufficient_permissions_error",
@@ -96,7 +96,7 @@ func checkIdempotency(w http.ResponseWriter, r *http.Request) bool {
 		mismatch = true
 	}
 	if mismatch {
-		error := &increase.Error{
+		error := &acme.Error{
 			Detail: "Idempotency token reused with dissimilar request",
 			Status: 422,
 			Title:  "Invalid idempotency configuration",
@@ -115,12 +115,12 @@ func checkIdempotency(w http.ResponseWriter, r *http.Request) bool {
 }
 
 var checkDepositNextID = 0
-var allCheckDeposits []*increase.CheckDeposit
+var allCheckDeposits []*acme.CheckDeposit
 
 func init() {
-	allCheckDeposits = make([]*increase.CheckDeposit, 5)
+	allCheckDeposits = make([]*acme.CheckDeposit, 5)
 	for i := 0; i < 5; i++ {
-		allCheckDeposits[i] = &increase.CheckDeposit{
+		allCheckDeposits[i] = &acme.CheckDeposit{
 			ID:               fmt.Sprintf("check_deposit_%08d", checkDepositNextID),
 			CreatedAt:        time.Now(),
 			AccountID:        fmt.Sprintf("account_%08d", rand.Int()),
@@ -168,7 +168,7 @@ func getCheckDepositsFunc(w http.ResponseWriter, r *http.Request) {
 		nextCursor = (allCheckDeposits[end]).ID
 	}
 	data := allCheckDeposits[start : end+1]
-	page := &shared.Page[*increase.CheckDeposit]{
+	page := &shared.Page[*acme.CheckDeposit]{
 		Data:       data,
 		NextCursor: nextCursor,
 	}
@@ -201,7 +201,7 @@ func postCheckDepositsFunc(w http.ResponseWriter, r *http.Request) {
 	check(err)
 
 	// Simulate processing create request.
-	cd := &increase.CheckDeposit{}
+	cd := &acme.CheckDeposit{}
 	err = json.Unmarshal(body, cd)
 	cd.ID = fmt.Sprintf("check_deposit_%08d", checkDepositNextID)
 	checkDepositNextID += 1

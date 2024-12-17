@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestAccountNumberNewWithOptionalParams(t *testing.T) {
@@ -22,22 +22,22 @@ func TestAccountNumberNewWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.AccountNumbers.New(context.TODO(), increase.AccountNumberNewParams{
-		AccountID: increase.F("account_in71c4amph0vgo2qllky"),
-		Name:      increase.F("Rent payments"),
-		InboundACH: increase.F(increase.AccountNumberNewParamsInboundACH{
-			DebitStatus: increase.F(increase.AccountNumberNewParamsInboundACHDebitStatusAllowed),
+	_, err := client.AccountNumbers.New(context.TODO(), acme.AccountNumberNewParams{
+		AccountID: acme.F("account_in71c4amph0vgo2qllky"),
+		Name:      acme.F("Rent payments"),
+		InboundACH: acme.F(acme.AccountNumberNewParamsInboundACH{
+			DebitStatus: acme.F(acme.AccountNumberNewParamsInboundACHDebitStatusAllowed),
 		}),
-		InboundChecks: increase.F(increase.AccountNumberNewParamsInboundChecks{
-			Status: increase.F(increase.AccountNumberNewParamsInboundChecksStatusAllowed),
+		InboundChecks: acme.F(acme.AccountNumberNewParamsInboundChecks{
+			Status: acme.F(acme.AccountNumberNewParamsInboundChecksStatusAllowed),
 		}),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -53,13 +53,13 @@ func TestAccountNumberGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.AccountNumbers.Get(context.TODO(), "account_number_v18nkfqm6afpsrvy82b2")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -75,23 +75,23 @@ func TestAccountNumberUpdateWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.AccountNumbers.Update(
 		context.TODO(),
 		"account_number_v18nkfqm6afpsrvy82b2",
-		increase.AccountNumberUpdateParams{
-			InboundACH: increase.F(increase.AccountNumberUpdateParamsInboundACH{
-				DebitStatus: increase.F(increase.AccountNumberUpdateParamsInboundACHDebitStatusBlocked),
+		acme.AccountNumberUpdateParams{
+			InboundACH: acme.F(acme.AccountNumberUpdateParamsInboundACH{
+				DebitStatus: acme.F(acme.AccountNumberUpdateParamsInboundACHDebitStatusBlocked),
 			}),
-			Name:   increase.F("x"),
-			Status: increase.F(increase.AccountNumberUpdateParamsStatusDisabled),
+			Name:   acme.F("x"),
+			Status: acme.F(acme.AccountNumberUpdateParamsStatusDisabled),
 		},
 	)
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -107,24 +107,24 @@ func TestAccountNumberListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.AccountNumbers.List(context.TODO(), increase.AccountNumberListParams{
-		AccountID: increase.F("string"),
-		CreatedAt: increase.F(increase.AccountNumberListParamsCreatedAt{
-			After:      increase.F(time.Now()),
-			Before:     increase.F(time.Now()),
-			OnOrAfter:  increase.F(time.Now()),
-			OnOrBefore: increase.F(time.Now()),
+	_, err := client.AccountNumbers.List(context.TODO(), acme.AccountNumberListParams{
+		AccountID: acme.F("string"),
+		CreatedAt: acme.F(acme.AccountNumberListParamsCreatedAt{
+			After:      acme.F(time.Now()),
+			Before:     acme.F(time.Now()),
+			OnOrAfter:  acme.F(time.Now()),
+			OnOrBefore: acme.F(time.Now()),
 		}),
-		Cursor: increase.F("string"),
-		Limit:  increase.F(int64(1)),
-		Status: increase.F(increase.AccountNumberListParamsStatusActive),
+		Cursor: acme.F("string"),
+		Limit:  acme.F(int64(1)),
+		Status: acme.F(acme.AccountNumberListParamsStatusActive),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

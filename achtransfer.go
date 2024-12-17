@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // ACHTransferService contains methods and other services that help with
-// interacting with the increase API. Note, unlike clients, this service does not
+// interacting with the acme API. Note, unlike clients, this service does not
 // read variables from the environment automatically. You should not instantiate
 // this service directly, and instead use the [NewACHTransferService] method
 // instead.
@@ -90,7 +90,7 @@ func (r *ACHTransferService) Cancel(ctx context.Context, achTransferID string, o
 	return
 }
 
-// ACH transfers move funds between your Increase account and any other account
+// ACH transfers move funds between your Acme account and any other account
 // accessible by the Automated Clearing House (ACH).
 type ACHTransfer struct {
 	// The ACH transfer's identifier.
@@ -101,7 +101,7 @@ type ACHTransfer struct {
 	AccountNumber string `json:"account_number,required"`
 	// After the transfer is acknowledged by FedACH, this will contain supplemental
 	// details. The Federal Reserve sends an acknowledgement message for each file that
-	// Increase submits.
+	// Acme submits.
 	Acknowledgement ACHTransferAcknowledgement `json:"acknowledgement,required,nullable"`
 	// Additional information that will be sent to the recipient.
 	Addendum string `json:"addendum,required,nullable"`
@@ -148,7 +148,7 @@ type ACHTransfer struct {
 	NotificationsOfChange []ACHTransferNotificationsOfChange `json:"notifications_of_change,required"`
 	// The ID for the pending transaction representing the transfer. A pending
 	// transaction is created when the transfer
-	// [requires approval](https://increase.com/documentation/transfer-approvals#transfer-approvals)
+	// [requires approval](https://acme.com/documentation/transfer-approvals#transfer-approvals)
 	// by someone else in your organization.
 	PendingTransactionID string `json:"pending_transaction_id,required,nullable"`
 	// If your transfer is returned, this will contain details of the return.
@@ -162,7 +162,7 @@ type ACHTransfer struct {
 	// The lifecycle status of the transfer.
 	Status ACHTransferStatus `json:"status,required"`
 	// After the transfer is submitted to FedACH, this will contain supplemental
-	// details. Increase batches transfers and submits a file to the Federal Reserve
+	// details. Acme batches transfers and submits a file to the Federal Reserve
 	// roughly every 30 minutes. The Federal Reserve processes ACH transfers during
 	// weekdays according to their
 	// [posted schedule](https://www.frbservices.org/resources/resource-centers/same-day-ach/fedach-processing-schedule.html).
@@ -220,7 +220,7 @@ func (r *ACHTransfer) UnmarshalJSON(data []byte) (err error) {
 
 // After the transfer is acknowledged by FedACH, this will contain supplemental
 // details. The Federal Reserve sends an acknowledgement message for each file that
-// Increase submits.
+// Acme submits.
 type ACHTransferAcknowledgement struct {
 	// When the Federal Reserve acknowledged the submitted file containing this
 	// transfer.
@@ -408,7 +408,7 @@ type ACHTransferReturn struct {
 	// The three character ACH return code, in the range R01 to R85.
 	RawReturnReasonCode string `json:"raw_return_reason_code,required"`
 	// Why the ACH Transfer was returned. This reason code is sent by the receiving
-	// bank back to Increase.
+	// bank back to Acme.
 	ReturnReasonCode ACHTransferReturnReturnReasonCode `json:"return_reason_code,required"`
 	// The identifier of the Transaction associated with this return.
 	TransactionID string `json:"transaction_id,required"`
@@ -434,7 +434,7 @@ func (r *ACHTransferReturn) UnmarshalJSON(data []byte) (err error) {
 }
 
 // Why the ACH Transfer was returned. This reason code is sent by the receiving
-// bank back to Increase.
+// bank back to Acme.
 type ACHTransferReturnReturnReasonCode string
 
 const (
@@ -645,7 +645,7 @@ const (
 	ACHTransferStatusPendingApproval ACHTransferStatus = "pending_approval"
 	// The transfer has been canceled.
 	ACHTransferStatusCanceled ACHTransferStatus = "canceled"
-	// The transfer is pending review by Increase.
+	// The transfer is pending review by Acme.
 	ACHTransferStatusPendingReviewing ACHTransferStatus = "pending_reviewing"
 	// The transfer is pending submission to the Federal Reserve.
 	ACHTransferStatusPendingSubmission ACHTransferStatus = "pending_submission"
@@ -653,14 +653,14 @@ const (
 	ACHTransferStatusSubmitted ACHTransferStatus = "submitted"
 	// The transfer has been returned.
 	ACHTransferStatusReturned ACHTransferStatus = "returned"
-	// The transfer requires attention from an Increase operator.
+	// The transfer requires attention from an Acme operator.
 	ACHTransferStatusRequiresAttention ACHTransferStatus = "requires_attention"
 	// The transfer has been rejected.
 	ACHTransferStatusRejected ACHTransferStatus = "rejected"
 )
 
 // After the transfer is submitted to FedACH, this will contain supplemental
-// details. Increase batches transfers and submits a file to the Federal Reserve
+// details. Acme batches transfers and submits a file to the Federal Reserve
 // roughly every 30 minutes. The Federal Reserve processes ACH transfers during
 // weekdays according to their
 // [posted schedule](https://www.frbservices.org/resources/resource-centers/same-day-ach/fedach-processing-schedule.html).
@@ -681,7 +681,7 @@ type ACHTransferSubmission struct {
 	// bank. Along with the amount, date, and originating routing number, this can be
 	// used to identify the ACH transfer at the receiving bank. ACH trace numbers are
 	// not unique, but are
-	// [used to correlate returns](https://increase.com/documentation/ach#returns).
+	// [used to correlate returns](https://acme.com/documentation/ach#returns).
 	TraceNumber string                    `json:"trace_number,required"`
 	JSON        achTransferSubmissionJSON `json:"-"`
 }
@@ -710,7 +710,7 @@ const (
 )
 
 type ACHTransferNewParams struct {
-	// The Increase identifier for the account that will send the transfer.
+	// The Acme identifier for the account that will send the transfer.
 	AccountID param.Field[string] `json:"account_id,required"`
 	// The transfer amount in cents. A positive amount originates a credit transfer
 	// pushing funds to the receiving account. A negative amount originates a debit

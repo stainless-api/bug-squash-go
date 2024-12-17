@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestBookkeepingEntrySetNewWithOptionalParams(t *testing.T) {
@@ -22,23 +22,23 @@ func TestBookkeepingEntrySetNewWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.BookkeepingEntrySets.New(context.TODO(), increase.BookkeepingEntrySetNewParams{
-		Entries: increase.F([]increase.BookkeepingEntrySetNewParamsEntry{{
-			AccountID: increase.F("bookkeeping_account_9husfpw68pzmve9dvvc7"),
-			Amount:    increase.F(int64(100)),
+	_, err := client.BookkeepingEntrySets.New(context.TODO(), acme.BookkeepingEntrySetNewParams{
+		Entries: acme.F([]acme.BookkeepingEntrySetNewParamsEntry{{
+			AccountID: acme.F("bookkeeping_account_9husfpw68pzmve9dvvc7"),
+			Amount:    acme.F(int64(100)),
 		}, {
-			AccountID: increase.F("bookkeeping_account_t2obldz1rcu15zr54umg"),
-			Amount:    increase.F(int64(-100)),
+			AccountID: acme.F("bookkeeping_account_t2obldz1rcu15zr54umg"),
+			Amount:    acme.F(int64(-100)),
 		}}),
-		Date:          increase.F(time.Now()),
-		TransactionID: increase.F("transaction_uyrp7fld2ium70oa7oi"),
+		Date:          acme.F(time.Now()),
+		TransactionID: acme.F("transaction_uyrp7fld2ium70oa7oi"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -54,13 +54,13 @@ func TestBookkeepingEntrySetGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.BookkeepingEntrySets.Get(context.TODO(), "bookkeeping_entry_set_n80c6wr2p8gtc6p4ingf")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -76,17 +76,17 @@ func TestBookkeepingEntrySetListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.BookkeepingEntrySets.List(context.TODO(), increase.BookkeepingEntrySetListParams{
-		Cursor:        increase.F("string"),
-		Limit:         increase.F(int64(1)),
-		TransactionID: increase.F("string"),
+	_, err := client.BookkeepingEntrySets.List(context.TODO(), acme.BookkeepingEntrySetListParams{
+		Cursor:        acme.F("string"),
+		Limit:         acme.F(int64(1)),
+		TransactionID: acme.F("string"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

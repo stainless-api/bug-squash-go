@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestCardProfileNewWithOptionalParams(t *testing.T) {
@@ -21,34 +21,34 @@ func TestCardProfileNewWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.CardProfiles.New(context.TODO(), increase.CardProfileNewParams{
-		Description: increase.F("My Card Profile"),
-		DigitalWallets: increase.F(increase.CardProfileNewParamsDigitalWallets{
-			TextColor: increase.F(increase.CardProfileNewParamsDigitalWalletsTextColor{
-				Red:   increase.F(int64(26)),
-				Green: increase.F(int64(43)),
-				Blue:  increase.F(int64(59)),
+	_, err := client.CardProfiles.New(context.TODO(), acme.CardProfileNewParams{
+		Description: acme.F("My Card Profile"),
+		DigitalWallets: acme.F(acme.CardProfileNewParamsDigitalWallets{
+			TextColor: acme.F(acme.CardProfileNewParamsDigitalWalletsTextColor{
+				Red:   acme.F(int64(26)),
+				Green: acme.F(int64(43)),
+				Blue:  acme.F(int64(59)),
 			}),
-			IssuerName:            increase.F("MyBank"),
-			CardDescription:       increase.F("MyBank Signature Card"),
-			ContactWebsite:        increase.F("https://example.com"),
-			ContactEmail:          increase.F("user@example.com"),
-			ContactPhone:          increase.F("+18885551212"),
-			BackgroundImageFileID: increase.F("file_1ai913suu1zfn1pdetru"),
-			AppIconFileID:         increase.F("file_8zxqkwlh43wo144u8yec"),
+			IssuerName:            acme.F("MyBank"),
+			CardDescription:       acme.F("MyBank Signature Card"),
+			ContactWebsite:        acme.F("https://example.com"),
+			ContactEmail:          acme.F("user@example.com"),
+			ContactPhone:          acme.F("+18885551212"),
+			BackgroundImageFileID: acme.F("file_1ai913suu1zfn1pdetru"),
+			AppIconFileID:         acme.F("file_8zxqkwlh43wo144u8yec"),
 		}),
-		PhysicalCards: increase.F(increase.CardProfileNewParamsPhysicalCards{
-			ContactPhone:       increase.F("x"),
-			FrontImageFileID:   increase.F("string"),
-			CarrierImageFileID: increase.F("string"),
+		PhysicalCards: acme.F(acme.CardProfileNewParamsPhysicalCards{
+			ContactPhone:       acme.F("x"),
+			FrontImageFileID:   acme.F("string"),
+			CarrierImageFileID: acme.F("string"),
 		}),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -64,13 +64,13 @@ func TestCardProfileGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.CardProfiles.Get(context.TODO(), "card_profile_cox5y73lob2eqly18piy")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -86,22 +86,22 @@ func TestCardProfileListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.CardProfiles.List(context.TODO(), increase.CardProfileListParams{
-		Cursor: increase.F("string"),
-		Limit:  increase.F(int64(1)),
-		PhysicalCardsStatus: increase.F(increase.CardProfileListParamsPhysicalCardsStatus{
-			In: increase.F([]increase.CardProfileListParamsPhysicalCardsStatusIn{increase.CardProfileListParamsPhysicalCardsStatusInNotEligible, increase.CardProfileListParamsPhysicalCardsStatusInRejected, increase.CardProfileListParamsPhysicalCardsStatusInPendingCreating}),
+	_, err := client.CardProfiles.List(context.TODO(), acme.CardProfileListParams{
+		Cursor: acme.F("string"),
+		Limit:  acme.F(int64(1)),
+		PhysicalCardsStatus: acme.F(acme.CardProfileListParamsPhysicalCardsStatus{
+			In: acme.F([]acme.CardProfileListParamsPhysicalCardsStatusIn{acme.CardProfileListParamsPhysicalCardsStatusInNotEligible, acme.CardProfileListParamsPhysicalCardsStatusInRejected, acme.CardProfileListParamsPhysicalCardsStatusInPendingCreating}),
 		}),
-		Status: increase.F(increase.CardProfileListParamsStatus{
-			In: increase.F([]increase.CardProfileListParamsStatusIn{increase.CardProfileListParamsStatusInPending, increase.CardProfileListParamsStatusInRejected, increase.CardProfileListParamsStatusInActive}),
+		Status: acme.F(acme.CardProfileListParamsStatus{
+			In: acme.F([]acme.CardProfileListParamsStatusIn{acme.CardProfileListParamsStatusInPending, acme.CardProfileListParamsStatusInRejected, acme.CardProfileListParamsStatusInActive}),
 		}),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -117,13 +117,13 @@ func TestCardProfileArchive(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.CardProfiles.Archive(context.TODO(), "card_profile_cox5y73lob2eqly18piy")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase_test
+package acme_test
 
 import (
 	"context"
@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/increase/increase-go"
-	"github.com/increase/increase-go/internal/testutil"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go"
+	"github.com/acme/acme-go/internal/testutil"
+	"github.com/acme/acme-go/option"
 )
 
 func TestAccountTransferNewWithOptionalParams(t *testing.T) {
@@ -22,20 +22,20 @@ func TestAccountTransferNewWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.AccountTransfers.New(context.TODO(), increase.AccountTransferNewParams{
-		AccountID:            increase.F("account_in71c4amph0vgo2qllky"),
-		Amount:               increase.F(int64(100)),
-		Description:          increase.F("Creating liquidity"),
-		DestinationAccountID: increase.F("account_uf16sut2ct5bevmq3eh"),
-		RequireApproval:      increase.F(true),
-		UniqueIdentifier:     increase.F("x"),
+	_, err := client.AccountTransfers.New(context.TODO(), acme.AccountTransferNewParams{
+		AccountID:            acme.F("account_in71c4amph0vgo2qllky"),
+		Amount:               acme.F(int64(100)),
+		Description:          acme.F("Creating liquidity"),
+		DestinationAccountID: acme.F("account_uf16sut2ct5bevmq3eh"),
+		RequireApproval:      acme.F(true),
+		UniqueIdentifier:     acme.F("x"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -51,13 +51,13 @@ func TestAccountTransferGet(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.AccountTransfers.Get(context.TODO(), "account_transfer_7k9qe1ysdgqztnt63l7n")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -73,24 +73,24 @@ func TestAccountTransferListWithOptionalParams(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
-	_, err := client.AccountTransfers.List(context.TODO(), increase.AccountTransferListParams{
-		AccountID: increase.F("string"),
-		CreatedAt: increase.F(increase.AccountTransferListParamsCreatedAt{
-			After:      increase.F(time.Now()),
-			Before:     increase.F(time.Now()),
-			OnOrAfter:  increase.F(time.Now()),
-			OnOrBefore: increase.F(time.Now()),
+	_, err := client.AccountTransfers.List(context.TODO(), acme.AccountTransferListParams{
+		AccountID: acme.F("string"),
+		CreatedAt: acme.F(acme.AccountTransferListParamsCreatedAt{
+			After:      acme.F(time.Now()),
+			Before:     acme.F(time.Now()),
+			OnOrAfter:  acme.F(time.Now()),
+			OnOrBefore: acme.F(time.Now()),
 		}),
-		Cursor:           increase.F("string"),
-		Limit:            increase.F(int64(1)),
-		UniqueIdentifier: increase.F("x"),
+		Cursor:           acme.F("string"),
+		Limit:            acme.F(int64(1)),
+		UniqueIdentifier: acme.F("x"),
 	})
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -106,13 +106,13 @@ func TestAccountTransferApprove(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.AccountTransfers.Approve(context.TODO(), "account_transfer_7k9qe1ysdgqztnt63l7n")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}
@@ -128,13 +128,13 @@ func TestAccountTransferCancel(t *testing.T) {
 	if !testutil.CheckTestServer(t, baseURL) {
 		return
 	}
-	client := increase.NewClient(
+	client := acme.NewClient(
 		option.WithBaseURL(baseURL),
 		option.WithAPIKey("My API Key"),
 	)
 	_, err := client.AccountTransfers.Cancel(context.TODO(), "account_transfer_7k9qe1ysdgqztnt63l7n")
 	if err != nil {
-		var apierr *increase.Error
+		var apierr *acme.Error
 		if errors.As(err, &apierr) {
 			t.Log(string(apierr.DumpRequest(true)))
 		}

@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless.
 
-package increase
+package acme
 
 import (
 	"context"
@@ -9,16 +9,16 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/increase/increase-go/internal/apijson"
-	"github.com/increase/increase-go/internal/apiquery"
-	"github.com/increase/increase-go/internal/param"
-	"github.com/increase/increase-go/internal/requestconfig"
-	"github.com/increase/increase-go/internal/shared"
-	"github.com/increase/increase-go/option"
+	"github.com/acme/acme-go/internal/apijson"
+	"github.com/acme/acme-go/internal/apiquery"
+	"github.com/acme/acme-go/internal/param"
+	"github.com/acme/acme-go/internal/requestconfig"
+	"github.com/acme/acme-go/internal/shared"
+	"github.com/acme/acme-go/option"
 )
 
 // EventService contains methods and other services that help with interacting with
-// the increase API. Note, unlike clients, this service does not read variables
+// the acme API. Note, unlike clients, this service does not read variables
 // from the environment automatically. You should not instantiate this service
 // directly, and instead use the [NewEventService] method instead.
 type EventService struct {
@@ -65,10 +65,10 @@ func (r *EventService) ListAutoPaging(ctx context.Context, query EventListParams
 	return shared.NewPageAutoPager(r.List(ctx, query, opts...))
 }
 
-// Events are records of things that happened to objects at Increase. Events are
+// Events are records of things that happened to objects at Acme. Events are
 // accessible via the List Events endpoint and can be delivered to your application
 // via webhooks. For more information, see our
-// [webhooks guide](https://increase.com/documentation/webhooks).
+// [webhooks guide](https://acme.com/documentation/webhooks).
 type Event struct {
 	// The Event identifier.
 	ID string `json:"id,required"`
@@ -188,7 +188,7 @@ const (
 	EventCategoryFileCreated EventCategory = "file.created"
 	// Occurs whenever a Group is updated.
 	EventCategoryGroupUpdated EventCategory = "group.updated"
-	// Increase may send webhooks with this category to see if a webhook endpoint is
+	// Acme may send webhooks with this category to see if a webhook endpoint is
 	// working properly.
 	EventCategoryGroupHeartbeat EventCategory = "group.heartbeat"
 	// Occurs whenever an Inbound ACH Transfer is created.
@@ -377,7 +377,7 @@ const (
 	EventListParamsCategoryInFileCreated EventListParamsCategoryIn = "file.created"
 	// Occurs whenever a Group is updated.
 	EventListParamsCategoryInGroupUpdated EventListParamsCategoryIn = "group.updated"
-	// Increase may send webhooks with this category to see if a webhook endpoint is
+	// Acme may send webhooks with this category to see if a webhook endpoint is
 	// working properly.
 	EventListParamsCategoryInGroupHeartbeat EventListParamsCategoryIn = "group.heartbeat"
 	// Occurs whenever an Inbound ACH Transfer is created.
