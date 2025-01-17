@@ -2,8 +2,8 @@ This is an exercise in improving an API client library, just as you might
 do at Stainless.
 
 A contributor has been trying to add support for idempotency to the Stainless
-Go client library for Acme. They've got some WIP code as shown in this
-repo.
+Go client library for Acme, a fake banking API. They've got some WIP code as
+shown in this repo.
 
 But some tests are failing now, and they're not sure why, or what to do next.
 They've asked for your help.
