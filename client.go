@@ -12,19 +12,17 @@ import (
 // interacting with the acme API. You should not instantiate this client
 // directly, and instead use the [NewClient] method instead.
 type Client struct {
-	Options              []option.RequestOption
-	Accounts             *AccountService
-	Transactions         *TransactionService
-	ACHTransfers         *ACHTransferService
-	Documents            *DocumentService
-	WireTransfers        *WireTransferService
-	CheckTransfers       *CheckTransferService
-	WireDrawdownRequests *WireDrawdownRequestService
-	Files                *FileService
-	Groups               *GroupService
-	OauthConnections     *OauthConnectionService
-	CheckDeposits        *CheckDepositService
-	RoutingNumbers       *RoutingNumberService
+	Options        []option.RequestOption
+	Accounts       *AccountService
+	Transactions   *TransactionService
+	ACHTransfers   *ACHTransferService
+	Documents      *DocumentService
+	WireTransfers  *WireTransferService
+	CheckTransfers *CheckTransferService
+	Files          *FileService
+	Groups         *GroupService
+	CheckDeposits  *CheckDepositService
+	RoutingNumbers *RoutingNumberService
 }
 
 // NewClient generates a new client with the default option read from the
@@ -46,10 +44,8 @@ func NewClient(opts ...option.RequestOption) (r *Client) {
 	r.Documents = NewDocumentService(opts...)
 	r.WireTransfers = NewWireTransferService(opts...)
 	r.CheckTransfers = NewCheckTransferService(opts...)
-	r.WireDrawdownRequests = NewWireDrawdownRequestService(opts...)
 	r.Files = NewFileService(opts...)
 	r.Groups = NewGroupService(opts...)
-	r.OauthConnections = NewOauthConnectionService(opts...)
 	r.CheckDeposits = NewCheckDepositService(opts...)
 	r.RoutingNumbers = NewRoutingNumberService(opts...)
 
