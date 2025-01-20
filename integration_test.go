@@ -48,11 +48,10 @@ func TestAutoPaginationIntegration(t *testing.T) {
 	}
 }
 
-// Test that when making requests against an API endpoint that has side
-// effects, and we lose the response from the server after those effects
-// happen, that subsequent client retries do not replay those side effects,
-// and instead correctly use an idempotency key to ensure the side effect only
-// happens once.
+// Test that we're sending idempotency keys correctly. We want to make sure
+// that if we retry a request we're sending the same idempotency key on each retry
+// and, thus, that the server doesn't try to process the same request twice and
+// cause unexpected, duplicative behavior.
 // Note that our integration server is known to apply the first instance of
 // the create call to its internal DB on the first request, but then to respond
 // with a temporary error, so the client will be forced to retry, at which point
@@ -68,6 +67,8 @@ func TestNewIdempotentlyIntegration(t *testing.T) {
 		option.WithAPIKey(apiKey),
 	)
 	accountID := fmt.Sprintf("account_%08d", rand.Int())
+	// part 1: create a check deposit. This method should trigger the idempotency behavior.
+	// we can't test that directly, so see part 2 below
 	_, err := client.CheckDeposits.New(context.TODO(), acme.CheckDepositNewParams{
 		AccountID:        acme.F(accountID),
 		Amount:           acme.F(int64(42)),
@@ -79,17 +80,20 @@ func TestNewIdempotentlyIntegration(t *testing.T) {
 		t.Fatalf("err should be nil: %s", err.Error())
 	}
 
+	// part 2: to check if we've done part 1 correctly, we'll count the number
+	// of check deposits that get created. we should only see 1!
 	iter := client.CheckDeposits.ListAutoPaging(context.TODO(), acme.CheckDepositListParams{})
-	accountIDSeen := 0
+	checkDepositsInAccount := 0
 	for iter.Next() {
-		if accountID == iter.Current().AccountID {
-			accountIDSeen += 1
+		// use this to filter down to only the check deposits on the account for this test
+		if accountID == iter.Current().ID {
+			checkDepositsInAccount += 1
 		}
 	}
 	if err := iter.Err(); err != nil {
 		t.Fatalf("err should be nil: %s", err.Error())
 	}
-	if accountIDSeen != 1 {
-		t.Errorf("Unique account ID seen in created records %d times, want exactly 1 time", accountIDSeen)
+	if checkDepositsInAccount != 1 {
+		t.Errorf("Saw %d deposits in account, but we want exactly 1 time", checkDepositsInAccount)
 	}
 }
