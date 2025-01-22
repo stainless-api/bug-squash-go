@@ -86,7 +86,7 @@ func TestNewIdempotentlyIntegration(t *testing.T) {
 	checkDepositsInAccount := 0
 	for iter.Next() {
 		// use this to filter down to only the check deposits on the account for this test
-		if accountID == iter.Current().ID {
+		if accountID == iter.Current().AccountID {
 			checkDepositsInAccount += 1
 		}
 	}
